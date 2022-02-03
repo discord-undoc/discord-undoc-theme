@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@300&family=Inter:wght@300;600;700;800;900&family=Open+Sans:wght@500;700;800&family=Passion+One:wght@400;700&display=swap');
+
+/* https://fonts.google.com/share?selection.family=Archivo%20Black%7CIBM%20Plex%20Sans:wght@300%7CInter:wght@300;600;700;800;900%7COpen%20Sans:wght@500;700;800%7CPassion%20One:wght@400;700 */
+
+:root {
+    --page-padding: 150px;
+    --sidebar-width: 333px;
+    --header-height: 100px;
+    --footer-height: 100px;
+    --brand-color: #5865F2;
+    /* 400 */
+    --font-ginto-nord-variation-1: 'Archivo Black', sans-serif;
+    /* 400 700 */
+    --font-ginto-nord-variation-2: 'Passion One', cursive;
+    /* 300 */
+    --font-code: 'IBM Plex Sans', sans-serif;
+    /* 300 */
+    --font-normal: 'Inter', sans-serif;
+    /* 500 700 800 */
+    --font-normal-variation-1: 'Open Sans', sans-serif;
+    /* 600 700 800 900 */
+    --font-normal-variation-2: 'Inter', sans-serif;
+}
+
+.light {
+    --text-normal: #000000;
+    --text-contrast: #FFFFFF;
+    --text-muted: #747F8D;
+    --main-background: #FFFFFF;
+    --sidebar-background: #F1F1F1;
+    --element: #FFFFFF;
+    --element-contrast: #36393F;
+    --code-block-background: #F1F1F1;
+
+    /* Codeblock colors */
+    /* From
+    https://github.com/highlightjs/highlight.js/blob/70ac79cdbb2bf877d708e4741bf398455f591eaf/src/styles/a11y-light.css */
+    --hljs-comment: #696969;
+    --hljs-red: #D91E18;
+    --hljs-orange: #AA5D00;
+    --hljs-yellow: #AA5D00;
+    --hljs-green: #008000;
+    --hljs-blue: #007FAA;
+    --hljs-purple: #7928A1;
+}
+
+.dark {
+    --text-normal: #FFFFFF;
+    --text-contrast: #FFFFFF;
+    --main-background: #36393F;
+    --text-muted: #747F8D;
+    --sidebar-background: #2F3136;
+    --element: #36393F;
+    --element-contrast: #FFFFFF;
+    --code-block-background: #2F3136;
+
+    /* Codeblock colors */
+    /* From
+    https://github.com/highlightjs/highlight.js/blob/70ac79cdbb2bf877d708e4741bf398455f591eaf/src/styles/a11y-dark.css */
+    --hljs-comment: #D4D0AB;
+    --hljs-red: #FFA07A;
+    --hljs-orange: #F5AB35;
+    --hljs-yellow: #FFD700;
+    --hljs-green: #ABE338;
+    --hljs-blue: #00E0E0;
+    --hljs-purple: #DCC6E0;
+
+}

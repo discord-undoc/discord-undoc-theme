@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58334"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="UNDocNoBG.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   inkscape:export-filename="/home/hanseungmin/Downloads/UNDocNoBG.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     height="1000px"
+     inkscape:zoom="0.804"
+     inkscape:cx="325.24876"
+     inkscape:cy="500"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     id="layer1">
+    <g
+       id="g2080"
+       inkscape:label="ClydeGroup">
+      <rect
+         style="display:inline;fill:#fee75c;fill-opacity:1;stroke-width:0.20684"
+         id="rect1092-6"
+         width="15"
+         height="30"
+         x="225"
+         y="117.29166"
+         ry="8.0515757"
+         inkscape:label="ClydeEarR" />
+      <rect
+         style="display:inline;fill:#fee75c;fill-opacity:1;stroke-width:0.20684"
+         id="rect1092"
+         width="15"
+         height="30"
+         x="25"
+         y="117.29166"
+         ry="8.0515757"
+         inkscape:label="ClydeEarL" />
+      <rect
+         style="display:inline;fill:#fd745e;fill-opacity:1;stroke-width:0.305756"
+         id="rect968"
+         width="198.4375"
+         height="132.29167"
+         x="33.072918"
+         y="66.145828"
+         ry="33.522346"
+         inkscape:label="ClydeBase" />
+      <g
+         id="g2071"
+         inkscape:label="ClydeChinGroup">
+        <rect
+           style="display:inline;fill:#fee75c;fill-opacity:1;stroke-width:0.11171"
+           id="rect1836"
+           width="19.84375"
+           height="6.6145835"
+           x="122.36979"
+           y="189.83855"
+           ry="3.3072917"
+           inkscape:label="ClydeChinRound" />
+        <rect
+           style="display:inline;fill:#fee75c;fill-opacity:1;stroke-width:0.0999167"
+           id="rect1936"
+           width="19.84375"
+           height="5.2916665"
+           x="122.36979"
+           y="193.14583"
+           ry="0"
+           inkscape:label="ClydeChin" />
+      </g>
+      <g
+         id="g2254"
+         inkscape:label="ClydeScreenGroup">
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke-width:0.254593"
+           id="rect1670"
+           width="171.97917"
+           height="105.83334"
+           x="46.302082"
+           y="79.374992"
+           ry="26.817877"
+           inkscape:label="ClydeScreen" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.188241"
+           id="rect2104"
+           width="105.83334"
+           height="6.6145835"
+           x="66.145836"
+           y="105.83334"
+           ry="3.3072917"
+           inkscape:label="ClydeDocLine_1" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.148818"
+           id="rect1073"
+           width="66.145836"
+           height="6.6145835"
+           x="66.145836"
+           y="119.0625"
+           ry="3.3072917"
+           inkscape:label="ClydeDocLine_2" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke-width:0.163022"
+           id="rect1075"
+           width="79.375"
+           height="6.6145835"
+           x="66.145836"
+           y="132.29167"
+           ry="3.3072917"
+           inkscape:label="ClydeDocLine_3" />
+      </g>
+    </g>
+  </g>
+</svg>
