@@ -26,8 +26,7 @@ window.onunload = function () { };
 (function addHomepageLink() {
     const header = document.querySelector('.sidebar .header a');
     let href = window.location.origin + '/' + base_url;
-    href = (href.endsWith('/')) ? href.slice(0, -1) : href;
-    href = href  + '/' + first_page;
+    href = (href.endsWith('/')) ? href + first_page : href  + '/' + first_page;
     header.setAttribute('href', href);
 })();
 
@@ -62,4 +61,42 @@ window.onunload = function () { };
                 break
         };
     });
+})();
+
+(function sidebar() {
+    var html = document.querySelector("html");
+    var sidebar = document.querySelector(".sidebar");
+    var sidebarToggleButton = document.querySelector(".sidebartoggle");
+
+    function showSidebar() {
+        html.classList.remove('sidebar-hidden')
+        html.classList.add('sidebar-visible');
+        try {
+            localStorage.setItem('sidebar', 'visible');
+        } catch (e) { }
+    }
+
+    function hideSidebar() {
+        html.classList.remove('sidebar-visible')
+        html.classList.add('sidebar-hidden');
+        try {
+            localStorage.setItem('sidebar', 'hidden');
+        } catch (e) { }
+    }
+
+    // Toggle sidebar
+    sidebarToggleButton.addEventListener('click', function sidebarToggle() {
+        if (html.classList.contains("sidebar-hidden")) {
+            showSidebar();
+        } else {
+            hideSidebar();
+        }
+    });
+
+    // Scroll sidebar to current active section
+    var activeSection = sidebar.querySelector(".active");
+    if (activeSection) {
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+        activeSection.scrollIntoView({ block: 'center' });
+    }
 })();

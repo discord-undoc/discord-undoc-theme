@@ -47,17 +47,24 @@
             } catch (e) { }
 
             const theme = localStorage.getItem('theme') || default_theme;
-            const sidebar = localStorage.getItem('sidebar') || 'visible';
+            let sidebar_state = 'hidden';
             const html = document.querySelector('html');
 
             html.classList.remove("{{ default_theme }}");
             html.classList.add(theme);
 
+            if (document.body.clientWidth > 800) {
+                sidebar_state = localStorage.getItem('sidebar') || 'visible'
+            }
+
             html.classList.remove("sidebar-visible");
-            html.classList.add(`sidebar-${sidebar}`);
+            html.classList.add(`sidebar-${sidebar_state}`);
         </script>
 
         <div class="main_page">
+            <div class="sidebartoggle">
+                <span class="material-icons round">menu</span>
+            </div>
             <div class="sidebar noselect">
                 <div class="header">
                     <a>
@@ -102,9 +109,9 @@
                     </div>
                 </div>
                 <div class="content">
-                    <br>
-                    <br>
-                    <br>
+                    <br class="noselect">
+                    <br class="noselect">
+                    <br class="noselect">
                     {{{ content }}}
                 </div>
                 <div class="navfooter">

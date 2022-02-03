@@ -19,3 +19,10 @@ After setting everything up, it's as simple as
   CWD is the folder the book is located in.
 
 Start improving the theme!
+
+## Features:
+
+- [x] Responsive Design
+- [x] Dark/Light Themes
+- [x] a11y codeblock colors
+- [ ] Support for devices smaller than the width of 332px (lul)

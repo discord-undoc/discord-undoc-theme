@@ -119,6 +119,7 @@ blockquote {
 .main_page {
     width: 100%;
     background-color: var(--main-background);
+    overflow: hidden;
 }
 
 /* Content container */
@@ -126,6 +127,12 @@ blockquote {
 .page_contents {
     width: calc((100% - var(--page-padding) * 2) - var(--sidebar-width));
     margin-left: calc(var(--page-padding) + var(--sidebar-width));
+    transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
+}
+
+html.sidebar-hidden .page_contents {
+    width: calc(100% - var(--page-padding) * 2);
+    margin-left: var(--page-padding);
 }
 
 .content * {
@@ -174,4 +181,56 @@ blockquote {
 
 .hidden {
     display: none !important;
+}
+
+/* Media Queries
+(Not in a separate file because i hate additional_css and js lul) */
+
+@media (max-width: 1250px) {
+    :root {
+        --page-padding: 50px;
+    }    
+}
+
+@media (max-width: 750px) {
+    .settings {
+        width: 30px !important;
+    }
+
+    .giturl,
+    .editpage {
+        display: none !important;
+    }
+
+    html.sidebar-visible .page_contents {
+        width: calc(100vw - var(--page-padding) * 2);
+        margin-left: calc(var(--page-padding) + var(--sidebar-width));  
+    }
+
+    html.sidebar-visible .settings {
+        right: -40px !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebartoggle {
+        z-index: 1;
+        left: calc(var(--sidebar-width) - 40px) !important;
+    }
+
+    html.sidebar-hidden .sidebartoggle {
+        left: 10px !important;
+    }
+}
+
+@media (max-width: 333px) {
+    body * {
+        display: none;
+    }
+
+    body::after {
+        display: block;
+        padding: 10px;
+        content: "Device TOO small!";
+    }
 }

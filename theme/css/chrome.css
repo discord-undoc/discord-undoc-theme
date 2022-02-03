@@ -9,6 +9,30 @@
 
 /* Sidebar */
 
+.sidebartoggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    left: calc(var(--sidebar-width) + 10px);
+    background-color: var(--sidebar-background);
+    color: var(--text-contrast);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: left 0.2s ease-in-out;
+}
+
+.sidebartoggle span {
+    font-size: 0.9rem;
+}
+
+html.sidebar-hidden .sidebartoggle {
+    left: 10px;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -17,6 +41,12 @@
     position: fixed;
     left: 0;
     background-color: var(--sidebar-background);
+    transition: left 0.2s ease-in-out;
+}
+
+html.sidebar-hidden .sidebar {
+    display: flex !important;
+    left: calc(var(--sidebar-width) * -1);
 }
 
 .sidebar .header a {
@@ -142,6 +172,7 @@
     border-radius: 30px;
     background-color: var(--element-contrast);
     overflow: hidden;
+    transition: right 0.2s ease-in-out;
 }
 
 .settings span {
