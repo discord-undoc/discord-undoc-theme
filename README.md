@@ -15,7 +15,7 @@ This book uses MdBook just like the main book.
 After setting everything up, it's as simple as
 - Opening the folder in any IDE of choice
 - Running the local mdbook server to see changes live.
-  - `mdbook serve` is the command to do that, amke sure that your
+  - `mdbook serve` is the command to do that, make sure that your
   CWD is the folder the book is located in.
 
 Start improving the theme!
