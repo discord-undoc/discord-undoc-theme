@@ -192,6 +192,13 @@ html.sidebar-hidden .page_contents {
     }    
 }
 
+@media (max-width: 950px) {
+    html.sidebar-visible .page_contents {
+        width: calc(100vw - var(--page-padding) * 2);
+        margin-left: calc(var(--page-padding) + var(--sidebar-width));  
+    }
+}
+
 @media (max-width: 750px) {
     .settings {
         width: 30px !important;
@@ -200,11 +207,6 @@ html.sidebar-hidden .page_contents {
     .giturl,
     .editpage {
         display: none !important;
-    }
-
-    html.sidebar-visible .page_contents {
-        width: calc(100vw - var(--page-padding) * 2);
-        margin-left: calc(var(--page-padding) + var(--sidebar-width));  
     }
 
     html.sidebar-visible .settings {

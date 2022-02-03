@@ -169,9 +169,8 @@ html.sidebar-hidden .sidebar {
     height: 30px;
     top: 10px;
     right: 10px;
-    border-radius: 30px;
+    border-radius: 7px;
     background-color: var(--element-contrast);
-    overflow: hidden;
     transition: right 0.2s ease-in-out;
 }
 
@@ -187,7 +186,7 @@ html.sidebar-hidden .sidebar {
     align-items: center;
     width: 30px;
     height: 30px;
-    border-radius: 30px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }

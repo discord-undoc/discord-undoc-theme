@@ -61,7 +61,7 @@
     --hljs-red: #FFA07A;
     --hljs-orange: #F5AB35;
     --hljs-yellow: #FFD700;
-    --hljs-green: #ABE338;
+    --hljs-green: #5AF78E; /* #ABE338 as per the reference theme, tho this one looks better */
     --hljs-blue: #00E0E0;
     --hljs-purple: #DCC6E0;
 
