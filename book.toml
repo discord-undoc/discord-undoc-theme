@@ -11,9 +11,9 @@ default-theme = "dark"
 preferred-dark-theme = "dark"
 curly-quotes = true
 copy-fonts = false
-git-repository-url = "https://github.com/arHSM/ddocs"
+git-repository-url = "https://github.com/discord-undoc/discord-undoc-theme"
 git-repository-icon = "source"
-edit-url-template = "https://github.com/arHSM/ddocs/edit/master/src/{path}"
+edit-url-template = "https://github.com/discord-undoc/discord-undoc-theme/edit/master/src/{path}"
 
 [output.html.print]
 enable = false
