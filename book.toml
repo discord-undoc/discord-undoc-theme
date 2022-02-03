@@ -14,7 +14,6 @@ copy-fonts = false
 git-repository-url = "https://github.com/arHSM/ddocs"
 git-repository-icon = "source"
 edit-url-template = "https://github.com/arHSM/ddocs/edit/master/src/{path}"
-site-url = "/ddocs/"
 
 [output.html.print]
 enable = false
