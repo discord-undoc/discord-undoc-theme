@@ -149,7 +149,7 @@ html.sidebar-hidden .sidebar {
 
 .search #searchresults-outer {
     width: calc(var(--sidebar-width) - 30px);
-    height: calc(var(--header-height) * 3);
+    max-height: calc(var(--header-height) * 3);
     margin-top: 10px;
     margin-left: 15px;
     padding: 5px;
