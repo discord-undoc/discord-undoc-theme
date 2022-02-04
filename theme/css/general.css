@@ -11,11 +11,12 @@ html {
 }
 
 body {
-    background-color: var(--main-background);
+    background: var(--main-background);
 }
 
 code {
-    font-family: var(--font-code) !important;
+    font-family: var(--font-code);
+    font-weight: 300;
     font-size: 0.875em;
 }
 
@@ -24,9 +25,15 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-normal-variation-1);
-    font-weight: 800;
+    font-family: var(--font-ginto-nord-variation-1);
 }
+
+h1 { font-weight: 900; }
+h2 { font-weight: 800; }
+h3 { font-weight: 700; }
+h4 { font-weight: 600; }
+h5 { font-weight: 600; }
+h6 { font-weight: 600; }
 
 h1:target::before,
 h2:target::before,
@@ -96,7 +103,7 @@ blockquote {
     margin: 20px 0;
     padding: 0 20px;
     color: var(--fg);
-    background-color: var(--quote-bg);
+    background: var(--quote-bg);
     border-top: .1em solid var(--quote-border);
     border-bottom: .1em solid var(--quote-border);
 }
@@ -118,7 +125,7 @@ blockquote {
 
 .main_page {
     width: 100%;
-    background-color: var(--main-background);
+    background: var(--main-background);
     overflow: hidden;
 }
 
@@ -168,9 +175,8 @@ html.sidebar-hidden .page_contents {
 
 .nav-title {
     padding: 0 25px 0 25px;
-    font-family: var(--font-ginto-nord-variation-2);
+    font-family: var(--font-ginto-nord-variation-1);
     font-size: 1.1rem;
-    line-height: 1.2rem;
 }
 
 .nav-button {
@@ -181,6 +187,34 @@ html.sidebar-hidden .page_contents {
 
 .hidden {
     display: none !important;
+}
+
+.noscrollbar {
+    scrollbar-width: none;
+}
+
+.noscrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--element-contrast) var(--element);
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: var(--element);
+}
+  
+*::-webkit-scrollbar-thumb {
+    background: var(--element-contrast);
+    border-radius: 20px;
+    border: 3px solid var(--element);
 }
 
 /* Media Queries
@@ -211,6 +245,10 @@ html.sidebar-hidden .page_contents {
 
     html.sidebar-visible .settings {
         right: -40px !important;
+    }
+
+    .navfooter .nav-title {
+        display: none;
     }
 }
 

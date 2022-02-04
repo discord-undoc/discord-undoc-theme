@@ -15,6 +15,21 @@
   padding: 0.5em;
 }
 
+/* For inline code blocks */
+
+code {
+  overflow-x: auto;
+  background: var(--code-block-background);
+  color: var(--text-normal);
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
 /* Comment */
 .hljs-comment,
 .hljs-quote {
@@ -74,7 +89,7 @@
 }
 
 .hljs-strong {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 @media screen and (-ms-high-contrast: active) {

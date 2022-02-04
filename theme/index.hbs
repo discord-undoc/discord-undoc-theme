@@ -78,14 +78,14 @@
                         <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="search-wrapper" style="display: inherit !important;">
-                        <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
                             <div id="searchresults-header" class="searchresults-header"></div>
                             <ul id="searchresults">
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="toc">
+                <div class="toc noscrollbar">
                     {{#toc}}{{/toc}}
                 </div>
             </div>
@@ -133,6 +133,12 @@
                     </a>
                     {{/next}}
                 </div>
+                <script>
+                    // 404 page patch
+                    if (document.querySelector('.navfooter').children.length === 0) {
+                        document.querySelector('.navfooter').style.display = 'none';
+                    }
+                </script>
             </div>
         </div>
 

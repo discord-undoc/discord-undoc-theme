@@ -10,17 +10,11 @@ window.onunload = function () { };
         languages: [],      // Languages used for auto-detection
     });
 
-    let code_nodes = Array
-        .from(document.querySelectorAll('code'))
-        // Don't highlight `inline code` blocks in headers.
-        .filter(function (node) {return !node.parentElement.classList.contains("header"); });
+    Array.from(document.querySelectorAll('pre code')).forEach(function (block) {
+        hljs.highlightElement(block);
+        block.classList.add('hljs');
+    });
 
-    
-    code_nodes.forEach(function (block) { hljs.highlightBlock(block); });
-
-    // Adding the hljs class gives code blocks the color css
-    // even if highlighting doesn't apply
-    code_nodes.forEach(function (block) { block.classList.add('hljs'); });
 })();
 
 (function addHomepageLink() {

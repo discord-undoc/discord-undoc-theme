@@ -1,10 +1,49 @@
 # Chapter 1
 
-```json
-{
-    "hello": "world"
-}
+## Example Codeblock to test highlight colors.
+
+```js
+var var1 = "This is Awesome";
+var var2 = 12345;
+document.innerHTML("Just to show Theme Colors...");
+
+function Vector(x, y) {
+    this.x = x || 0;
+    this.y = y || 0;
+  }
+
+  Vector.prototype.add = function(vector) {
+    this.x += vector.x;
+    this.y += vector.y;
+  }
+  
+  Vector.prototype.getMagnitude = function () {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  };
+
+  Vector.prototype.getAngle = function () {
+    return Math.atan2(this.y,this.x);
+  };
+
+  Vector.fromAngle = function (angle, magnitude) {
+    return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle));
+  };
+
+  function Emitter(point, velocity, spread) {
+    this.position = point; // Vector
+    this.velocity = velocity; // Vector
+    this.spread = spread || Math.PI /* /16 */; // possible angles = velocity +/- spread
+    this.drawColor = "#999"; // So we can tell them apart from Fields later
+  }
 ```
+
+## Inline `codeblock` test
+
+So you want some `inline` coede huh!
+there you go:
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ullamcorper dui eu malesuada. Etiam pharetra, nisl quis tempor rhoncus, nibh lorem volutpat erat, id malesuada dolor nunc eu nisi. Mauris facilisis rutrum massa et euismod. Nullam maximus pulvinar lorem quis auctor. Proin posuere dui at nisi pharetra, at egestas est vestibulum. Praesent ut condimentum neque, at tincidunt libero. Duis porttitor euismod turpis, vel vulputate tellus ornare ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In nisi mi, fringilla at ligula nec, mollis aliquam enim.` (should I insert a TWICE reference here, lol)
+
+## Example Text to test scrolling
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ullamcorper dui eu malesuada. Etiam pharetra, nisl quis tempor rhoncus, nibh lorem volutpat erat, id malesuada dolor nunc eu nisi. Mauris facilisis rutrum massa et euismod. Nullam maximus pulvinar lorem quis auctor. Proin posuere dui at nisi pharetra, at egestas est vestibulum. Praesent ut condimentum neque, at tincidunt libero. Duis porttitor euismod turpis, vel vulputate tellus ornare ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In nisi mi, fringilla at ligula nec, mollis aliquam enim. Etiam feugiat odio vitae porttitor fringilla. Etiam pulvinar nisi sagittis pharetra maximus.
 

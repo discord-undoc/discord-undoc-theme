@@ -16,17 +16,22 @@
     position: fixed;
     top: 10px;
     left: calc(var(--sidebar-width) + 10px);
-    background-color: var(--sidebar-background);
-    color: var(--text-contrast);
+    background: var(--sidebar-background);
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: 5px;
     cursor: pointer;
     transition: left 0.2s ease-in-out;
 }
 
 .sidebartoggle span {
+    color: var(--text-muted);
     font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.sidebartoggle:hover > span {
+    color: var(--text-normal);
 }
 
 html.sidebar-hidden .sidebartoggle {
@@ -40,7 +45,7 @@ html.sidebar-hidden .sidebartoggle {
     height: 100vh;
     position: fixed;
     left: 0;
-    background-color: var(--sidebar-background);
+    background: var(--sidebar-background);
     transition: left 0.2s ease-in-out;
 }
 
@@ -55,7 +60,8 @@ html.sidebar-hidden .sidebar {
     padding: 0 0 0 15px;
     cursor: pointer;
     font-family: var(--font-ginto-nord-variation-1);
-    font-size: 0.85rem;
+    font-weight: 900;
+    font-size: 0.87rem;
 }
 
 .sidebar .header {
@@ -73,8 +79,9 @@ html.sidebar-hidden .sidebar {
     overflow: scroll;
     left: 0;
     margin: 0;
-    font-size: .85rem;
     font-family: var(--font-ginto-nord-variation-1);
+    font-weight: 800;
+    font-size: .85rem;
 }
 
 .toc::-webkit-scrollbar {
@@ -113,9 +120,15 @@ html.sidebar-hidden .sidebar {
 }
 
 .toc li a.active,
-.toc li a:hover {
+.toc li a.active:focus,
+.toc li a.active:hover {
     color: var(--text-contrast);
     background-color: var(--brand-color);
+}
+
+.toc li a:hover,
+.toc li a:focus {
+    background-color: rgba(116, 127, 141, 0.2);
 }
 
 /* Search */
@@ -131,15 +144,17 @@ html.sidebar-hidden .sidebar {
     padding: 10px 5px 10px 5px;
     border-radius: 5px;
     border: none;
-    background-color: var(--element);
+    background: var(--element);
 }
 
 .search #searchresults-outer {
     width: calc(var(--sidebar-width) - 30px);
+    height: calc(var(--header-height) * 3);
     margin-top: 10px;
     margin-left: 15px;
     padding: 5px;
-    font-family: var(--font-normal-variation-2);
+    overflow: scroll;
+    font-family: var(--font-code);
     border: solid 1px var(--element);
     border-radius: 5px;
 }
@@ -150,6 +165,7 @@ html.sidebar-hidden .sidebar {
 }
 
 .search #searchresults-outer li a {
+    font-family: var(--font-normal);
     font-weight: 700;
     padding: 0 5px 0 0;
 }
@@ -170,12 +186,12 @@ html.sidebar-hidden .sidebar {
     top: 10px;
     right: 10px;
     border-radius: 7px;
-    background-color: var(--element-contrast);
+    background: var(--sidebar-background);
     transition: right 0.2s ease-in-out;
 }
 
 .settings span {
-    color: var(--element);
+    color: var(--text-muted);
     font-size: 0.8rem;
     transition: color 0.2s ease-in-out;
 }
@@ -196,5 +212,5 @@ html.sidebar-hidden .sidebar {
 }
 
 .setting:hover span {
-    color: var(--element-contrast);
+    color: var(--text-normal);
 }
