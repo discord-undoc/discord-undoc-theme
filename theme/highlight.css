@@ -12,6 +12,7 @@
   background: var(--code-block-background);
   color: var(--text-normal);
   border-radius: 5px;
+  font-size: 1.1rem;
   /* Check reason below */
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -32,7 +33,7 @@ code {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 /* Comment */
