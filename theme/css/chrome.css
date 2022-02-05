@@ -214,3 +214,72 @@ html.sidebar-hidden .sidebar {
 .setting:hover span {
     color: var(--text-normal);
 }
+
+/* Custom elements */
+
+.user {
+    display: inline-block;
+    background: var(--sidebar-background);
+    border-radius: 40px;
+    font-size: 0.7rem;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.user b {
+    padding-left: 5px;
+}
+
+.user span {
+    color: var(--text-muted);
+    padding-right: 5px;
+}
+
+.user .avatar {
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.undoc,
+.nobot,
+.iandeploy {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+}
+
+.undoc .material-icons,
+.nobot .material-icons,
+.iandeploy .material-icons {
+    color: var(--text-muted);
+    padding: 0;
+    font-size: 1em;
+}
+
+.undoc .tooltip,
+.nobot .tooltip,
+.iandeploy .tooltip {
+    display: none;
+    width: 120px;
+    background-color: var(--sidebar-background);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 0.6rem;
+
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -5px);
+}
+
+.undoc:hover .tooltip,
+.nobot:hover .tooltip,
+.iandeploy:hover .tooltip {
+    display: block;
+}

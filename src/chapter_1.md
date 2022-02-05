@@ -1,5 +1,13 @@
 # Chapter 1
 
+## Example custom elements
+
+Lorem ipsum <a class="user" id="755792681313108018 a_90be0df51f8cf7dc36bec9cb1ad1459c">Rydix#1726</a> dolor sit amet. <a class="user" id="841509053422632990 06909e938b7a97344ba99498bbc5e9e6">arHSM#5682</a> Mauris facilisis rutrum massa et euismod. Nullam maximus pulvinar lorem quis auctor. Proin posuere dui at nisi pharetra, at egestas est vestibulum. Praesent ut condimentum neque, at tincidunt libero. Duis porttitor euismod turpis, vel vulputate tellus ornare ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Undocumented: <b class="undoc"></b>\
+Not for bots: <b class="nobot"></b>\
+Ian Deploy™ : <b class="iandeploy"></b>
+
 ## Example Codeblock to test highlight colors.
 
 ```js

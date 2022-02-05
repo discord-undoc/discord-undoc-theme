@@ -2,6 +2,42 @@
 
 window.onunload = function () { };
 
+(function customeElements() {
+    (function user() {
+        const users = document.querySelectorAll('.user');
+        users.forEach((user) => {
+            const uinfo = user.innerHTML.split('#');
+            const uname = uinfo[0];
+            const discrim = uinfo[1];
+            const uavatar =  user.id.split(" ");
+            const avatar = `https://cdn.discordapp.com/avatars/${uavatar[0]}/${uavatar[1]}.${(uavatar[1].startsWith("a_")) ? 'gif' : 'webp'}`;
+            user.href = `https://discord.com/users/${uavatar[0]}`;
+            user.innerHTML = `<img src="${avatar}" alt="" class="avatar"><b>${uname}</b><span>#${discrim}</span></img>`
+        });
+    })();
+    
+    (function undocumented() {
+        const undocs = document.querySelectorAll('.undoc');
+        undocs.forEach((undoc) => {
+            undoc.innerHTML = `<b class="material-icons round">article</b><b class="tooltip">This is not officially documented.</b>`;
+        });
+    })();
+
+    (function noBot() {
+        const nobots = document.querySelectorAll('.nobot');
+        nobots.forEach((nobot) => {
+            nobot.innerHTML = `<b class="material-icons round">smart_toy</b><b class="tooltip">This is not useable by bots.</b>`;
+        });
+    })();
+
+    (function ianDeploy() {
+        const iandeploys = document.querySelectorAll('.iandeploy');
+        iandeploys.forEach((iandeploy) => {
+            iandeploy.innerHTML = `<b class="material-icons round">build_circle</b><b class="tooltip">IAN DEPLOY!!!!!</b>`;
+        });
+    })();
+})();
+
 (function codeSnippets() {
 
     // Syntax highlighting Configuration
