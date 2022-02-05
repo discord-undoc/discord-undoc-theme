@@ -39,7 +39,7 @@ function Vector(x, y) {
 
 ## Inline `codeblock` test
 
-So you want some `inline` coede huh!
+So you want some `inline` code huh!
 there you go:
 `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet ullamcorper dui eu malesuada. Etiam pharetra, nisl quis tempor rhoncus, nibh lorem volutpat erat, id malesuada dolor nunc eu nisi. Mauris facilisis rutrum massa et euismod. Nullam maximus pulvinar lorem quis auctor. Proin posuere dui at nisi pharetra, at egestas est vestibulum. Praesent ut condimentum neque, at tincidunt libero. Duis porttitor euismod turpis, vel vulputate tellus ornare ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In nisi mi, fringilla at ligula nec, mollis aliquam enim.` (should I insert a TWICE reference here, lol)
 

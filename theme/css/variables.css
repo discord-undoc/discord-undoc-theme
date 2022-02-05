@@ -19,7 +19,7 @@
 .light {
     --text-normal: #000000;
     --text-contrast: #FFFFFF;
-    --text-muted: #747F8D;
+    --text-muted: #4F5763;
     --main-background: #FFFFFF;
     --sidebar-background: #F2F3F5;
     --element: #FFFFFF;
@@ -31,10 +31,10 @@
     https://github.com/highlightjs/highlight.js/blob/70ac79cdbb2bf877d708e4741bf398455f591eaf/src/styles/a11y-light.css */
     --hljs-comment: #696969;
     --hljs-red: #D91E18;
-    --hljs-orange: #AA5D00;
+    --hljs-orange: #7A4300; /* #AA5D00 as per the reference theme, tho swithed for a11y reasons */
     --hljs-yellow: #AA5D00;
     --hljs-green: #008000;
-    --hljs-blue: #007FAA;
+    --hljs-blue: #005875; /* #007FAA as per the reference thene, tho switchedd for a11y reasons*/
     --hljs-purple: #7928A1;
 }
 
@@ -42,7 +42,7 @@
     --text-normal: #FFFFFF;
     --text-contrast: #FFFFFF;
     --main-background: #36393F;
-    --text-muted: #747F8D;
+    --text-muted: #C8CBD0;
     --sidebar-background: #2F3136;
     --element: #36393F;
     --element-contrast: #FFFFFF;
