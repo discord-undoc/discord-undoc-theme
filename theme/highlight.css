@@ -11,13 +11,13 @@
   overflow-x: auto;
   background: var(--code-block-background);
   color: var(--text-normal);
-  border-radius: 5px;
-  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
   /* Check reason below */
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
 }
 
 /* For inline code blocks */
@@ -26,12 +26,12 @@ code {
   overflow-x: auto;
   background: var(--code-block-background);
   color: var(--text-normal);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   /* Manual padding because uh, code element did a fucky wucky */
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
   padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 2px !important;
   font-weight: 400;
   font-size: 0.9rem;
 }

@@ -4,6 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:title" content="Unofficial Discord Documentation" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://discord-undoc.github.io" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
+        <meta property="og:description" content="Unofficial Discsord Documentation - Documenting the undocumented side of the Discord API" />
+        <meta name="theme-color" content="#FF0000">
+
         <title>{{ book_title }}</title>
 
         {{#if base_url }}
@@ -11,6 +19,16 @@
         {{/if}}
 
         {{> head}}
+
+        <link rel="preload" href="{{ path_to_root }}css/variables.css" as="style">
+        <link rel="preload" href="{{ path_to_root }}css/general.css" as="style">
+        <link rel="preload" href="{{ path_to_root }}css/chrome.css" as="style">
+        <link rel="preload" href="{{ path_to_root }}elasticlunr.min.js" as="script">
+        <link rel="preload" href="{{ path_to_root }}mark.min.js" as="script">
+        <link rel="preload" href="{{ path_to_root }}searcher.js" as="script">
+        <link rel="preload" href="{{ path_to_root }}clipboard.min.js" as="script">
+        <link rel="preload" href="{{ path_to_root }}highlight.js" as="script">
+        <link rel="preload" href="{{ path_to_root }}book.js" as="script">
 
         <link rel="icon" href="{{ path_to_root }}favicon.svg">
         <link rel="shortcut icon" href="{{ path_to_root }}favicon.png">

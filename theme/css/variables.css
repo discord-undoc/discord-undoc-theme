@@ -7,19 +7,27 @@
     --sidebar-width: 333px;
     --header-height: 100px;
     --footer-height: 100px;
+
     --brand-color: #5865F2;
+
     /* 600 700 800 900 */
     --font-ginto-nord-variation-1: 'Archivo', sans-serif;
     /* 300 400 500 */
     --font-code: 'IBM Plex Sans', sans-serif;
     /* 300 600 700 800 900 */
     --font-normal: 'Inter', sans-serif;
+
+    /* Note, Info, Warning */
+    --note-b-color: #5865F2;
+    --info-b-color: #FEE75C;
+    --warn-b-color: #ED4245;
 }
 
 .light {
     --text-normal: #000000;
     --text-contrast: #FFFFFF;
     --text-muted: #4F5763;
+    --text-link: #2839F0;
     --main-background: #FFFFFF;
     --sidebar-background: #F2F3F5;
     --element: #FFFFFF;
@@ -36,13 +44,26 @@
     --hljs-green: #008000;
     --hljs-blue: #005875; /* #007FAA as per the reference thene, tho switchedd for a11y reasons*/
     --hljs-purple: #7928A1;
+
+    --inw-color: #171717;
+    --note-color: #5865F280;
+    --info-color: #FEE75C80;
+    --warn-color: #ED424580;
+
+    --block-quote-background: #595959;
+
+    --table-header-border: #CCCCCC;
+    --table-header-background: #E6E6E6;
+    --table-row-background-1: #EDEDED;
+    --table-row-background-2: #FAFAFA;
 }
 
 .dark {
     --text-normal: #FFFFFF;
     --text-contrast: #FFFFFF;
-    --main-background: #36393F;
     --text-muted: #C8CBD0;
+    --text-link: #C2C8F9;
+    --main-background: #36393F;
     --sidebar-background: #2F3136;
     --element: #36393F;
     --element-contrast: #FFFFFF;
@@ -58,5 +79,17 @@
     --hljs-green: #5AF78E; /* #ABE338 as per the reference theme, tho this one looks better */
     --hljs-blue: #00E0E0;
     --hljs-purple: #DCC6E0;
+
+    --inw-color: #FFFFFF;
+    --note-color: #5865F24D;
+    --info-color: #FEE75C26;
+    --warn-color: #ED42454D;
+
+    --block-quote-background: #CCCCCC;
+
+    --table-header-border: #686868;
+    --table-header-background: #555862;
+    --table-row-background-1: #45474F;
+    --table-row-background-2: #3B3D44;
 
 }

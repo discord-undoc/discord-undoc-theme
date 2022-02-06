@@ -10,7 +10,7 @@ window.onunload = function () { };
             const uname = uinfo[0];
             const discrim = uinfo[1];
             const uavatar =  user.id.split(" ");
-            const avatar = `https://cdn.discordapp.com/avatars/${uavatar[0]}/${uavatar[1]}.${(uavatar[1].startsWith("a_")) ? 'gif' : 'webp'}`;
+            const avatar = `https://cdn.discordapp.com/avatars/${uavatar[0]}/${uavatar[1]}.${(uavatar[1].startsWith("a_")) ? 'gif' : 'webp'}?size=48`;
             user.href = `https://discord.com/users/${uavatar[0]}`;
             user.innerHTML = `<img src="${avatar}" alt="" class="avatar"><b>${uname}</b><span>#${discrim}</span></img>`
         });
@@ -19,21 +19,21 @@ window.onunload = function () { };
     (function undocumented() {
         const undocs = document.querySelectorAll('.undoc');
         undocs.forEach((undoc) => {
-            undoc.innerHTML = `<b class="material-icons round">article</b><b class="tooltip">This is not officially documented.</b>`;
+            undoc.innerHTML = `<b class="material-icons round">article</b>`;
         });
     })();
 
     (function noBot() {
         const nobots = document.querySelectorAll('.nobot');
         nobots.forEach((nobot) => {
-            nobot.innerHTML = `<b class="material-icons round">smart_toy</b><b class="tooltip">This is not useable by bots.</b>`;
+            nobot.innerHTML = `<b class="material-icons round">smart_toy</b>`;
         });
     })();
 
     (function ianDeploy() {
         const iandeploys = document.querySelectorAll('.iandeploy');
         iandeploys.forEach((iandeploy) => {
-            iandeploy.innerHTML = `<b class="material-icons round">rocket_launch</b><b class="tooltip">IAN DEPLOY!!!!!</b>`;
+            iandeploy.innerHTML = `<b class="material-icons round">rocket_launch</b>`;
         });
     })();
 })();
