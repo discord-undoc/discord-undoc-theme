@@ -1,4 +1,4 @@
-# Discord-Undoc Theme
+# Introduction
 
 This is a demo book, only used for the sole pupose of working on the
 custom theme of the book.

@@ -6,14 +6,23 @@ src = "src"
 title = "Unofficial Discord Documentation"
 description = "Theme for the Unofficial Discord Documentation"
 
+[build]
+build-dir = "docs"
+
+[preprocessor.discord-undoc]
+command = "python ./theme/discord_undoc.py"
+
 [output.html]
 default-theme = "dark"
 preferred-dark-theme = "dark"
 curly-quotes = true
 copy-fonts = false
+no-section-label = true
 git-repository-url = "https://github.com/discord-undoc/discord-undoc-theme"
 git-repository-icon = "source"
 edit-url-template = "https://github.com/discord-undoc/discord-undoc-theme/edit/master/{path}"
+site-url = "/discord-undoc-theme/"
+
 
 [output.html.print]
 enable = false

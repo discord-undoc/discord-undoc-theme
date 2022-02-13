@@ -1,96 +1,96 @@
 <!DOCTYPE html>
-<html lang="{{ language }}" class="sidebar-visible {{ default_theme }}">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
 
-        <meta property="og:title" content="Unofficial Discord Documentation" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://discord-undoc.github.io" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
-        <meta property="og:description" content="Unofficial Discsord Documentation - Documenting the undocumented side of the Discord API" />
-        <meta name="theme-color" content="#FF0000">
+    <meta property="og:title" content="Unofficial Discord Documentation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://discord-undoc.github.io" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="theme-color" content="#FF0000">
 
-        <title>{{ book_title }}</title>
+    <title>{{ book_title }}</title>
 
-        {{#if base_url }}
-        <base href="{{ base_url }}">
-        {{/if}}
+    {{#if base_url }}
+    <base href="{{ base_url }}">
+    {{/if}}
 
-        {{> head}}
+    {{> head}}
 
-        <link rel="preload" href="{{ path_to_root }}css/variables.css" as="style">
-        <link rel="preload" href="{{ path_to_root }}css/general.css" as="style">
-        <link rel="preload" href="{{ path_to_root }}css/chrome.css" as="style">
-        <link rel="preload" href="{{ path_to_root }}elasticlunr.min.js" as="script">
-        <link rel="preload" href="{{ path_to_root }}mark.min.js" as="script">
-        <link rel="preload" href="{{ path_to_root }}searcher.js" as="script">
-        <link rel="preload" href="{{ path_to_root }}clipboard.min.js" as="script">
-        <link rel="preload" href="{{ path_to_root }}highlight.js" as="script">
-        <link rel="preload" href="{{ path_to_root }}book.js" as="script">
+    <link rel="preload" href="{{ path_to_root }}css/variables.css" as="style">
+    <link rel="preload" href="{{ path_to_root }}css/general.css" as="style">
+    <link rel="preload" href="{{ path_to_root }}css/chrome.css" as="style">
+    <link rel="preload" href="{{ path_to_root }}elasticlunr.min.js" as="script">
+    <link rel="preload" href="{{ path_to_root }}mark.min.js" as="script">
+    <link rel="preload" href="{{ path_to_root }}searcher.js" as="script">
+    <link rel="preload" href="{{ path_to_root }}highlight.js" as="script">
+    <link rel="preload" href="{{ path_to_root }}book.js" as="script">
 
-        <link rel="icon" href="{{ path_to_root }}favicon.svg">
-        <link rel="shortcut icon" href="{{ path_to_root }}favicon.png">
+    <link rel="icon" href="{{ path_to_root }}favicon.svg">
+    <link rel="shortcut icon" href="{{ path_to_root }}favicon.png">
 
-        <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
-        <link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
+    <link rel="stylesheet" href="{{ path_to_root }}css/variables.css">
+    <link rel="stylesheet" href="{{ path_to_root }}css/general.css">
+    <link rel="stylesheet" href="{{ path_to_root }}css/chrome.css">
 
-        <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
+    <link rel="stylesheet" href="{{ path_to_root }}highlight.css">
 
-        {{#each additional_css}}
-        <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}">
-        {{/each}}
+    {{#each additional_css}}
+    <link rel="stylesheet" href="{{ ../path_to_root }}{{ this }}">
+    {{/each}}
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    </head>
-    <body>
-        <script type="text/javascript">
-            const base_url = "{{ base_url }}";
-            const path_to_root = "{{ path_to_root }}";
-            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "{{ preferred_dark_theme }}" : "{{ default_theme }}";
-        
-            try {
-                let theme = localStorage.getItem('theme');
-                let sidebar = localStorage.getItem('sidebar');
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <script type="text/javascript">
+        const base_url = "{{ base_url }}";
+        const path_to_root = "{{ path_to_root }}";
+        const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "{{ preferred_dark_theme }}" : "{{ default_theme }}";
+    
+        try {
+            let theme = localStorage.getItem('theme');
+            let sidebar = localStorage.getItem('sidebar');
 
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('theme', theme.slice(1, theme.length - 1));
-                }
-
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-
-            const theme = localStorage.getItem('theme') || default_theme;
-            let sidebar_state = 'hidden';
-            const html = document.querySelector('html');
-
-            html.classList.remove("{{ default_theme }}");
-            html.classList.add(theme);
-
-            if (document.body.clientWidth > 800) {
-                sidebar_state = localStorage.getItem('sidebar') || 'visible'
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('theme', theme.slice(1, theme.length - 1));
             }
 
-            html.classList.remove("sidebar-visible");
-            html.classList.add(`sidebar-${sidebar_state}`);
-        </script>
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
 
-        <div class="main_page">
-            <div class="sidebartoggle">
-                <span class="material-icons round">menu</span>
+        const theme = localStorage.getItem('theme') || default_theme;
+        let sidebar_state = 'hidden';
+        const html = document.querySelector('html');
+
+        html.classList.remove("{{ default_theme }}");
+        html.classList.add(theme);
+
+        if (document.body.clientWidth > 800) {
+            sidebar_state = localStorage.getItem('sidebar') || 'visible'
+        }
+
+        html.classList.remove("sidebar-visible");
+        html.classList.add(`sidebar-${sidebar_state}`);
+    </script>
+    <main class="page">
+        <div class="sidebar noselect">
+            <div class="sb_header">
+                <a href="">
+                    <img src="{{ path_to_root }}favicon.png" alt="" srcset="" width="50px" height="50px">
+                        <span>{{ book_title }}</span>
+                    </img>
+                </a>
+                <script>
+                    document.querySelector('.sb_header a').href = window.location.origin;
+                </script>
             </div>
-            <div class="sidebar noselect">
-                <div class="header">
-                    <a>
-                        <img src="{{ path_to_root }}favicon.svg" alt="" width="50px">
-                         {{ book_title }}
-                    </a>
-                </div>
-                <div class="search">
+            <div class="search">
                     <button id="search-toggle" style="display: none;"></button>
                     <form id="searchbar-outer" class="searchbar-outer" autocomplete="off" spellcheck="false">
                         <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -98,91 +98,79 @@
                     <div id="search-wrapper" style="display: inherit !important;">
                         <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
                             <div id="searchresults-header" class="searchresults-header"></div>
-                            <ul id="searchresults">
+                            <ul id="searchresults" class="noscrollbar">
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="toc noscrollbar">
-                    {{#toc}}{{/toc}}
-                </div>
-            </div>
-            <script>
-                let first_page = '';
-                if (window.location.href === (window.location.origin + '/' + base_url)) {
-                    first_page = document.querySelector('.sidebar .toc ol li a')
-                    window.location.href = first_page.href
-                }
-            </script>
-            <div class="page_contents">
-                <div class="settings noselect">
-                    <a class="setting giturl" href="{{git_repository_url}}" target="_blank">
-                        <span class="material-icons round">{{ git_repository_icon }}</span>
-                    </a>
-                    <a class="setting editpage" href="{{git_repository_edit_url}}" target="_blank">
-                        <span class="material-icons round">edit</span>
-                    </a>
-                    <div class="setting themepicker">
-                        <span class="material-icons round">palette</span>
-                    </div>
-                </div>
-                <div class="content">
-                    <br class="noselect">
-                    <br class="noselect">
-                    <br class="noselect">
-                    {{{ content }}}
-                </div>
-                <div class="navfooter">
-                    {{#previous}}
-                    <a href="{{ link }}" class="nav prev">
-                        <div class="nav-button prev">
-                            <span class="material-icons round">arrow_back_ios_new</span>
-                        </div>
-                        <span class="nav-title">{{ title }}</span>
-                    </a>
-                    {{/previous}}
-                    {{#next}}
-                    <a href="{{ link }}" class="nav next">
-                        <span class="nav-title">{{ title }}</span>
-                        <div class="nav-button next">
-                            <span class="material-icons round">arrow_forward_ios</span>
-                        </div>
-                        </a>
-                    </a>
-                    {{/next}}
-                </div>
-                <script>
-                    // 404 page patch
-                    if (document.querySelector('.navfooter').children.length === 0) {
-                        document.querySelector('.navfooter').style.display = 'none';
-                    }
-                </script>
+            <div class="toctree noscrollbar">
+                {{#toc}}{{/toc}}
             </div>
         </div>
+        <div class="page-content">
+            <div class="sidebartoggle noselect">
+                <span class="material-icons round">menu</span>
+            </div>
+            <div class="settings noselect">
+                <div class="themetoggle">
+                    <span class="material-icons round">format_paint</span>
+                </div>
+                <a class="gitedit" href="{{git_repository_edit_url}}" target="_blank">
+                    <span class="material-icons round">edit</span>
+                </a>
+                <a class="giturl" href="{{git_repository_url}}" target="_blank">
+                    <span class="material-icons round">{{git_repository_icon}}</span>
+                </a>
+            </div>
+            <div class="chapter-contents">
+                <br class="noselect">
+                <br class="noselect">
+                {{{ content }}}
+            </div>
+            <div class="navigation">
+                {{#previous}}
+                <a href="{{ link }}" class="nav prev">
+                    <div class="nav-button prev">
+                        <span class="material-icons round">arrow_back_ios_new</span>
+                    </div>
+                    <span class="nav-title">{{ title }}</span>
+                </a>
+                {{/previous}}
+                {{#next}}
+                <a href="{{ link }}" class="nav next">
+                    <span class="nav-title">{{ title }}</span>
+                    <div class="nav-button next">
+                        <span class="material-icons round">arrow_forward_ios</span>
+                    </div>
+                    </a>
+                </a>
+                {{/next}}
+            </div>
+        </div>
+    </main>
 
-        {{#if livereload}}
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("{{{livereload}}}");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
+    {{#if livereload}}
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("{{{livereload}}}");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
                 socket.close();
+                location.reload();
             }
-        </script>
-        {{/if}}
+        };
 
-        <script src="{{ path_to_root }}elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}searcher.js" type="text/javascript" charset="utf-8"></script>
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
+    {{/if}}
 
-        <script src="{{ path_to_root }}clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ path_to_root }}book.js" type="text/javascript" charset="utf-8"></script>
-    </body>
+    <script src="{{ path_to_root }}elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ path_to_root }}mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ path_to_root }}searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="{{ path_to_root }}highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ path_to_root }}book.js" type="text/javascript" charset="utf-8"></script>
+</body>
 </html>

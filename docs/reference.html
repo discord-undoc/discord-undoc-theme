@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Theme for the Unofficial Discord Documentation">
+
+    <meta property="og:title" content="Unofficial Discord Documentation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://discord-undoc.github.io" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
+    <meta property="og:description" content="Theme for the Unofficial Discord Documentation" />
+    <meta name="theme-color" content="#FF0000">
+
+    <title>Unofficial Discord Documentation</title>
+
+
+    
+    <link rel="preload" href="css/variables.css" as="style">
+    <link rel="preload" href="css/general.css" as="style">
+    <link rel="preload" href="css/chrome.css" as="style">
+    <link rel="preload" href="elasticlunr.min.js" as="script">
+    <link rel="preload" href="mark.min.js" as="script">
+    <link rel="preload" href="searcher.js" as="script">
+    <link rel="preload" href="highlight.js" as="script">
+    <link rel="preload" href="book.js" as="script">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <link rel="stylesheet" href="highlight.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <script type="text/javascript">
+        const base_url = "";
+        const path_to_root = "";
+        const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+    
+        try {
+            let theme = localStorage.getItem('theme');
+            let sidebar = localStorage.getItem('sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        const theme = localStorage.getItem('theme') || default_theme;
+        let sidebar_state = 'hidden';
+        const html = document.querySelector('html');
+
+        html.classList.remove("dark");
+        html.classList.add(theme);
+
+        if (document.body.clientWidth > 800) {
+            sidebar_state = localStorage.getItem('sidebar') || 'visible'
+        }
+
+        html.classList.remove("sidebar-visible");
+        html.classList.add(`sidebar-${sidebar_state}`);
+    </script>
+    <main class="page">
+        <div class="sidebar noselect">
+            <div class="sb_header">
+                <a href="">
+                    <img src="favicon.png" alt="" srcset="" width="50px" height="50px">
+                        <span>Unofficial Discord Documentation</span>
+                    </img>
+                </a>
+                <script>
+                    document.querySelector('.sb_header a').href = window.location.origin;
+                </script>
+            </div>
+            <div class="search">
+                    <button id="search-toggle" style="display: none;"></button>
+                    <form id="searchbar-outer" class="searchbar-outer" autocomplete="off" spellcheck="false">
+                        <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="search-wrapper" style="display: inherit !important;">
+                        <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
+                            <div id="searchresults-header" class="searchresults-header"></div>
+                            <ul id="searchresults" class="noscrollbar">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="toctree noscrollbar">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Readable Content</li><li class="chapter-item expanded "><a href="demo.html">Custom Elements</a></li><li class="chapter-item expanded "><a href="reference.html" class="active">Reference</a></li><li class="chapter-item expanded "><a href="mddemo.html">Markdown</a></li><li class="chapter-item expanded "><a href="kbdcombo.html">Keyboard Shortcuts</a></li><li class="chapter-item expanded affix "><li class="part-title">Testing Spam</li><li class="chapter-item expanded "><div>Start</div></li><li class="chapter-item expanded "><div>Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Sub Spam 1</div></li><li class="chapter-item expanded "><div>Sub Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Spam 2</div></li><li class="chapter-item expanded "><div>Spam 3</div></li><li class="chapter-item expanded "><div>Spam 4</div></li><li class="chapter-item expanded "><div>Spam 5</div></li><li class="chapter-item expanded "><div>Spam 6</div></li><li class="chapter-item expanded "><div>Spam 7</div></li><li class="chapter-item expanded "><div>Spam 8</div></li><li class="chapter-item expanded "><div>Spam 9</div></li><li class="chapter-item expanded "><div>Spam 10</div></li><li class="chapter-item expanded "><div>Spam 11</div></li><li class="chapter-item expanded "><div>Spam 12</div></li><li class="chapter-item expanded "><div>Spam 13</div></li><li class="chapter-item expanded "><div>Spam 14</div></li><li class="chapter-item expanded "><div>Spam 15</div></li><li class="chapter-item expanded "><div>Spam 16</div></li><li class="chapter-item expanded "><div>Spam 17</div></li><li class="chapter-item expanded "><div>Spam 18</div></li><li class="chapter-item expanded "><div>Spam 19</div></li><li class="chapter-item expanded "><div>Spam 20</div></li><li class="chapter-item expanded "><div>Spam 21</div></li><li class="chapter-item expanded "><div>Spam 22</div></li><li class="chapter-item expanded "><div>Spam 23</div></li><li class="chapter-item expanded "><div>Spam 24</div></li><li class="chapter-item expanded "><div>Spam 25</div></li><li class="chapter-item expanded "><div>Spam 27</div></li><li class="chapter-item expanded "><div>Spam 28</div></li><li class="chapter-item expanded "><div>Spam 29</div></li><li class="chapter-item expanded "><div>Spam 30</div></li><li class="chapter-item expanded "><div>Spam 31</div></li><li class="chapter-item expanded "><div>Spam 32</div></li><li class="chapter-item expanded "><div>Spam 33</div></li><li class="chapter-item expanded "><div>Spam 34</div></li><li class="chapter-item expanded "><div>Spam 35</div></li><li class="chapter-item expanded "><div>END</div></li></ol>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="sidebartoggle noselect">
+                <span class="material-icons round">menu</span>
+            </div>
+            <div class="settings noselect">
+                <div class="themetoggle">
+                    <span class="material-icons round">format_paint</span>
+                </div>
+                <a class="gitedit" href="https://github.com/discord-undoc/discord-undoc-theme/edit/master/src/reference.md" target="_blank">
+                    <span class="material-icons round">edit</span>
+                </a>
+                <a class="giturl" href="https://github.com/discord-undoc/discord-undoc-theme" target="_blank">
+                    <span class="material-icons round">source</span>
+                </a>
+            </div>
+            <div class="chapter-contents">
+                <br class="noselect">
+                <br class="noselect">
+                <h1 id="reference"><a class="header" href="#reference">Reference</a></h1>
+<h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
+<p><strong>Any custom element can be divided into 2 parts</strong></p>
+<ol>
+<li>The type</li>
+<li>The content</li>
+</ol>
+<p><span class="warn">Some elements <strong>do not</strong> require any content.</span></p>
+<p>The format is: <code>{::(TYPE) (CONTENT)}</code></p>
+<ul>
+<li>The <code>TYPE</code> and the <code>CONTENT</code> must be separated by a space (<code> </code>)</li>
+<li>Passing in content for an element that doesn’t accept any may result in rendering issues!</li>
+<li>Element types are case sensitive.</li>
+</ul>
+<h2 id="formats-and-examples"><a class="header" href="#formats-and-examples">Formats and Examples</a></h2>
+<p><span class="info">Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering</span></p>
+<p>User Badge:</p>
+<ul>
+<li>Format: <code>{::user (USERNAME#DISCRIMINATOR)-(USER_ID)-(AVATAR_HASH)}</code></li>
+<li>Example: <code>{::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc36bec9cb1ad1459c}</code>
+<a href="https://discord.com/users/755792681313108018" class="user"><img src="https://cdn.discordapp.com/avatars/755792681313108018/a_90be0df51f8cf7dc36bec9cb1ad1459c.gif" alt="Rydix's avatar" class="avatar" width="25px" height="25px">Rydix<span>#1726</span></img></a></li>
+</ul>
+<br>
+<p>HTTP Stuff:</p>
+<ul>
+<li>Format: <code>{::(get|head|post|put|delete|connect|options|trace|patch) (ENDPOINT)}</code></li>
+<li>Exaple: <code>{::post /auth}</code> <b class="endpoint"><span class="endpoint-c"><span class="http-method post">POST</span> /auth</span></b></li>
+</ul>
+<br>
+<p>Indicators:</p>
+<ul>
+<li>Format: <code>{::(undoc|nobot|iandeploy)}</code></li>
+<li>Example: <code>{::iandeploy}</code> <b class="iandeploy"><b class="material-icons round">rocket_launch</b></b></li>
+</ul>
+<br>
+<p>Alert Boxes:</p>
+<ul>
+<li>Format: <code>{::(note|info|warn) (CONTENT)}</code></li>
+<li>Exaple: <code>{::note Hi!}</code> <span class="note">Hi!</span></li>
+</ul>
+<h2 id="examples-of-faulty-rendering"><a class="header" href="#examples-of-faulty-rendering">Examples of faulty rendering</a></h2>
+<p><code>{::undoc hello}</code> -&gt; (‘undoc’, ‘hello’)</p>
+<p><code>{::note}</code> -&gt; note</p>
+<p><code>{::user ab#12-12432-suhOUAdass}</code> -&gt; ab#12-12432-suhOUAdass</p>
+<p><code>{::trace}</code> -&gt; trace</p>
+<p>Annnnnnnnnnnnnnnnnnnnnnnnnnnnd many more cases……………..</p>
+
+            </div>
+            <div class="navigation">
+                <a href="demo.html" class="nav prev">
+                    <div class="nav-button prev">
+                        <span class="material-icons round">arrow_back_ios_new</span>
+                    </div>
+                    <span class="nav-title">Custom Elements</span>
+                </a>
+                <a href="mddemo.html" class="nav next">
+                    <span class="nav-title">Markdown</span>
+                    <div class="nav-button next">
+                        <span class="material-icons round">arrow_forward_ios</span>
+                    </div>
+                    </a>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

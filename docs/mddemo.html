@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Theme for the Unofficial Discord Documentation">
+
+    <meta property="og:title" content="Unofficial Discord Documentation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://discord-undoc.github.io" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
+    <meta property="og:description" content="Theme for the Unofficial Discord Documentation" />
+    <meta name="theme-color" content="#FF0000">
+
+    <title>Unofficial Discord Documentation</title>
+
+
+    
+    <link rel="preload" href="css/variables.css" as="style">
+    <link rel="preload" href="css/general.css" as="style">
+    <link rel="preload" href="css/chrome.css" as="style">
+    <link rel="preload" href="elasticlunr.min.js" as="script">
+    <link rel="preload" href="mark.min.js" as="script">
+    <link rel="preload" href="searcher.js" as="script">
+    <link rel="preload" href="highlight.js" as="script">
+    <link rel="preload" href="book.js" as="script">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <link rel="stylesheet" href="highlight.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <script type="text/javascript">
+        const base_url = "";
+        const path_to_root = "";
+        const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+    
+        try {
+            let theme = localStorage.getItem('theme');
+            let sidebar = localStorage.getItem('sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        const theme = localStorage.getItem('theme') || default_theme;
+        let sidebar_state = 'hidden';
+        const html = document.querySelector('html');
+
+        html.classList.remove("dark");
+        html.classList.add(theme);
+
+        if (document.body.clientWidth > 800) {
+            sidebar_state = localStorage.getItem('sidebar') || 'visible'
+        }
+
+        html.classList.remove("sidebar-visible");
+        html.classList.add(`sidebar-${sidebar_state}`);
+    </script>
+    <main class="page">
+        <div class="sidebar noselect">
+            <div class="sb_header">
+                <a href="">
+                    <img src="favicon.png" alt="" srcset="" width="50px" height="50px">
+                        <span>Unofficial Discord Documentation</span>
+                    </img>
+                </a>
+                <script>
+                    document.querySelector('.sb_header a').href = window.location.origin;
+                </script>
+            </div>
+            <div class="search">
+                    <button id="search-toggle" style="display: none;"></button>
+                    <form id="searchbar-outer" class="searchbar-outer" autocomplete="off" spellcheck="false">
+                        <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="search-wrapper" style="display: inherit !important;">
+                        <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
+                            <div id="searchresults-header" class="searchresults-header"></div>
+                            <ul id="searchresults" class="noscrollbar">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="toctree noscrollbar">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Readable Content</li><li class="chapter-item expanded "><a href="demo.html">Custom Elements</a></li><li class="chapter-item expanded "><a href="reference.html">Reference</a></li><li class="chapter-item expanded "><a href="mddemo.html" class="active">Markdown</a></li><li class="chapter-item expanded "><a href="kbdcombo.html">Keyboard Shortcuts</a></li><li class="chapter-item expanded affix "><li class="part-title">Testing Spam</li><li class="chapter-item expanded "><div>Start</div></li><li class="chapter-item expanded "><div>Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Sub Spam 1</div></li><li class="chapter-item expanded "><div>Sub Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Spam 2</div></li><li class="chapter-item expanded "><div>Spam 3</div></li><li class="chapter-item expanded "><div>Spam 4</div></li><li class="chapter-item expanded "><div>Spam 5</div></li><li class="chapter-item expanded "><div>Spam 6</div></li><li class="chapter-item expanded "><div>Spam 7</div></li><li class="chapter-item expanded "><div>Spam 8</div></li><li class="chapter-item expanded "><div>Spam 9</div></li><li class="chapter-item expanded "><div>Spam 10</div></li><li class="chapter-item expanded "><div>Spam 11</div></li><li class="chapter-item expanded "><div>Spam 12</div></li><li class="chapter-item expanded "><div>Spam 13</div></li><li class="chapter-item expanded "><div>Spam 14</div></li><li class="chapter-item expanded "><div>Spam 15</div></li><li class="chapter-item expanded "><div>Spam 16</div></li><li class="chapter-item expanded "><div>Spam 17</div></li><li class="chapter-item expanded "><div>Spam 18</div></li><li class="chapter-item expanded "><div>Spam 19</div></li><li class="chapter-item expanded "><div>Spam 20</div></li><li class="chapter-item expanded "><div>Spam 21</div></li><li class="chapter-item expanded "><div>Spam 22</div></li><li class="chapter-item expanded "><div>Spam 23</div></li><li class="chapter-item expanded "><div>Spam 24</div></li><li class="chapter-item expanded "><div>Spam 25</div></li><li class="chapter-item expanded "><div>Spam 27</div></li><li class="chapter-item expanded "><div>Spam 28</div></li><li class="chapter-item expanded "><div>Spam 29</div></li><li class="chapter-item expanded "><div>Spam 30</div></li><li class="chapter-item expanded "><div>Spam 31</div></li><li class="chapter-item expanded "><div>Spam 32</div></li><li class="chapter-item expanded "><div>Spam 33</div></li><li class="chapter-item expanded "><div>Spam 34</div></li><li class="chapter-item expanded "><div>Spam 35</div></li><li class="chapter-item expanded "><div>END</div></li></ol>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="sidebartoggle noselect">
+                <span class="material-icons round">menu</span>
+            </div>
+            <div class="settings noselect">
+                <div class="themetoggle">
+                    <span class="material-icons round">format_paint</span>
+                </div>
+                <a class="gitedit" href="https://github.com/discord-undoc/discord-undoc-theme/edit/master/src/mddemo.md" target="_blank">
+                    <span class="material-icons round">edit</span>
+                </a>
+                <a class="giturl" href="https://github.com/discord-undoc/discord-undoc-theme" target="_blank">
+                    <span class="material-icons round">source</span>
+                </a>
+            </div>
+            <div class="chapter-contents">
+                <br class="noselect">
+                <br class="noselect">
+                <h1 id="markdown-demo"><a class="header" href="#markdown-demo">Markdown Demo</a></h1>
+<h2 id="code-block"><a class="header" href="#code-block">Code Block</a></h2>
+<p><strong>Prism w/ custom a11y colors</strong>
+<span class="info">Most colors in light mode do not meet <code>WCAG AAA</code> requirements but they do comply with <code>WCAG AA</code></span></p>
+<pre><code class="language-js">var var1 = &quot;This is Awesome&quot;;
+var var2 = 12345;
+document.innerHTML(&quot;Just to show Theme Colors...&quot;);
+
+function Vector(x, y) {
+    this.x = x || 0;
+    this.y = y || 0;
+}
+
+Vector.prototype.add = function(vector) {
+    this.x += vector.x;
+    this.y += vector.y;
+}
+  
+Vector.prototype.getMagnitude = function () {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+};
+
+Vector.prototype.getAngle = function () {
+    return Math.atan2(this.y,this.x);
+};
+
+Vector.fromAngle = function (angle, magnitude) {
+    return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle));
+};
+
+function Emitter(point, velocity, spread) {
+    this.position = point; // Vector
+    this.velocity = velocity; // Vector
+    this.spread = spread || Math.PI /* /16 */; // possible angles = velocity +/- spread
+    this.drawColor = &quot;#999&quot;; // So we can tell them apart from Fields later
+}
+</code></pre>
+<pre><code class="language-json">{
+  &quot;code&quot;: 50035,
+  &quot;errors&quot;: {
+    &quot;activities&quot;: {
+      &quot;0&quot;: {
+        &quot;platform&quot;: {
+          &quot;_errors&quot;: [
+            {
+              &quot;code&quot;: &quot;BASE_TYPE_CHOICES&quot;,
+              &quot;message&quot;: &quot;Value must be one of ('desktop', 'android', 'ios').&quot;
+            }
+          ]
+        },
+        &quot;type&quot;: {
+          &quot;_errors&quot;: [
+            {
+              &quot;code&quot;: &quot;BASE_TYPE_CHOICES&quot;,
+              &quot;message&quot;: &quot;Value must be one of (0, 1, 2, 3, 4, 5).&quot;
+            }
+          ]
+        }
+      }
+    }
+  },
+  &quot;message&quot;: &quot;Invalid Form Body&quot;
+}
+</code></pre>
+<pre><code class="language-py">def foo(bar: tuple[int, str]) -&gt; str:
+  return bar[1]
+</code></pre>
+<h2 id="inline-code"><a class="header" href="#inline-code">Inline Code</a></h2>
+<p>Here, have a <code>429 - Too many cats</code><br />
+<a href="https://http.cat/429">https://http.cat/429</a> or <a href="https://http.cat/429"><code>429</code></a></p>
+<h2 id="text-and-paragraphs"><a class="header" href="#text-and-paragraphs">Text and Paragraphs</a></h2>
+<pre><code class="language-md">Here is a line of text.
+
+This is a new line.
+</code></pre>
+<p>Here is a line of text.</p>
+<p>This is a new line.</p>
+<h2 id="headings"><a class="header" href="#headings">Headings</a></h2>
+<pre><code class="language-md">### A heading 
+
+Some text.
+
+#### A smaller heading 
+
+More text.
+</code></pre>
+<h3 id="a-heading"><a class="header" href="#a-heading">A heading</a></h3>
+<p>Some text.</p>
+<h4 id="a-smaller-heading"><a class="header" href="#a-smaller-heading">A smaller heading</a></h4>
+<p>More text.</p>
+<h2 id="lists"><a class="header" href="#lists">Lists</a></h2>
+<pre><code class="language-md">Unordered
+* milk
+* eggs
+* butter
+
+Ordered
+1. carrots
+1. celery
+1. radishes
+</code></pre>
+<p>Unordered</p>
+<ul>
+<li>milk</li>
+<li>eggs</li>
+<li>butter</li>
+</ul>
+<p>Ordered</p>
+<ol>
+<li>carrots</li>
+<li>celery</li>
+<li>radishes</li>
+</ol>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<pre><code class="language-md">Use [mdBook](https://github.com/rust-lang/mdBook). 
+
+Read about [mdBook](mdBook.md).
+
+A bare url: &lt;https://www.rust-lang.org&gt;.
+</code></pre>
+<p>Use <a href="https://github.com/rust-lang/mdBook">mdBook</a>. </p>
+<p>Read about <a href="mdBook.html">mdBook</a>.</p>
+<p>A bare url: <a href="https://www.rust-lang.org">https://www.rust-lang.org</a>.</p>
+<h2 id="images"><a class="header" href="#images">Images</a></h2>
+<p><code>![TWICE](https://upload.wikimedia.org/wikipedia/commons/f/f4/180717_열린음악회_트와이스_02.jpg)</code></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/180717_%EC%97%B4%EB%A6%B0%EC%9D%8C%EC%95%85%ED%9A%8C_%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4_02.jpg" alt="TWICE" /></p>
+<h2 id="videos"><a class="header" href="#videos">Videos</a></h2>
+<pre><code class="language-html">&lt;video controls&gt;
+  &lt;source src=&quot;https://globalv-rmcnmv.akamaized.net/c/read/v2/VOD_ALPHA/global_v_2021_11_12_370/2898752b-4374-11ec-8fb5-246e96398ca5.mp4?__gda__=1644768116_12acbd46bcf3ef3e55bb525567bacaac&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+</code></pre>
+<video controls>
+  <source src="https://globalv-rmcnmv.akamaized.net/c/read/v2/VOD_ALPHA/global_v_2021_11_12_370/2898752b-4374-11ec-8fb5-246e96398ca5.mp4?__gda__=1644768116_12acbd46bcf3ef3e55bb525567bacaac" type="video/mp4">
+</video>
+<h2 id="strikethrough"><a class="header" href="#strikethrough">Strikethrough</a></h2>
+<p><code>An example of ~~strikethrough text~~.</code></p>
+<p>An example of <del>strikethrough text</del>.</p>
+<h2 id="footnotes"><a class="header" href="#footnotes">Footnotes</a></h2>
+<pre><code class="language-md">This is an example of a footnote[^note].
+
+[^note]: This text is the contents of the footnote, which will be rendered
+    towards the bottom.
+</code></pre>
+<p>This is an example of a footnote<sup class="footnote-reference"><a href="#note">1</a></sup>.</p>
+<div class="footnote-definition" id="note"><sup class="footnote-definition-label">1</sup>
+<p>This text is the contents of the footnote, which will be rendered
+towards the bottom.</p>
+</div>
+<h2 id="tables"><a class="header" href="#tables">Tables</a></h2>
+<pre><code class="language-md">| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+</code></pre>
+<table><thead><tr><th style="text-align: left">Syntax</th><th style="text-align: center">Description</th><th style="text-align: right">Test Text</th></tr></thead><tbody>
+<tr><td style="text-align: left">Header</td><td style="text-align: center">Title</td><td style="text-align: right">Here’s this</td></tr>
+<tr><td style="text-align: left">Paragraph</td><td style="text-align: center">Text</td><td style="text-align: right">And more</td></tr>
+</tbody></table>
+<h2 id="task-lists"><a class="header" href="#task-lists">Task Lists</a></h2>
+<pre><code class="language-md">TODO:
+- [x] Complete task
+- [ ] Incomplete task
+</code></pre>
+<p>TODO:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Complete task</li>
+<li><input disabled="" type="checkbox"/>
+Incomplete task</li>
+</ul>
+<h2 id="blockquotes"><a class="header" href="#blockquotes">Blockquotes</a></h2>
+<pre><code>&gt; Hi 👋🏻
+&gt; &gt; Blockquotes can be nested!!!!
+&gt; &gt; &gt; To any possible amount
+&gt;
+&gt; But, they start to look ugly
+</code></pre>
+<blockquote>
+<p>Hi 👋🏻</p>
+<blockquote>
+<p>Blockquotes can be nested!!!!</p>
+<blockquote>
+<p>To any possible amount</p>
+</blockquote>
+</blockquote>
+<p>But, they start to look ugly</p>
+</blockquote>
+
+            </div>
+            <div class="navigation">
+                <a href="reference.html" class="nav prev">
+                    <div class="nav-button prev">
+                        <span class="material-icons round">arrow_back_ios_new</span>
+                    </div>
+                    <span class="nav-title">Reference</span>
+                </a>
+                <a href="kbdcombo.html" class="nav next">
+                    <span class="nav-title">Keyboard Shortcuts</span>
+                    <div class="nav-button next">
+                        <span class="material-icons round">arrow_forward_ios</span>
+                    </div>
+                    </a>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
