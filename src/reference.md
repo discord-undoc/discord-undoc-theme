@@ -7,7 +7,7 @@
 1. The type
 2. The content
 
-{::warn Some elements **do not** require any content.}
+{::warn Some elements <b>do not<b> require any content.}
 
 The format is: `{::(TYPE) (CONTENT)}`
 - The `TYPE` and the `CONTENT` must be separated by a space (` `)

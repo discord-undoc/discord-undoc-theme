@@ -161,11 +161,11 @@ A bare url: <https://www.rust-lang.org>.
 
 ```html
 <video controls>
-  <source src="/TWICE%20SCIENTIST.mp4" type="video/mp4">
+  <source src="./TWICE%20SCIENTIST.mp4" type="video/mp4">
 </video>
 ```
 <video controls>
-  <source src="/TWICE%20SCIENTIST.mp4" type="video/mp4">
+  <source src="./TWICE%20SCIENTIST.mp4" type="video/mp4">
 </video>
 
 
