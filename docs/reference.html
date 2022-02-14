@@ -129,7 +129,7 @@
 <li>The type</li>
 <li>The content</li>
 </ol>
-<div class="warn">Some elements **do not** require any content.</div>
+<div class="warn">Some elements <b>do not<b> require any content.</div>
 <p>The format is: <code>{::(TYPE) (CONTENT)}</code></p>
 <ul>
 <li>The <code>TYPE</code> and the <code>CONTENT</code> must be separated by a space (<code> </code>)</li>
@@ -194,20 +194,6 @@
         </div>
     </main>
 
-    <!-- Livereload script (if served using the cli tool) -->
-    <script type="text/javascript">
-        var socket = new WebSocket("ws://localhost:3000/__livereload");
-        socket.onmessage = function (event) {
-            if (event.data === "reload") {
-                socket.close();
-                location.reload();
-            }
-        };
-
-        window.onbeforeunload = function() {
-            socket.close();
-        }
-    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

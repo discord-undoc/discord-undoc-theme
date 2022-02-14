@@ -250,11 +250,11 @@ A bare url: &lt;https://www.rust-lang.org&gt;.
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/180717_%EC%97%B4%EB%A6%B0%EC%9D%8C%EC%95%85%ED%9A%8C_%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4_02.jpg" alt="TWICE" /></p>
 <h2 id="videos"><a class="header" href="#videos">Videos</a></h2>
 <pre><code class="language-html">&lt;video controls&gt;
-  &lt;source src=&quot;/TWICE%20SCIENTIST.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;./TWICE%20SCIENTIST.mp4&quot; type=&quot;video/mp4&quot;&gt;
 &lt;/video&gt;
 </code></pre>
 <video controls>
-  <source src="/TWICE%20SCIENTIST.mp4" type="video/mp4">
+  <source src="./TWICE%20SCIENTIST.mp4" type="video/mp4">
 </video>
 <h2 id="strikethrough"><a class="header" href="#strikethrough">Strikethrough</a></h2>
 <p><code>An example of ~~strikethrough text~~.</code></p>
@@ -329,20 +329,6 @@ Incomplete task</li>
         </div>
     </main>
 
-    <!-- Livereload script (if served using the cli tool) -->
-    <script type="text/javascript">
-        var socket = new WebSocket("ws://localhost:3000/__livereload");
-        socket.onmessage = function (event) {
-            if (event.data === "reload") {
-                socket.close();
-                location.reload();
-            }
-        };
-
-        window.onbeforeunload = function() {
-            socket.close();
-        }
-    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

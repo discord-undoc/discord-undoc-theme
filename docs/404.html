@@ -15,7 +15,7 @@
 
     <title>Unofficial Discord Documentation</title>
 
-    <base href="/">
+    <base href="/discord-undoc-theme/">
 
     
 
@@ -43,7 +43,7 @@
 </head>
 <body>
     <script type="text/javascript">
-        const base_url = "/";
+        const base_url = "/discord-undoc-theme/";
         const path_to_root = "";
         const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
     
@@ -130,20 +130,6 @@
         </div>
     </main>
 
-    <!-- Livereload script (if served using the cli tool) -->
-    <script type="text/javascript">
-        var socket = new WebSocket("ws://localhost:3000/__livereload");
-        socket.onmessage = function (event) {
-            if (event.data === "reload") {
-                socket.close();
-                location.reload();
-            }
-        };
-
-        window.onbeforeunload = function() {
-            socket.close();
-        }
-    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
