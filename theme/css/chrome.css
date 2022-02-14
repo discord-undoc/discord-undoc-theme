@@ -88,7 +88,8 @@ html.sidebar-hidden .page-content {
     position: relative;
     color: var(--text-muted);
     cursor: default;
-    bottom: -0.1rem;
+    line-height: 1rem;
+    margin: 0 var(--element-padding);
     font-weight: 500;
 }
 
@@ -436,11 +437,18 @@ html.sidebar-hidden .sidebartoggle {
 
 @media (max-width: 800px) {
     .sidebartoggle {
-        left: calc(var(--sidebar-width) - var(--element-padding) * 3 - 1rem);
+        left: calc(var(--sidebar-width) - var(--element-padding) * 3 - 1.25rem);
     }
 
     .sb_header {
         padding: calc(var(--element-padding) * 4) var(--element-padding) !important;
+    }
+
+    .sidebartoggle span,
+    .giturl span,
+    .gitedit span,
+    .themetoggle span {
+        font-size: 1.25rem;
     }
 }
 
@@ -451,7 +459,11 @@ html.sidebar-hidden .sidebartoggle {
     }
 
     html.sidebar-visible .settings {
-        right: calc(var(--element-padding) * -2 - 1rem);
+        right: calc(var(--element-padding) * -2 - 1.25rem);
+    }
+
+    .navigation .nav .nav-title {
+        display: none;
     }
 }
 

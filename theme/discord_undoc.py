@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from typing import Callable
 
 USER_RE = re.compile(r'(.{2,32})(#\d{4})-(\d*)-(\w*)')
 
@@ -27,8 +28,20 @@ def e_http_method(data: tuple[str, str]) -> str:
 
 
 def e_alert_box(data: tuple[str, str]) -> str:
-    return f'<span class="{data[0]}">{data[1]}</span>'
+    return f'<div class="{data[0]}">{data[1]}</div>'
 
+def e_details(data: tuple[str, str], open=False) -> str:
+    element = data[1].split("<summ>", 1)
+    if len(element) == 1:
+        summary, content = ("", element[0])
+    else:
+        summary, content = element
+    
+    return (f'<details {"open" if open else ""}><summary>{summary}</summary>'
+            f'<div class="d_content">{content}</div></details>')
+
+def e_details_open(data: tuple[str, str]) -> str:
+    return e_details(data, open=True)
 
 STATIC_ELEMENTS = {
     "undoc": '<b class="undoc"><b class="material-icons round">article</b></b>',
@@ -36,7 +49,7 @@ STATIC_ELEMENTS = {
     "iandeploy": '<b class="iandeploy"><b class="material-icons round">rocket_launch</b></b>'
 }
 
-DYNAMIC_ELEMENTS = {
+DYNAMIC_ELEMENTS: dict[str, Callable[[tuple[str, str]], str]] = {
     "user": e_user,
     "get": e_http_method,
     "head": e_http_method,
@@ -50,6 +63,8 @@ DYNAMIC_ELEMENTS = {
     "note": e_alert_box,
     "info": e_alert_box,
     "warn": e_alert_box,
+    "details": e_details,
+    "details-open": e_details_open,
 }
 
 class UnclosedTagError(Exception):
@@ -71,36 +86,37 @@ class Element:
 
     def scan_element(self, index: int) -> tuple[int, str]:
         element_data = ""
-        next_char = self.text[index : index + 1]
-        while next_char != "}":
+        while index < len(self.text):
+            if self.text[index : index + 3] == "{::":
+                index, content = self.scan_element(index + 3)
+                index += 1
+                element_data += content
+
+            if self.text[index] == "}":
+                break
+
             element_data += self.text[index]
             index += 1
-            next_char = self.text[index : index + 1] 
-    
+
         return index, self.parse_element(element_data)
-    
+
     def scanner(self) -> str:
         f_text = ""
         index = 0
         ignore = False
-        while index != len(self.text):
-            if self.text[index : index + 3] == "```" or self.text[index : index + 1] == "`":
+        while index < len(self.text):
+            if self.text[index : index + 3] == "```" or self.text[index] == "`":
                 ignore = not ignore
-            if index == len(self.text) - 1 and ignore and self.text[index : index + 1] != "`":
-                raise UnclosedTagError("Unclosed code block")
-                    
-            if ignore:
-                f_text += self.text[index]
+
+            if self.text[index : index + 3] == "{::" and not ignore:
+                index, content = self.scan_element(index + 3)
+                f_text += content
             else:
-                if self.text[index : index + 3] == "{::":
-                    index, element_data = self.scan_element(index + 3)
-                    f_text += element_data
-                else:
-                    f_text += self.text[index]
+                f_text += self.text[index]
+
             index += 1
-        
         return f_text
-    
+
     def __call__(self, text: str) -> str:
         self.text = text
         return self.scanner()

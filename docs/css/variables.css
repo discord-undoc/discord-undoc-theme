@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,400;125,500;125,600;125,700;125,800;125,900&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+Mono:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,400;125,500;125,600;125,700;125,800;125,900&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+Mono:wght@300;400;500&display=swap");
 
 /* https://fonts.google.com/share?selection.family=Archivo:wdth,wght@125,400;125,500;125,600;125,700;125,800;125,900|Montserrat:wght@400;500;600;700;800;900|Noto+Sans+Mono:wght@300;400;500 */
 
@@ -13,11 +13,11 @@
 
     /* Fonts */
         /* 400, 600, 700, 800, 900 */
-    --font-head: 'Archivo', sans-serif;
+    --font-head: "Archivo", sans-serif;
         /* 400, 500, 600, 700, 800, 900 */
-    --font-normal: 'Montserrat', sans-serif;
+    --font-normal: "Montserrat", sans-serif;
         /* 300, 400, 500 */
-    --font-code: 'Noto Sans Mono', monospace;
+    --font-code: "Noto Sans Mono", monospace;
 
     /* Page margin */
     --page-margin: 5rem;
@@ -53,6 +53,9 @@
     --table-even-background: #F2F3F5E6;
     --table-odd-background: #F2F3F599;
 
+    /* Accordion */
+    --summary-color: #D9D9D9;
+
     /* Highlight Colors */
     --prism-background: #EDEDF7;
     --prism-color: #030303;
@@ -87,6 +90,9 @@
     --table-border-color: #757D8A;
     --table-even-background: #303236E6;
     --table-odd-background: #30323699;
+
+    /* Accordion */
+    --summary-color: #242424;
 
     /* Highlight Colors */
     --prism-background: #303236;

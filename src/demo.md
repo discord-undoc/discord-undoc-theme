@@ -32,3 +32,15 @@ a11y checked ofc.
 {::note This is a random note.}
 {::info You know what this reminds me of? Blobs!}
 {::warn ┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻}
+
+### Accordions
+
+{::details 
+The quick brown fox jumps over the lazy dog<summ>
+Hello
+}
+
+{::details-open 
+You can also make it be open by default
+{::details-open Nesting? No problem!}
+}

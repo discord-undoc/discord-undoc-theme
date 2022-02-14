@@ -77,10 +77,6 @@ h6:target::before {
     width: 25px;
 }
 
-sup {
-    vertical-align: super;
-}
-
 code {
     display: inline;
     font-family: var(--font-code);
@@ -129,6 +125,70 @@ blockquote {
     background: var(--alternative-background);
     overflow: hidden;
 }
+
+details {
+    display: block;
+    border-radius: var(--element-border-radius);
+    border-bottom: solid 1px var(--summary-color);
+    background: var(--alternative-background);
+    overflow: hidden;
+    margin: var(--element-padding) 0;
+}
+
+details .d_content {
+    padding: var(--element-padding);
+    height: fit-content;
+}
+
+details summary {
+    display: flex;
+    align-items: center;
+    padding: var(--element-padding);
+    background: var(--summary-color);
+    border-radius: var(--element-border-radius);
+    cursor: pointer;
+}
+
+details > summary::before {
+    display: inline-block;
+    width: calc(var(--element-padding) * 3);
+    height: calc(var(--element-padding) * 3);
+    content: "navigate_next";
+    font-family: "Material Icons";
+    font-size: calc(var(--element-padding) * 3);
+    color: var(--text-muted);
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    background: var(--main-background);
+    border-radius: var(--element-border-radius);
+    padding: var(--element-padding);
+    margin-right: var(--element-padding);
+
+    transition: transform 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+
+details[open] > summary::before {
+    transform: rotate(90deg);
+    border-radius: 50%;
+}
+
+details summary::-webkit-details-marker {
+    content: "";
+    display: none;
+}
+
+details summary::marker {
+    content: "";
+    display: none;
+}
+
 
 table {
     width: 100%;

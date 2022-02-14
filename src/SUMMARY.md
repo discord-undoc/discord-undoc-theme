@@ -11,6 +11,7 @@
 
 # Testing Spam
 
+- [Testing Cases](./edgecases.md)
 - [Start]()
 - [Spam 1]()
   - [Sub Spam 1]()

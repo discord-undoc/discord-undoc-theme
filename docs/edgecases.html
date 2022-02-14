@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Theme for the Unofficial Discord Documentation">
+
+    <meta property="og:title" content="Unofficial Discord Documentation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://discord-undoc.github.io" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
+    <meta property="og:description" content="Theme for the Unofficial Discord Documentation" />
+    <meta name="theme-color" content="#FF0000">
+
+    <title>Unofficial Discord Documentation</title>
+
+
+    
+        <link rel="prerender" href="kbdcombo.html">
+
+
+    <link rel="preload" href="css/variables.css" as="style">
+    <link rel="preload" href="css/general.css" as="style">
+    <link rel="preload" href="css/chrome.css" as="style">
+    <link rel="preload" href="elasticlunr.min.js" as="script">
+    <link rel="preload" href="mark.min.js" as="script">
+    <link rel="preload" href="searcher.js" as="script">
+    <link rel="preload" href="highlight.js" as="script">
+    <link rel="preload" href="book.js" as="script">
+
+    <link rel="icon" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+
+    <link rel="stylesheet" href="highlight.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <script type="text/javascript">
+        const base_url = "";
+        const path_to_root = "";
+        const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+    
+        try {
+            let theme = localStorage.getItem('theme');
+            let sidebar = localStorage.getItem('sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+
+        const theme = localStorage.getItem('theme') || default_theme;
+        let sidebar_state = 'hidden';
+        const html = document.querySelector('html');
+
+        html.classList.remove("dark");
+        html.classList.add(theme);
+
+        if (document.body.clientWidth > 800) {
+            sidebar_state = localStorage.getItem('sidebar') || 'visible'
+        }
+
+        html.classList.remove("sidebar-visible");
+        html.classList.add(`sidebar-${sidebar_state}`);
+    </script>
+    <main class="page">
+        <div class="sidebar noselect">
+            <div class="sb_header">
+                <a href="">
+                    <img src="favicon.png" alt="" srcset="" width="50px" height="50px">
+                        <span>Unofficial Discord Documentation</span>
+                    </img>
+                </a>
+                <script>
+                    document.querySelector('.sb_header a').href = window.location.origin;
+                </script>
+            </div>
+            <div class="search">
+                    <button id="search-toggle" style="display: none;"></button>
+                    <form id="searchbar-outer" class="searchbar-outer" autocomplete="off" spellcheck="false">
+                        <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="search-wrapper" style="display: inherit !important;">
+                        <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
+                            <div id="searchresults-header" class="searchresults-header"></div>
+                            <ul id="searchresults" class="noscrollbar">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="toctree noscrollbar">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Readable Content</li><li class="chapter-item expanded "><a href="demo.html">Custom Elements</a></li><li class="chapter-item expanded "><a href="reference.html">Reference</a></li><li class="chapter-item expanded "><a href="mddemo.html">Markdown</a></li><li class="chapter-item expanded "><a href="kbdcombo.html">Keyboard Shortcuts</a></li><li class="chapter-item expanded affix "><li class="part-title">Testing Spam</li><li class="chapter-item expanded "><a href="edgecases.html" class="active">Testing Cases</a></li><li class="chapter-item expanded "><div>Start</div></li><li class="chapter-item expanded "><div>Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Sub Spam 1</div></li><li class="chapter-item expanded "><div>Sub Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Spam 2</div></li><li class="chapter-item expanded "><div>Spam 3</div></li><li class="chapter-item expanded "><div>Spam 4</div></li><li class="chapter-item expanded "><div>Spam 5</div></li><li class="chapter-item expanded "><div>Spam 6</div></li><li class="chapter-item expanded "><div>Spam 7</div></li><li class="chapter-item expanded "><div>Spam 8</div></li><li class="chapter-item expanded "><div>Spam 9</div></li><li class="chapter-item expanded "><div>Spam 10</div></li><li class="chapter-item expanded "><div>Spam 11</div></li><li class="chapter-item expanded "><div>Spam 12</div></li><li class="chapter-item expanded "><div>Spam 13</div></li><li class="chapter-item expanded "><div>Spam 14</div></li><li class="chapter-item expanded "><div>Spam 15</div></li><li class="chapter-item expanded "><div>Spam 16</div></li><li class="chapter-item expanded "><div>Spam 17</div></li><li class="chapter-item expanded "><div>Spam 18</div></li><li class="chapter-item expanded "><div>Spam 19</div></li><li class="chapter-item expanded "><div>Spam 20</div></li><li class="chapter-item expanded "><div>Spam 21</div></li><li class="chapter-item expanded "><div>Spam 22</div></li><li class="chapter-item expanded "><div>Spam 23</div></li><li class="chapter-item expanded "><div>Spam 24</div></li><li class="chapter-item expanded "><div>Spam 25</div></li><li class="chapter-item expanded "><div>Spam 27</div></li><li class="chapter-item expanded "><div>Spam 28</div></li><li class="chapter-item expanded "><div>Spam 29</div></li><li class="chapter-item expanded "><div>Spam 30</div></li><li class="chapter-item expanded "><div>Spam 31</div></li><li class="chapter-item expanded "><div>Spam 32</div></li><li class="chapter-item expanded "><div>Spam 33</div></li><li class="chapter-item expanded "><div>Spam 34</div></li><li class="chapter-item expanded "><div>Spam 35</div></li><li class="chapter-item expanded "><div>END</div></li></ol>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="sidebartoggle noselect">
+                <span class="material-icons round">menu</span>
+            </div>
+            <div class="settings noselect">
+                <div class="themetoggle">
+                    <span class="material-icons round">format_paint</span>
+                </div>
+                <a class="gitedit" href="https://github.com/discord-undoc/discord-undoc-theme/edit/master/src/edgecases.md" target="_blank">
+                    <span class="material-icons round">edit</span>
+                </a>
+                <a class="giturl" href="https://github.com/discord-undoc/discord-undoc-theme" target="_blank">
+                    <span class="material-icons round">source</span>
+                </a>
+            </div>
+            <div class="chapter-contents">
+                <br class="noselect">
+                <br class="noselect">
+                <h1 id="testing-cases"><a class="header" href="#testing-cases">Testing Cases</a></h1>
+<div class="info">These are just tests and very rare to occur in reality</div>
+<br>
+<p><code>{::get /some/endpoint {::undoc}}</code> - works<br />
+<b class="endpoint"><span class="endpoint-c"><span class="http-method get">GET</span> /some/endpoint <b class="undoc"><b class="material-icons round">article</b></b></span></b></p>
+<br>
+<p><code>{::note hello {::details-open hello}}</code> - works</p>
+<div class="note">hello <details open><summary></summary><div class="d_content">hello</div></details></div>
+<br>
+<p><code>{::user arHSM#5682-841509053422632990-06909e938b7a97344ba99498bbc5e9e6 {::undoc}}</code> - indicator not displaying<br />
+<a href="https://discord.com/users/841509053422632990" class="user"><img src="https://cdn.discordapp.com/avatars/841509053422632990/06909e938b7a97344ba99498bbc5e9e6.webp" alt="arHSM's avatar" class="avatar" width="25px" height="25px">arHSM<span>#5682</span></img></a></p>
+<br>
+<p><code>{::note hi {::info hrm {::warn wha}}}</code> - works but a11y go brrrrr</p>
+<div class="note">hi <div class="info">hrm <div class="warn">wha</div></div></div>
+<br>
+<p><code>{::undoc {::nobot}}</code> - faulty rendering<br />
+(‘undoc’, ‘<b class="nobot"><b class="material-icons round">smart_toy</b></b>’)</p>
+<br>
+<br>
+<p>And I’m too lazy to think of more weird cases, so lets call it a day!</p>
+
+            </div>
+            <div class="navigation">
+                <a href="kbdcombo.html" class="nav prev">
+                    <div class="nav-button prev">
+                        <span class="material-icons round">arrow_back_ios_new</span>
+                    </div>
+                    <span class="nav-title">Keyboard Shortcuts</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3000/__livereload");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
+
+    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="book.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

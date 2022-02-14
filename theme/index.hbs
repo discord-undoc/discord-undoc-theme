@@ -21,6 +21,14 @@
 
     {{> head}}
 
+    {{#previous}}
+        <link rel="prerender" href="{{ link }}">
+    {{/previous}}
+
+    {{#next}}
+        <link rel="prerender" href="{{ link }}">
+    {{/next}}
+
     <link rel="preload" href="{{ path_to_root }}css/variables.css" as="style">
     <link rel="preload" href="{{ path_to_root }}css/general.css" as="style">
     <link rel="preload" href="{{ path_to_root }}css/chrome.css" as="style">

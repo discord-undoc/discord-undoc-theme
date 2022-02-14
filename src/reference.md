@@ -41,6 +41,12 @@ Alert Boxes:
 - Format: `{::(note|info|warn) (CONTENT)}`
 - Exaple: `{::note Hi!}` {::note Hi!}
 
+<br>
+
+Accordins:
+- Format: `{::(details|details-open) (SUMMARY-optional)<summ>-optional(CONTENT)}`
+- Example: `{::details-open Hello}` {::details-open Hello}
+
 ## Examples of faulty rendering
 
 `{::undoc hello}` -> {::undoc hello}
