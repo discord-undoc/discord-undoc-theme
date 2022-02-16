@@ -129,7 +129,8 @@
 <li>The type</li>
 <li>The content</li>
 </ol>
-<div class="warn">Some elements <b>do not</b> require any content.</div>
+<div class="warn"><p>Some elements <b>do not</b> require any content.</p>
+</div>
 <p>The format is: <code>{::(TYPE) (CONTENT)}</code></p>
 <ul>
 <li>The <code>TYPE</code> and the <code>CONTENT</code> must be separated by a space (<code> </code>)</li>
@@ -137,7 +138,8 @@
 <li>Element types are case sensitive.</li>
 </ul>
 <h2 id="formats-and-examples"><a class="header" href="#formats-and-examples">Formats and Examples</a></h2>
-<div class="info">Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering</div>
+<div class="info"><p>Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering</p>
+</div>
 <p>User Badge:</p>
 <ul>
 <li>Format: <code>{::user (USERNAME#DISCRIMINATOR)-(USER_ID)-(AVATAR_HASH)}</code></li>
@@ -160,14 +162,16 @@
 <p>Alert Boxes:</p>
 <ul>
 <li>Format: <code>{::(note|info|warn) (CONTENT)}</code></li>
-<li>Exaple: <code>{::note Hi!}</code> <div class="note">Hi!</div></li>
+<li>Exaple: <code>{::note Hi!}</code> <div class="note"><p>Hi!</p></li>
 </ul>
+</div>
 <br>
 <p>Accordins:</p>
 <ul>
 <li>Format: <code>{::(details|details-open) (SUMMARY-optional)&lt;summ&gt;-optional(CONTENT)}</code></li>
-<li>Example: <code>{::details-open Hello}</code> <details open><summary></summary><div class="d_content">Hello</div></details></li>
+<li>Example: <code>{::details-open Hello}</code> <details open><summary></summary><div class="d_content"><p>Hello</p></li>
 </ul>
+</div></details>
 <h2 id="examples-of-faulty-rendering"><a class="header" href="#examples-of-faulty-rendering">Examples of faulty rendering</a></h2>
 <p><code>{::undoc hello}</code> -&gt; (‘undoc’, ‘hello’)</p>
 <p><code>{::note}</code> -&gt; note</p>
@@ -194,6 +198,20 @@
         </div>
     </main>
 
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3000/__livereload");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

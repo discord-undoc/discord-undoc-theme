@@ -123,7 +123,8 @@
                 <br class="noselect">
                 <br class="noselect">
                 <h1 id="custom-elements"><a class="header" href="#custom-elements">Custom Elements</a></h1>
-<div class="note">Check out [./reference.md](./reference.md) for more info.</div>
+<div class="note"><p>Check out <a href="./reference.html">./reference.md</a> for more info.</p>
+</div>
 <h3 id="user-badges"><a class="header" href="#user-badges">User Badges</a></h3>
 <p>User: <a href="https://discord.com/users/841509053422632990" class="user"><img src="https://cdn.discordapp.com/avatars/841509053422632990/06909e938b7a97344ba99498bbc5e9e6.webp" alt="arHSM's avatar" class="avatar" width="25px" height="25px">arHSM<span>#5682</span></img></a><br />
 User (animated avatar): <a href="https://discord.com/users/755792681313108018" class="user"><img src="https://cdn.discordapp.com/avatars/755792681313108018/a_90be0df51f8cf7dc36bec9cb1ad1459c.gif" alt="Rydix's avatar" class="avatar" width="25px" height="25px">Rydix<span>#1726</span></img></a></p>
@@ -143,17 +144,19 @@ Not for bots: <b class="nobot"><b class="material-icons round">smart_toy</b></b>
 Ian Deploy™: <b class="iandeploy"><b class="material-icons round">rocket_launch</b></b></p>
 <h3 id="alert-boxes"><a class="header" href="#alert-boxes">Alert boxes</a></h3>
 <p>a11y checked ofc.</p>
-<div class="note">This is a random note.</div>
-<div class="info">You know what this reminds me of? Blobs!</div>
-<div class="warn">┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻</div>
+<div class="note"><p>This is a random note.</p>
+</div>
+<div class="info"><p>You know what this reminds me of? Blobs!</p>
+</div>
+<div class="warn"><p>┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻</p>
+</div>
 <h3 id="accordions"><a class="header" href="#accordions">Accordions</a></h3>
-<details ><summary>
-The quick brown fox jumps over the lazy dog</summary><div class="d_content">
-Hello
+<details ><summary><p>The quick brown fox jumps over the lazy dog</p>
+</summary><div class="d_content"><p>Hello</p>
 </div></details>
-<details open><summary></summary><div class="d_content">
-You can also make it be open by default
-<details open><summary></summary><div class="d_content">Nesting? No problem!</div></details>
+<details open><summary></summary><div class="d_content"><p>You can also make it be open by default
+<span><details open><summary></summary><div class="d_content"><p>Nesting? No problem!</p></p>
+</div></details></span>
 </div></details>
 
             </div>
@@ -175,6 +178,20 @@ You can also make it be open by default
         </div>
     </main>
 
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3000/__livereload");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

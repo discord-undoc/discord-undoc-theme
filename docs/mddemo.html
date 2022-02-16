@@ -125,7 +125,8 @@
                 <h1 id="markdown-demo"><a class="header" href="#markdown-demo">Markdown Demo</a></h1>
 <h2 id="code-block"><a class="header" href="#code-block">Code Block</a></h2>
 <p><strong>Prism w/ custom a11y colors</strong></p>
-<div class="info">Most colors in light mode do not meet `WCAG AAA` requirements but they do comply with `WCAG AA`</div>
+<div class="info"><p>Most colors in light mode do not meet <code>WCAG AAA</code> requirements but they do comply with <code>WCAG AA</code></p>
+</div>
 <pre><code class="language-js">var var1 = &quot;This is Awesome&quot;;
 var var2 = 12345;
 document.innerHTML(&quot;Just to show Theme Colors...&quot;);
@@ -329,6 +330,20 @@ Incomplete task</li>
         </div>
     </main>
 
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3000/__livereload");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

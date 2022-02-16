@@ -122,22 +122,28 @@
                 <br class="noselect">
                 <br class="noselect">
                 <h1 id="testing-cases"><a class="header" href="#testing-cases">Testing Cases</a></h1>
-<div class="info">These are just tests and very rare to occur in reality</div>
+<div class="info"><p>These are just tests and very rare to occur in reality</p>
+</div>
 <br>
 <p><code>{::get /some/endpoint {::undoc}}</code> - works<br />
-<b class="endpoint"><span class="endpoint-c"><span class="http-method get">GET</span> /some/endpoint <b class="undoc"><b class="material-icons round">article</b></b></span></b></p>
+<b class="endpoint"><span class="endpoint-c"><span class="http-method get">GET</span> /some/endpoint <span><b class="undoc"><b class="material-icons round">article</b></b></span></span></b></p>
 <br>
 <p><code>{::note hello {::details-open hello}}</code> - works</p>
-<div class="note">hello <details open><summary></summary><div class="d_content">hello</div></details></div>
+<div class="note"><p>hello <span><details open><summary></summary><div class="d_content"><p>hello</p></p>
+</div></details></span>
+</div>
 <br>
 <p><code>{::user arHSM#5682-841509053422632990-06909e938b7a97344ba99498bbc5e9e6 {::undoc}}</code> - indicator not displaying<br />
 <a href="https://discord.com/users/841509053422632990" class="user"><img src="https://cdn.discordapp.com/avatars/841509053422632990/06909e938b7a97344ba99498bbc5e9e6.webp" alt="arHSM's avatar" class="avatar" width="25px" height="25px">arHSM<span>#5682</span></img></a></p>
 <br>
 <p><code>{::note hi {::info hrm {::warn wha}}}</code> - works but a11y go brrrrr</p>
-<div class="note">hi <div class="info">hrm <div class="warn">wha</div></div></div>
+<div class="note"><p>hi <span><div class="info"><p>hrm <span><div class="warn"><p>wha</p></p></p>
+</div></span>
+</div></span>
+</div>
 <br>
 <p><code>{::undoc {::nobot}}</code> - faulty rendering<br />
-(‘undoc’, ‘<b class="nobot"><b class="material-icons round">smart_toy</b></b>’)</p>
+(‘undoc’, ‘<span><b class="nobot"><b class="material-icons round">smart_toy</b></b></span>’)</p>
 <br>
 <br>
 <p>And I’m too lazy to think of more weird cases, so lets call it a day!</p>
@@ -154,6 +160,20 @@
         </div>
     </main>
 
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3000/__livereload");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

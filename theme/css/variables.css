@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,400;125,500;125,600;125,700;125,800;125,900&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+Mono:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@105,400;105,500;105,600;105,700;105,800;105,900&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+Mono:wght@300;400;500&display=swap");
 
-/* https://fonts.google.com/share?selection.family=Archivo:wdth,wght@125,400;125,500;125,600;125,700;125,800;125,900|Montserrat:wght@400;500;600;700;800;900|Noto+Sans+Mono:wght@300;400;500 */
+/* https://fonts.google.com/share?selection.family=Archivo:wdth,wght@105,400;105,500;105,600;105,700;105,800;105,900|Montserrat:wght@400;500;600;700;800;900|Noto+Sans+Mono:wght@300;400;500 */
 
 :root {
     /* Colors */
     --brand-color: #5865F2;
-    
-    /* Alert Box borders */
+    /* Aert Box borders */
     --note-border-color: #5865F2;
     --info-border-color: #FEE75C;
     --warn-border-color: #ED4245;
