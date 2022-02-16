@@ -11,12 +11,14 @@
     <meta property="og:url" content="http://discord-undoc.github.io" />
     <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
     <meta property="og:description" content="{{ description }}" />
-    <meta name="theme-color" content="#FF0000">
+    <meta name="theme-color" content="#FD745E">
 
     <title>{{ book_title }}</title>
 
     {{#if base_url }}
-    <base href="{{ base_url }}">
+    <base href="{{ base_url }}" target="_blank">
+    {{else}}
+    <base target="_blank">
     {{/if}}
 
     {{> head}}
