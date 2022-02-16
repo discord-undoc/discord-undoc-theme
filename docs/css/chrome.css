@@ -25,14 +25,11 @@
 }
 
 .page-content {
-    position: relative;
-    min-height: 100vh;
-    height: 100%;
     width: calc(100% - var(--sidebar-width) - (var(--page-margin) * 2));
     line-height: 1.5rem;
     margin-left: calc(var(--page-margin) + var(--sidebar-width));
     overflow: hidden;
-    padding: calc(var(--element-padding) * 2) 0 calc(var(--element-padding) * 2 + var(--footer-height)) 0;
+    padding: calc(var(--element-padding) * 2) 0 0;
     transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
 }
 
@@ -54,6 +51,10 @@ html.sidebar-hidden .page-content {
 .page-content img,
 .page-content video {
     max-width: 100%;
+}
+
+.chapter-contents {
+    min-height: calc(100vh - var(--footer-height) - var(--element-padding) * 2);
 }
 
 /* User Badges */
@@ -436,12 +437,10 @@ html.sidebar-hidden .sidebartoggle {
 /* Navigation */
 
 .navigation {
-    position: absolute;
     display: flex;
     align-items: center;
     width: 100%;
     height: var(--footer-height);
-    bottom: 0;
     padding: var(--element-padding);
 }
 
