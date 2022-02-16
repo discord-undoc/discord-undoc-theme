@@ -3,7 +3,9 @@ from __future__ import annotations
 import json
 import re
 import sys
-from typing import Callable
+from typing import Callable  
+import string  
+import secrets
 
 from mistletoe import markdown
 
@@ -35,28 +37,32 @@ def e_http_method(data: tuple[str, str]) -> str:
 
 def e_alert_box(data: tuple[str, str]) -> str:
     name, content = data
-    content = markdown(content)
+    content = markdown(content)[0:-1]
     return f'<div class="{name}">{content}</div>'
 
 
-def e_details(data: tuple[str, str], open=False) -> str:
+def e_details(data: tuple[str, str], dopen=False) -> str:
     element = data[1].split("<summ>", 1)
     if len(element) == 1:
         summary, content = ("", element[0])
     else:
         summary, content = element
 
-    summary = markdown(summary)
-    content = markdown(content)
+    summary = markdown(summary)[0:-1]
+    content = markdown(content)[0:-1]
 
     return (
-        f'<details {"open" if open else ""}><summary>{summary}</summary>'
+        f'<details {"open" if dopen else ""}><summary>{summary}</summary>'
         f'<div class="d_content">{content}</div></details>'
     )
 
 
 def e_details_open(data: tuple[str, str]) -> str:
-    return e_details(data, open=True)
+    return e_details(data, dopen=True)
+
+def e_spoilers(data: tuple[str, str]) -> str:
+    res = ''.join(secrets.choice(string.ascii_letters) for _ in range(10))
+    return f'<input type="checkbox" class="spoiler" id="{res}"><label for="{res}">{data[1]}</label>'
 
 
 STATIC_ELEMENTS = {
@@ -81,6 +87,7 @@ DYNAMIC_ELEMENTS: dict[str, Callable[[tuple[str, str]], str]] = {
     "warn": e_alert_box,
     "details": e_details,
     "details-open": e_details_open,
+    "spoiler": e_spoilers,
 }
 
 
@@ -92,23 +99,23 @@ class Element:
     text: str
 
     def parse_element(self, data: str) -> str:
-        elem = STATIC_ELEMENTS.get(data[6:-7], None)
+        elem = STATIC_ELEMENTS.get(data, None)
 
         if " " not in data and elem is None:
-            return data[6:-7]
+            return data
 
         if elem is None:
-            tag, p_data = data[6:-7].split(" ", 1)
+            tag, p_data = data.split(" ", 1)
             elem = DYNAMIC_ELEMENTS.get(tag, str)((tag, p_data))
         return elem
 
     def scan_element(self, index: int) -> tuple[int, str]:
-        element_data = "<span>"
+        element_data = ""
         while index < len(self.text):
             if self.text[index : index + 3] == "{::":
                 index, content = self.scan_element(index + 3)
                 index += 1
-                element_data += f"<span>{content}</span>"
+                element_data += content
 
             if self.text[index] == "}":
                 break
@@ -116,7 +123,6 @@ class Element:
             element_data += self.text[index]
             index += 1
 
-        element_data += "</span>"
         return index, self.parse_element(element_data)
 
     def scanner(self) -> str:

@@ -1,3 +1,10 @@
+(() => {
+    const toctree = document.querySelectorAll('.toctree a');
+    toctree.forEach(a => {
+        a.setAttribute('target', '_self');
+    });
+})();
+
 function toggle(remove, add, id, value) {
     html.classList.remove(remove);
     html.classList.add(add);
@@ -6,7 +13,7 @@ function toggle(remove, add, id, value) {
     } catch (e) {}
 }
 
-(function sidebarToggle() {
+(() => {
     const sidebar_toggle = document.querySelector('.sidebartoggle');
 
     sidebar_toggle.addEventListener('click', function sidebarToggle() {
@@ -18,7 +25,7 @@ function toggle(remove, add, id, value) {
     });
 })();
 
-(function themeToggle() {
+(() => {
     const theme_toggle = document.querySelector('.themetoggle');
 
     theme_toggle.addEventListener('click', function themeToggle() {
@@ -30,7 +37,7 @@ function toggle(remove, add, id, value) {
     });
 })();
 
-(function chapterKeyCombos() {
+(() => {
     document.addEventListener('keydown', function(h) {
         if (window.search && window.search.hasFocus()) { return; }
         if (h.altKey || h.ctrlKey || h.metaKey || h.shiftKey) { return; }

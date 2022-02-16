@@ -11,10 +11,11 @@
     <meta property="og:url" content="http://discord-undoc.github.io" />
     <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
     <meta property="og:description" content="Theme for the Unofficial Discord Documentation" />
-    <meta name="theme-color" content="#FF0000">
+    <meta name="theme-color" content="#FD745E">
 
     <title>Unofficial Discord Documentation</title>
 
+    <base target="_blank">
 
     
         <link rel="prerender" href="demo.html">
@@ -129,8 +130,7 @@
 <li>The type</li>
 <li>The content</li>
 </ol>
-<div class="warn"><p>Some elements <b>do not</b> require any content.</p>
-</div>
+<div class="warn"><p>Some elements <b>do not</b> require any content.</p></div>
 <p>The format is: <code>{::(TYPE) (CONTENT)}</code></p>
 <ul>
 <li>The <code>TYPE</code> and the <code>CONTENT</code> must be separated by a space (<code> </code>)</li>
@@ -138,8 +138,7 @@
 <li>Element types are case sensitive.</li>
 </ul>
 <h2 id="formats-and-examples"><a class="header" href="#formats-and-examples">Formats and Examples</a></h2>
-<div class="info"><p>Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering</p>
-</div>
+<div class="info"><p>Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering</p></div>
 <p>User Badge:</p>
 <ul>
 <li>Format: <code>{::user (USERNAME#DISCRIMINATOR)-(USER_ID)-(AVATAR_HASH)}</code></li>
@@ -162,16 +161,14 @@
 <p>Alert Boxes:</p>
 <ul>
 <li>Format: <code>{::(note|info|warn) (CONTENT)}</code></li>
-<li>Exaple: <code>{::note Hi!}</code> <div class="note"><p>Hi!</p></li>
+<li>Exaple: <code>{::note Hi!}</code> <div class="note"><p>Hi!</p></div></li>
 </ul>
-</div>
 <br>
 <p>Accordins:</p>
 <ul>
 <li>Format: <code>{::(details|details-open) (SUMMARY-optional)&lt;summ&gt;-optional(CONTENT)}</code></li>
-<li>Example: <code>{::details-open Hello}</code> <details open><summary></summary><div class="d_content"><p>Hello</p></li>
+<li>Example: <code>{::details-open Hello}</code> <details open><summary></summary><div class="d_content"><p>Hello</p></div></details></li>
 </ul>
-</div></details>
 <h2 id="examples-of-faulty-rendering"><a class="header" href="#examples-of-faulty-rendering">Examples of faulty rendering</a></h2>
 <p><code>{::undoc hello}</code> -&gt; (‘undoc’, ‘hello’)</p>
 <p><code>{::note}</code> -&gt; note</p>

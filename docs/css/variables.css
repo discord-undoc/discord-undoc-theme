@@ -55,6 +55,10 @@
     /* Accordion */
     --summary-color: #D9D9D9;
 
+    /* Spoiler */
+    --s-hidden-background: #EDEDF7;
+    --s-visible-background: #EDEDF799;
+
     /* Highlight Colors */
     --prism-background: #EDEDF7;
     --prism-color: #030303;
@@ -92,6 +96,10 @@
 
     /* Accordion */
     --summary-color: #242424;
+
+    /* Spoiler */
+    --s-hidden-background: #303236;
+    --s-visible-background: #30323699;
 
     /* Highlight Colors */
     --prism-background: #303236;

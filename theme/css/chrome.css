@@ -187,6 +187,39 @@ html.sidebar-hidden .page-content {
 .info { border: solid 2px var(--info-border-color); background: var(--info-background); }
 .warn { border: solid 2px var(--warn-border-color); background: var(--warn-background); }
 
+/* Spoliers */
+
+input.spoiler {
+    appearance: none;
+    width: 0;
+    height: 0;
+}
+
+input.spoiler + label {
+    border-radius: var(--element-border-radius);
+    padding: 0 var(--element-padding);
+    background: var(--s-hidden-background);
+    color: var(--alternative-background);
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input:checked + label {
+    background: var(--s-visible-background);
+    color: var(--text-primary);
+    -webkit-touch-callout: inherit;
+    -webkit-user-select: inherit;
+    -khtml-user-select: inherit;
+    -moz-user-select: inherit;
+    -ms-user-select: inherit;
+    user-select: inherit;
+}
+
 /* Sidebar */
 
 .sidebar {

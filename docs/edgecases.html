@@ -11,10 +11,11 @@
     <meta property="og:url" content="http://discord-undoc.github.io" />
     <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
     <meta property="og:description" content="Theme for the Unofficial Discord Documentation" />
-    <meta name="theme-color" content="#FF0000">
+    <meta name="theme-color" content="#FD745E">
 
     <title>Unofficial Discord Documentation</title>
 
+    <base target="_blank">
 
     
         <link rel="prerender" href="kbdcombo.html">
@@ -122,28 +123,22 @@
                 <br class="noselect">
                 <br class="noselect">
                 <h1 id="testing-cases"><a class="header" href="#testing-cases">Testing Cases</a></h1>
-<div class="info"><p>These are just tests and very rare to occur in reality</p>
-</div>
+<div class="info"><p>These are just tests and very rare to occur in reality</p></div>
 <br>
 <p><code>{::get /some/endpoint {::undoc}}</code> - works<br />
-<b class="endpoint"><span class="endpoint-c"><span class="http-method get">GET</span> /some/endpoint <span><b class="undoc"><b class="material-icons round">article</b></b></span></span></b></p>
+<b class="endpoint"><span class="endpoint-c"><span class="http-method get">GET</span> /some/endpoint <b class="undoc"><b class="material-icons round">article</b></b></span></b></p>
 <br>
 <p><code>{::note hello {::details-open hello}}</code> - works</p>
-<div class="note"><p>hello <span><details open><summary></summary><div class="d_content"><p>hello</p></p>
-</div></details></span>
-</div>
+<div class="note"><p>hello <details open><summary></summary><div class="d_content"><p>hello</p></div></details></p></div>
 <br>
 <p><code>{::user arHSM#5682-841509053422632990-06909e938b7a97344ba99498bbc5e9e6 {::undoc}}</code> - indicator not displaying<br />
 <a href="https://discord.com/users/841509053422632990" class="user"><img src="https://cdn.discordapp.com/avatars/841509053422632990/06909e938b7a97344ba99498bbc5e9e6.webp" alt="arHSM's avatar" class="avatar" width="25px" height="25px">arHSM<span>#5682</span></img></a></p>
 <br>
 <p><code>{::note hi {::info hrm {::warn wha}}}</code> - works but a11y go brrrrr</p>
-<div class="note"><p>hi <span><div class="info"><p>hrm <span><div class="warn"><p>wha</p></p></p>
-</div></span>
-</div></span>
-</div>
+<div class="note"><p>hi <div class="info"><p>hrm <div class="warn"><p>wha</p></div></p></div></p></div>
 <br>
 <p><code>{::undoc {::nobot}}</code> - faulty rendering<br />
-(‘undoc’, ‘<span><b class="nobot"><b class="material-icons round">smart_toy</b></b></span>’)</p>
+(‘undoc’, ‘<b class="nobot"><b class="material-icons round">smart_toy</b></b>’)</p>
 <br>
 <br>
 <p>And I’m too lazy to think of more weird cases, so lets call it a day!</p>

@@ -9,15 +9,15 @@ User (animated avatar): {::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc
 
 ### HTTP Stuff
 
-{::get /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::head /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::post /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::put /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::delete /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::connect /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::options /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::trace /some/endpoint} {::nobot} {::undoc} {::iandeploy}\
-{::patch /some/endpoint} {::nobot} {::undoc} {::iandeploy} 
+{::get /some/endpoint}\
+{::head /some/endpoint}\
+{::post /some/endpoint}\
+{::put /some/endpoint}\
+{::delete /some/endpoint}\
+{::connect /some/endpoint}\
+{::options /some/endpoint}\
+{::trace /some/endpoint}\
+{::patch /some/endpoint}
 
 ### Indicators
 
@@ -44,3 +44,7 @@ Hello
 You can also make it be open by default
 {::details-open Nesting? No problem!}
 }
+
+## Spoilers
+
+Lorem ipsum dolor sit amet, consectetur adipiscing {::spoiler something} elit. Sed turpis erat, tempor a vehicula a, ullamcorper vel augue. Vivamus eget elementum ex, ullamcorper interdum neque. {::spoiler stuff}
