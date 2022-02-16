@@ -3,9 +3,8 @@ from __future__ import annotations
 import json
 import re
 import sys
-from typing import Callable  
-import string  
-import secrets
+from time import monotonic
+from typing import Callable
 
 from mistletoe import markdown
 
@@ -61,8 +60,8 @@ def e_details_open(data: tuple[str, str]) -> str:
     return e_details(data, dopen=True)
 
 def e_spoilers(data: tuple[str, str]) -> str:
-    res = ''.join(secrets.choice(string.ascii_letters) for _ in range(10))
-    return f'<input type="checkbox" class="spoiler" id="{res}"><label for="{res}">{data[1]}</label>'
+    sid = str(monotonic()).replace(".", "")
+    return f'<input type="checkbox" class="spoiler" id="spoiler-{sid}"><label for="spoiler-{sid}">{data[1]}</label>'
 
 
 STATIC_ELEMENTS = {

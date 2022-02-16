@@ -197,7 +197,7 @@ input.spoiler {
 
 input.spoiler + label {
     border-radius: var(--element-border-radius);
-    padding: 0 var(--element-padding);
+    padding: 2px var(--element-padding);
     background: var(--s-hidden-background);
     color: var(--alternative-background);
     cursor: pointer;

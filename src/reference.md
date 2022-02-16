@@ -43,9 +43,13 @@ Alert Boxes:
 
 <br>
 
-Accordins:
+Accordions:
 - Format: `{::(details|details-open) (SUMMARY-optional)<summ>-optional(CONTENT)}`
 - Example: `{::details-open Hello}` {::details-open Hello}
+
+Spoilers:
+- Format: `{::spoiler (CONTENT)}`
+- Example: `{::spoiler this is a spoiler}` {::spoiler this is a spoiler}
 
 ## Examples of faulty rendering
 
