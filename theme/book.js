@@ -1,5 +1,5 @@
 (() => {
-    const toctree = document.querySelectorAll('.toctree a');
+    const toctree = document.querySelectorAll('.sidebar a');
     toctree.forEach(a => {
         a.setAttribute('target', '_self');
     });
