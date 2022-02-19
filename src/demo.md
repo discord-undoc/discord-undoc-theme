@@ -31,7 +31,7 @@ a11y checked ofc.
 
 {::note This is a random note.}
 {::info You know what this reminds me of? Blobs!}
-{::warn ┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻}
+{::warn ┻━┻ ︵ヽ(\`Д´)ﾉ︵﻿ ┻━┻}
 
 ### Accordions
 
@@ -43,6 +43,42 @@ Hello
 {::details-open 
 You can also make it be open by default
 {::details-open Nesting? No problem!}
+}
+
+{::details 
+**components.json**<summ>
+
+{::details 
+{::get }<summ>
+```json
+{
+    "page": {
+        "id": "srhpyqt94yxb",
+        "name": "Discord",
+        "url": "https://discordstatus.com",
+        "time_zone": "America/Tijuana",
+        "updated_at": "2022-02-15T13:37:37.407-08:00"
+    },
+    "components": [
+        {
+            "id": "rhznvxg4v7yh",
+            "name": "API",
+            "status": "operational",
+            "created_at": "2015-07-30T18:55:43.739-07:00",
+            "updated_at": "2022-02-15T13:21:55.150-08:00",
+            "position": 1,
+            "description": "The API is responsible for sending and receiving messages, and general operations on the platform. If this is down, chances are you'll have trouble connecting and/or sending messages.",
+            "showcase": true,
+            "start_date": null,
+            "group_id": null,
+            "page_id": "srhpyqt94yxb",
+            "group": false,
+            "only_show_if_degraded": false
+        }
+    ]
+}
+```
+}
 }
 
 ## Spoilers

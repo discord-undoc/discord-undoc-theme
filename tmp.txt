@@ -1,3 +1,0 @@
-<details ><summary><p>something</p></summary><div class="d_content"><pre><code class="language-json">{
-    &quot;hello&quot;: &quot;world&quot;
-</code></pre></div></details>

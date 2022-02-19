@@ -128,7 +128,7 @@ class Element:
                 index += 1
                 element_data += content
 
-            if self.text[index] == "`":
+            if self.text[index] == "`" and self.text[index - 1] != "\\":
                 tmp_prev, index = self.get_len(index)
                 element_data += tmp_prev
                 if prev == tmp_prev:
@@ -152,7 +152,7 @@ class Element:
         ignore = False
         prev = ""
         while index < len(self.text):
-            if self.text[index] == "`":
+            if self.text[index] == "`" and self.text[index - 1] != "\\":
                 tmp_prev, index = self.get_len(index)
                 text += tmp_prev
                 if prev == tmp_prev:
