@@ -38,16 +38,6 @@ html.sidebar-hidden .page-content {
     margin-left: var(--page-margin);
 }
 
-.page-content h1,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-    margin-top: calc(var(--element-padding) * 3);
-    margin-bottom: calc(var(--element-padding) * 3);
-}
-
 .page-content img,
 .page-content video {
     max-width: 100%;
@@ -134,7 +124,7 @@ html.sidebar-hidden .page-content {
 
 .endpoint {
     display: inline-block;
-    padding: var(--element-padding) 0;
+    padding: calc(var(--element-padding) / 2) 0;
 }
 
 .endpoint-c {
@@ -144,7 +134,7 @@ html.sidebar-hidden .page-content {
 
 .http-method {
     font-size: 0.75rem;
-    padding: var(--element-padding);
+    padding: calc(var(--element-padding) / 2) var(--element-padding);
     margin-right: var(--element-padding);
     border-radius: var(--element-border-radius);
 }
