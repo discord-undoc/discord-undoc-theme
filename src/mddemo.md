@@ -230,3 +230,7 @@ TODO:
 > > > To any possible amount
 >
 > But, they start to look ugly
+
+## KBD Element (IK not markdown, but meh)
+
+Lorem ipsum dolor <kbd>d</kbd> sit amet, consectetur <kbd>e</kbd> adipiscing elit. Nunc fermentum <kbd>e</kbd> quis sapien quis pellentesque. Phasellus vitae congue <kbd>z</kbd> mauris. Etiam neque leo, vehicula ac varius vitae, fringilla <kbd>space</kbd> eu metus. Fusce semper leo a ante mattis, at rhoncus arcu consequat. <kbd>n</kbd> In hac habitasse platea dictumst. Praesent <kbd>u</kbd> facilisis accumsan nisi non elementum. Aenean sed <kbd>t</kbd> eleifend mi, ut consectetur sapien. Pellentesque ut tellus ac mauris lobortis varius non in nunc. Donec <kbd>s</kbd> posuere, nisi et viverra condimentum, nulla tortor volutpat urna, eget lacinia odio eros ac ante. Nullam ullamcorper tortor at nulla pretium placerat. Maecenas luctus vulputate est, in porttitor magna ullamcorper in.

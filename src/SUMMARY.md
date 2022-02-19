@@ -7,7 +7,7 @@
 - [Custom Elements](./demo.md)
 - [Reference](./reference.md)
 - [Markdown](./mddemo.md)
-- [Keyboard Shortcuts](./kbdcombo.md)
+- [Navigation](./kbdcombo.md)
 
 # Testing Spam
 

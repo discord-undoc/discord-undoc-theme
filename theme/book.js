@@ -65,6 +65,14 @@ function toggle(remove, add, id, value) {
                     toggle('sidebar-hidden', 'sidebar-visible', 'sidebar', 'visible');
                 }
                 break
+            case 'e':
+                const edit = document.querySelector('.gitedit');
+                edit.click();
+                break
+            case 'r':
+                const repo = document.querySelector('.giturl');
+                repo.click();
+                break
         };
     });
 })();

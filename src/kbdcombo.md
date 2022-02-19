@@ -1,13 +1,38 @@
 # Keyboard Shortcuts
 
-1. Toggle sidebar   - <kbd>k</kbd>
-2. Change theme     - <kbd>t</kbd>
-3. Search           - <kbd>s</kbd>
-4. Previous Chapter - <kbd>←</kbd>
-5. Next Chapter     - <kbd>→</kbd>
+|  Name            | Key          |
+|------------------|--------------|
+| Toggle sidebar   | <kbd>k</kbd> |
+| Change theme     | <kbd>t</kbd> |
+| Edit Chapter     | <kbd>e</kbd> |
+| View Repository  | <kbd>r</kbd> |
+| Search           | <kbd>s</kbd> |
+| Previous Chapter | <kbd>←</kbd> |
+| Next Chapter     | <kbd>→</kbd> |
+
+# Manual Navigation
+
+**Sidebar Toggle**
+
+![Sidebar Toggle](./assets/sidebar_toggle.png)
 
 <br>
 
-Lorem ipsum dolor <kbd>d</kbd> sit amet, consectetur adipiscing elit. <kbd>e</kbd> Quisque sit amet arcu sagittis, convallis <kbd>e</kbd> libero non, volutpat eros. Sed orci urna, eleifend sed porta <kbd>z</kbd> ultricies, faucibus a ipsum. Morbi vel justo lacinia, facilisis leo nec, iaculis odio. Praesent posuere <kbd>n</kbd> arcu et magna vestibulum, viverra venenatis nisi <kbd>u</kbd> scelerisque. Pellentesque quis vehicula augue. Integer porta mi <kbd>t</kbd> nunc, vitae accumsan est consequat vestibulum. Nullam ante velit, imperdiet a auctor quis, eleifend vitae <kbd>s</kbd> libero.
+**Theme Toggle**\
+**Edit Chpater**\
+**View Repository**
 
-Curabitur egestas nisi nec maximus posuere. Curabitur congue quam lorem, non gravida neque mattis eget. Nulla dolor lorem, mattis ut odio id, viverra vestibulum quam. Maecenas a pulvinar nunc, in.
+![Settings Panel](./assets/settings_panel.png)
+
+<br>
+
+**Search**
+
+![Search](./assets/search.png)
+
+<br>
+
+**Previous Chapter - Next Chapter**
+
+![Chapter Navigation](./assets/chapter_navigation.png)
+

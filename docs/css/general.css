@@ -241,11 +241,13 @@ input[type="checkbox"]:checked {
 
 kbd {
     display: inline-block;
+    position: relative;
+    top: -1px;
     background: var(--alternative-background);
     border-radius: var(--element-border-radius);
     margin: 3px 0;
     padding: 0 var(--element-padding);
-    box-shadow: 1px 1px 2px 0 var(--text-muted);
+    box-shadow: 0 4px 0 0 var(--blockquote-color-l);
     font-size: 1rem;
     vertical-align: middle;
     cursor: pointer;
@@ -260,7 +262,8 @@ kbd {
 }
 
 kbd:active {
-    box-shadow: 1px 1px 2px 0 var(--text-muted) inset;
+    top: 1px;
+    box-shadow: 0 2px 0 0 var(--blockquote-color-l);
 }
 
 ul,
