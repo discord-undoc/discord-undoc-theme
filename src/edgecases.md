@@ -28,6 +28,28 @@
 {::undoc {::nobot}}
 
 <br>
+
+````markdown
+{::details 
+**something** *and something*<summ>
+```json
+{
+    "hello": "world"
+}
+```
+}
+````
+
+{::details 
+**something** *and something*<summ>
+```json
+{
+    "hello": "world"
+}
+```
+}
+
+<br>
 <br>
 
 And I'm too lazy to think of more weird cases, so lets call it a day!

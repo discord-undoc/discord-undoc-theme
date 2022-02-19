@@ -51,7 +51,7 @@ def e_details(data: tuple[str, str], dopen=False) -> str:
     content = markdown(content)[0:-1]
 
     return (
-        f'<details {"open" if dopen else ""}><summary>{summary}</summary>'
+        f'<details{" open" if dopen else ""}><summary>{summary}</summary>'
         f'<div class="d_content">{content}</div></details>'
     )
 
@@ -97,6 +97,16 @@ class UnclosedTagError(Exception):
 class Element:
     text: str
 
+    def get_len(self, index: int) -> tuple[str, int]:
+        text = ""
+        while index < len(self.text):
+            if self.text[index] != "`":
+                break
+            text += self.text[index]
+            index += 1
+
+        return text, index
+
     def parse_element(self, data: str) -> str:
         elem = STATIC_ELEMENTS.get(data, None)
 
@@ -110,13 +120,25 @@ class Element:
 
     def scan_element(self, index: int) -> tuple[int, str]:
         element_data = ""
+        ignore = False
+        prev = ""
         while index < len(self.text):
             if self.text[index : index + 3] == "{::":
                 index, content = self.scan_element(index + 3)
                 index += 1
                 element_data += content
 
-            if self.text[index] == "}":
+            if self.text[index] == "`":
+                tmp_prev, index = self.get_len(index)
+                element_data += tmp_prev
+                if prev == tmp_prev:
+                    prev = ""
+                    ignore = False
+                elif prev == "":
+                    prev = tmp_prev
+                    ignore = True
+
+            if self.text[index] == "}" and not ignore:
                 break
 
             element_data += self.text[index]
@@ -125,21 +147,29 @@ class Element:
         return index, self.parse_element(element_data)
 
     def scanner(self) -> str:
-        f_text = ""
+        text = ""
         index = 0
         ignore = False
+        prev = ""
         while index < len(self.text):
-            if self.text[index : index + 3] == "```" or self.text[index] == "`":
-                ignore = not ignore
+            if self.text[index] == "`":
+                tmp_prev, index = self.get_len(index)
+                text += tmp_prev
+                if prev == tmp_prev:
+                    prev = ""
+                    ignore = False
+                elif prev == "":
+                    prev = tmp_prev
+                    ignore = True
 
             if self.text[index : index + 3] == "{::" and not ignore:
                 index, content = self.scan_element(index + 3)
-                f_text += content
+                text += content
             else:
-                f_text += self.text[index]
+                text += self.text[index]
 
             index += 1
-        return f_text
+        return text
 
     def __call__(self, text: str) -> str:
         self.text = text
