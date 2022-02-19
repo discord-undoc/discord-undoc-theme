@@ -152,7 +152,7 @@ Ian Deploy™: <b class="iandeploy"><b class="material-icons round">rocket_launc
 <details open><summary></summary><div class="d_content"><p>You can also make it be open by default</p>
 <details open><summary></summary><div class="d_content"><p>Nesting? No problem!</p></div></details></div></details>
 <h2 id="spoilers"><a class="header" href="#spoilers">Spoilers</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing <input type="checkbox" class="spoiler" id="spoiler-15318049822159"><label for="spoiler-15318049822159">something</label> elit. Sed turpis erat, tempor a vehicula a, ullamcorper vel augue. Vivamus eget elementum ex, ullamcorper interdum neque. <input type="checkbox" class="spoiler" id="spoiler-15318050039906"><label for="spoiler-15318050039906">stuff</label></p></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing <input type="checkbox" class="spoiler" id="spoiler-16534009848557"><label for="spoiler-16534009848557">something</label> elit. Sed turpis erat, tempor a vehicula a, ullamcorper vel augue. Vivamus eget elementum ex, ullamcorper interdum neque. <input type="checkbox" class="spoiler" id="spoiler-16534010028813"><label for="spoiler-16534010028813">stuff</label></p></div>
             </div>
             <div class="navigation">
                 <a href="index.html" class="nav prev">
@@ -172,6 +172,20 @@ Ian Deploy™: <b class="iandeploy"><b class="material-icons round">rocket_launc
         </div>
     </main>
 
+    <!-- Livereload script (if served using the cli tool) -->
+    <script type="text/javascript">
+        var socket = new WebSocket("ws://localhost:3000/__livereload");
+        socket.onmessage = function (event) {
+            if (event.data === "reload") {
+                socket.close();
+                location.reload();
+            }
+        };
+
+        window.onbeforeunload = function() {
+            socket.close();
+        }
+    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

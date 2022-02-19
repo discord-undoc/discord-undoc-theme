@@ -363,11 +363,20 @@ html.sidebar-hidden .sidebar {
 }
 
 .toctree .part-title {
-    padding: var(--element-padding);
+    padding: calc(var(--element-padding) * 2);
     color: var(--text-muted);
     font-family: var(--font-head);
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.toctree .part-title::before {
+    display: inline-block;
+    content: "⤷ ";
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    width: 15px;
 }
 
 /* Sidebar Toggle */
