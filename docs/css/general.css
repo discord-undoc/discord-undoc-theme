@@ -118,9 +118,10 @@ blockquote {
     margin: var(--element-padding) 0;
     border-radius: 5px;
     padding: 5px 10px;
-    border-bottom: solid 1px var(--blockquote-color-l);
+    border-top: solid 1px var(--blockquote-color-l);
     border-right: solid 1px var(--blockquote-color-l);
-    border-left: solid 3px var(--blockquote-color);
+    border-bottom: solid 1px var(--blockquote-color-l);
+    border-left: solid 3px var(--blockquote-color-l);
     stroke-linecap: round;
     background: var(--alternative-background);
     overflow: hidden;
@@ -129,8 +130,10 @@ blockquote {
 details {
     display: block;
     border-radius: var(--element-border-radius);
-    border-bottom: solid 1px var(--summary-color);
-    background: var(--alternative-background);
+    border-left: solid 1px var(--summary-background);
+    border-bottom: solid 1px var(--summary-background);
+    border-right: solid 1px var(--summary-background);
+    background: var(--d-body-background);
     overflow: hidden;
     margin: var(--element-padding) 0;
 }
@@ -144,7 +147,7 @@ details summary {
     display: flex;
     align-items: center;
     padding: var(--element-padding);
-    background: var(--summary-color);
+    background: var(--summary-background);
     border-radius: var(--element-border-radius);
     cursor: pointer;
 }

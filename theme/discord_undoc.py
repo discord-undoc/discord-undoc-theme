@@ -96,10 +96,11 @@ class UnclosedTagError(Exception):
 
 class Element:
     text: str
+    tlen: int
 
     def get_len(self, index: int) -> tuple[str, int]:
         text = ""
-        while index < len(self.text):
+        while index != self.tlen:
             if self.text[index] != "`":
                 break
             text += self.text[index]
@@ -122,7 +123,8 @@ class Element:
         element_data = ""
         ignore = False
         prev = ""
-        while index < len(self.text):
+        open_index = None
+        while index != self.tlen:
             if self.text[index : index + 3] == "{::":
                 index, content = self.scan_element(index + 3)
                 index += 1
@@ -134,9 +136,14 @@ class Element:
                 if prev == tmp_prev:
                     prev = ""
                     ignore = False
+                    open_index = None
                 elif prev == "":
                     prev = tmp_prev
                     ignore = True
+                    open_index = index
+
+            if ignore and (index + 1) == self.tlen:
+                raise UnclosedTagError(f"Unclosed inline/block code: {open_index} - {self.tlen}")
 
             if self.text[index] == "}" and not ignore:
                 break
@@ -151,28 +158,38 @@ class Element:
         index = 0
         ignore = False
         prev = ""
-        while index < len(self.text):
-            if self.text[index] == "`" and self.text[index - 1] != "\\":
-                tmp_prev, index = self.get_len(index)
-                text += tmp_prev
-                if prev == tmp_prev:
-                    prev = ""
-                    ignore = False
-                elif prev == "":
-                    prev = tmp_prev
-                    ignore = True
+        open_index = None
+        while index != self.tlen:
+            try:
+                if self.text[index] == "`" and self.text[index - 1] != "\\":
+                    tmp_prev, index = self.get_len(index)
+                    text += tmp_prev
+                    if prev == tmp_prev:
+                        prev = ""
+                        ignore = False
+                        open_index = None
+                    elif prev == "":
+                        prev = tmp_prev
+                        ignore = True
+                        open_index = index
 
-            if self.text[index : index + 3] == "{::" and not ignore:
-                index, content = self.scan_element(index + 3)
-                text += content
-            else:
-                text += self.text[index]
+                if ignore and (index + 1) == self.tlen:
+                    raise UnclosedTagError(f"Unclosed inline/block code: {open_index} - {self.tlen}")
+
+                if self.text[index : index + 3] == "{::" and not ignore:
+                    index, content = self.scan_element(index + 3)
+                    text += content
+                else:
+                    text += self.text[index]
+            except IndexError:
+                break
 
             index += 1
         return text
 
     def __call__(self, text: str) -> str:
         self.text = text
+        self.tlen = len(text)
         return self.scanner()
 
 

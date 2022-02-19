@@ -36,8 +36,6 @@
     --note-background: #5865F233;
     --info-background: #FEE75C33;
     --warn-background: #ED424533;
-    --blockquote-color: #595959;
-    --blockquote-color-l: #59595933;
 
     /* Font colors */
     --alert-box-color: #171717;
@@ -46,6 +44,10 @@
     --text-muted-t: #4F57634D;
     --text-contrast: #FFFFFF;
 
+    /* Blockquotes */
+    --blockquote-color: #D9D9D9;
+    --blockquote-color-l: #CCCCE5;
+
     /* Tables */
     --table-header-background: #F2F3F5;
     --table-border-color: #B7BCC8;
@@ -53,7 +55,8 @@
     --table-odd-background: #F2F3F599;
 
     /* Accordion */
-    --summary-color: #D9D9D9;
+    --summary-background: #D9D9D9;
+    --d-body-background: #F4F4FA;
 
     /* Spoiler */
     --s-hidden-background: #EDEDF7;
@@ -72,14 +75,12 @@
 
 .dark {
     /* Colors */
-    --main-background: #36393f;
+    --main-background: #36393F;
     --alternative-background: #303236;
     --link-color: #C2C8F9;
     --note-background: #5865F24D;
     --info-background: #FEE75C26;
     --warn-background: #ED42454D;
-    --blockquote-color: #CCCCCC;
-    --blockquote-color-l: #CCCCCC33;
 
     /* Font colors */
     --alert-box-color: #FFFFFF;
@@ -88,6 +89,10 @@
     --text-muted-t: #C8CBD04D;
     --text-contrast: #FFFFFF;
 
+    /* Blockquotes */
+    --blockquote-color: #242424;
+    --blockquote-color-l: #18181B;
+
     /* Tables */
     --table-header-background: #303236;
     --table-border-color: #757D8A;
@@ -95,7 +100,8 @@
     --table-odd-background: #30323699;
 
     /* Accordion */
-    --summary-color: #242424;
+    --summary-background: #242424;
+    --d-body-background: #2C2D30;
 
     /* Spoiler */
     --s-hidden-background: #303236;
