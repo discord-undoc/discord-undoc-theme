@@ -1,10 +1,3 @@
-(() => {
-    const toctree = document.querySelectorAll('.sidebar a');
-    toctree.forEach(a => {
-        a.setAttribute('target', '_self');
-    });
-})();
-
 function toggle(remove, add, id, value) {
     html.classList.remove(remove);
     html.classList.add(add);
