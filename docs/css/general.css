@@ -44,7 +44,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-head);
-    margin-top: calc(var(--element-padding) * 3);
+    margin-top: calc(var(--element-padding) * 6);
     margin-bottom: calc(var(--element-padding) * 3);
 }
 
@@ -182,7 +182,7 @@ details > summary::before {
     -webkit-font-smoothing: antialiased;
     background: var(--main-background);
     border-radius: var(--element-border-radius);
-    padding: calc(var(--element-padding) / 2);
+    padding: calc(var(--element-padding) / 3);
     margin-right: var(--element-padding);
 
     transition: transform 0.2s ease-in-out, border-radius 0.2s ease-in-out;
