@@ -411,6 +411,7 @@ html.sidebar-hidden .sidebartoggle {
     cursor: pointer;
 
     transition: right 0.2s ease-in-out;
+    z-index: 5;
 }
 
 .settings span {
