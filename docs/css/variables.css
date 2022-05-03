@@ -30,6 +30,7 @@
 
 .light {
     /* Colors */
+    --scrollbar-color: #757575;
     --main-background: #FFFFFF;
     --alternative-background: #EDEDF7;
     --link-color: #1527EF;
@@ -75,6 +76,7 @@
 
 .dark {
     /* Colors */
+    --scrollbar-color: #999999;
     --main-background: #36393F;
     --alternative-background: #303236;
     --link-color: #C2C8F9;

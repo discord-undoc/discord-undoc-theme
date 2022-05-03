@@ -1,12 +1,14 @@
 function toggle(remove, add, id, value) {
+    let html = document.querySelector('html');
     html.classList.remove(remove);
     html.classList.add(add);
     try {
         window.localStorage.setItem(id, value);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 (() => {
+    let html = document.querySelector('html');
     const sidebar_toggle = document.querySelector('.sidebartoggle');
 
     sidebar_toggle.addEventListener('click', function sidebarToggle() {
@@ -19,6 +21,7 @@ function toggle(remove, add, id, value) {
 })();
 
 (() => {
+    let html = document.querySelector('html');
     const theme_toggle = document.querySelector('.themetoggle');
 
     theme_toggle.addEventListener('click', function themeToggle() {
@@ -31,7 +34,8 @@ function toggle(remove, add, id, value) {
 })();
 
 (() => {
-    document.addEventListener('keydown', function(h) {
+    let html = document.querySelector('html');
+    document.addEventListener('keydown', function (h) {
         if (window.search && window.search.hasFocus()) { return; }
         if (h.altKey || h.ctrlKey || h.metaKey || h.shiftKey) { return; }
 

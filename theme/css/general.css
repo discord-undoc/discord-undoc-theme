@@ -1,3 +1,19 @@
+/*
+Copyright 2022 한승민
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 @import "./variables.css";
 
 .noselect {
@@ -9,7 +25,8 @@
     user-select: none;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+    /* Code for Firefox */
     color: #FFFFFF;
     background: var(--brand-color);
 }
@@ -30,7 +47,7 @@ html {
     font-family: var(--font-normal);
     color: var(--text-primary);
     scroll-behavior: smooth;
-    word-wrap:break-word
+    word-wrap: break-word
 }
 
 body {
@@ -163,7 +180,7 @@ details summary h6 {
     font-weight: 600;
 }
 
-details > summary::before {
+details>summary::before {
     display: inline-block;
     width: calc(var(--element-padding) * 3);
     height: calc(var(--element-padding) * 3);
@@ -188,7 +205,7 @@ details > summary::before {
     transition: transform 0.2s ease-in-out, border-radius 0.2s ease-in-out;
 }
 
-details[open] > summary::before {
+details[open]>summary::before {
     transform: rotate(90deg);
     border-radius: 50%;
 }
@@ -291,11 +308,11 @@ ol {
 }
 
 pre {
-    scrollbar-color: var(--main-background) transparent;
+    scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 pre::-webkit-scrollbar-thumb {
-    background: var(--main-background);
+    background: var(--scrollbar-color);
     border-radius: var(--element-border-radius);
     border: 3px solid transparent;
     background-clip: padding-box;
@@ -303,7 +320,7 @@ pre::-webkit-scrollbar-thumb {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--alternative-background) transparent;
+    scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -317,7 +334,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 *::-webkit-scrollbar-thumb {
-    background: var(--alternative-background);
+    background: var(--scrollbar-color);
     border-radius: var(--element-border-radius);
     border: 3px solid transparent;
     background-clip: padding-box;

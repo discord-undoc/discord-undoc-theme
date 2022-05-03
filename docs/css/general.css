@@ -291,11 +291,11 @@ ol {
 }
 
 pre {
-    scrollbar-color: var(--main-background) transparent;
+    scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 pre::-webkit-scrollbar-thumb {
-    background: var(--main-background);
+    background: var(--scrollbar-color);
     border-radius: var(--element-border-radius);
     border: 3px solid transparent;
     background-clip: padding-box;
@@ -303,7 +303,7 @@ pre::-webkit-scrollbar-thumb {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--alternative-background) transparent;
+    scrollbar-color: var(--scrollbar-color) transparent;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -317,7 +317,7 @@ pre::-webkit-scrollbar-thumb {
 }
 
 *::-webkit-scrollbar-thumb {
-    background: var(--alternative-background);
+    background: var(--scrollbar-color);
     border-radius: var(--element-border-radius);
     border: 3px solid transparent;
     background-clip: padding-box;

@@ -14,8 +14,8 @@
 
 <br>
 
-`{::user arHSM#5682-841509053422632990-06909e938b7a97344ba99498bbc5e9e6 {::undoc}}` - indicator not displaying\
-{::user arHSM#5682-841509053422632990-06909e938b7a97344ba99498bbc5e9e6 {::undoc}}
+`{::user 841509053422632990 {::undoc}}` - indicator not displaying\
+{::user 841509053422632990 {::undoc}}
 
 <br>
 

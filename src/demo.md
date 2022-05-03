@@ -4,8 +4,8 @@
 
 ### User Badges
 
-User: {::user arHSM#5682-841509053422632990-06909e938b7a97344ba99498bbc5e9e6}\
-User (animated avatar): {::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc36bec9cb1ad1459c}
+User: {::user 841509053422632990}\
+User (animated avatar): {::user 755792681313108018}
 
 ### HTTP Stuff
 
@@ -21,9 +21,9 @@ User (animated avatar): {::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc
 
 ### Indicators
 
-Undocumented: {::undoc}\
-Not for bots: {::nobot}\
-Ian Deploy™: {::iandeploy}
+Undocumented: {::undoc} some random text\
+Not for bots: {::nobot} some random text\
+Ian Deploy™: {::iandeploy} some random text
 
 ### Alert boxes
 

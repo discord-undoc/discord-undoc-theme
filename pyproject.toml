@@ -3,11 +3,14 @@ name = "ddocstheme"
 version = "0.1.0"
 description = "Theme files for the Unofficial Discord Documentation"
 authors = ["arHSM <hanseungmin.ar@gmail.com>"]
-license = "Apache 2.0"
+license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 mistletoe = "^0.8.2"
+httpx = "^0.22.0"
+orjson = "^3.6.8"
+beautifulsoup4 = "^4.11.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"

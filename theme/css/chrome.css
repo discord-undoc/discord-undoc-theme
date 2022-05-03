@@ -1,3 +1,19 @@
+/*
+Copyright 2022 한승민
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 @import "./variables.css";
 
 /* MDBoook CSS */
@@ -79,17 +95,14 @@ html.sidebar-hidden .page-content {
 .iandeploy {
     display: inline-block;
     position: relative;
-    color: var(--text-muted);
+    fill: var(--text-muted);
     cursor: default;
-    line-height: 1rem;
-    margin: 0 var(--element-padding);
+    line-height: 0.5rem;
+    padding: 0 calc(var(--element-padding) / 2);
     font-weight: 500;
-}
-
-.undoc .material-icons,
-.nobot .material-icons,
-.iandeploy .material-icons {
-    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
 }
 
 .undoc:hover::before,
@@ -118,9 +131,17 @@ html.sidebar-hidden .page-content {
 
 }
 
-.undoc::before { content: "This is not officially documented."; }
-.nobot::before { content: "This is not usable by bots."; }
-.iandeploy::before { content: "IAN 2 DEPLOY!!!"; }
+.undoc::before {
+    content: "This is not officially documented.";
+}
+
+.nobot::before {
+    content: "This is not usable by bots.";
+}
+
+.iandeploy::before {
+    content: "IAN 2 DEPLOY!!!";
+}
 
 /* HTTP methods */
 
@@ -176,9 +197,20 @@ html.sidebar-hidden .page-content {
     font-weight: 500;
 }
 
-.note { border: solid 2px var(--note-border-color); background: var(--note-background); }
-.info { border: solid 2px var(--info-border-color); background: var(--info-background); }
-.warn { border: solid 2px var(--warn-border-color); background: var(--warn-background); }
+.note {
+    border: solid 2px var(--note-border-color);
+    background: var(--note-background);
+}
+
+.info {
+    border: solid 2px var(--info-border-color);
+    background: var(--info-background);
+}
+
+.warn {
+    border: solid 2px var(--warn-border-color);
+    background: var(--warn-background);
+}
 
 /* Spoliers */
 
@@ -188,7 +220,7 @@ input.spoiler {
     height: 0;
 }
 
-input.spoiler + label {
+input.spoiler+label {
     border-radius: var(--element-border-radius);
     padding: 2px var(--element-padding);
     background: var(--s-hidden-background);
@@ -202,7 +234,7 @@ input.spoiler + label {
     user-select: none;
 }
 
-input:checked + label {
+input:checked+label {
     background: var(--s-visible-background);
     color: var(--text-primary);
     -webkit-touch-callout: inherit;
@@ -211,6 +243,14 @@ input:checked + label {
     -moz-user-select: inherit;
     -ms-user-select: inherit;
     user-select: inherit;
+}
+
+/* Highlight */
+
+.highlight-search {
+    background: #FEE75C;
+    padding: 0 calc(var(--element-padding) / 2);
+    border-radius: calc(var(--element-border-radius) / 2);
 }
 
 /* Sidebar */
@@ -337,7 +377,9 @@ html.sidebar-hidden .sidebar {
     color: var(--text-contrast);
 }
 
-.toctree a { transition: color 0.2s ease-in-out, background 0.2s ease-in-out; }
+.toctree a {
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
 
 .toctree a:hover {
     background: var(--text-muted-t);
@@ -380,7 +422,7 @@ html.sidebar-hidden .sidebar {
     left: calc(var(--sidebar-width) + var(--element-padding));
     border-radius: var(--element-border-radius);
     background: var(--alternative-background);
-    color: var(--text-muted);
+    fill: var(--text-muted);
     line-height: 0;
     cursor: pointer;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out, left 0.2s ease-in-out;
@@ -388,7 +430,7 @@ html.sidebar-hidden .sidebar {
 
 .sidebartoggle:hover {
     background: var(--main-background);
-    color: var(--text-primary);
+    fill: var(--text-primary);
 }
 
 .sidebartoggle span {
@@ -425,14 +467,22 @@ html.sidebar-hidden .sidebartoggle {
 .themetoggle {
     padding: var(--element-padding);
     color: var(--text-muted);
+    fill: var(--text-muted);
     border-radius: var(--element-border-radius);
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.giturl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .giturl:hover,
 .gitedit:hover,
 .themetoggle:hover {
     color: var(--text-primary);
+    fill: var(--text-primary);
     background: var(--main-background);
 }
 

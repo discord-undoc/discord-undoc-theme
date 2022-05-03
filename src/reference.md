@@ -19,9 +19,9 @@ The format is: `{::(TYPE) (CONTENT)}`
 {::info Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering}
 
 User Badge:
-- Format: `{::user (USERNAME#DISCRIMINATOR)-(USER_ID)-(AVATAR_HASH)}`\
-- Example: `{::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc36bec9cb1ad1459c}`
-    {::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc36bec9cb1ad1459c}
+- Format: `{::user (USER_ID)}`\
+- Example: `{::user 755792681313108018}`
+    {::user 755792681313108018}
 
 <br>
 
@@ -57,7 +57,7 @@ Spoilers:
 
 `{::note}` -> {::note}
 
-`{::user ab#12-12432-suhOUAdass}` -> {::user ab#12-12432-suhOUAdass}
+`{::user 1234}` -> *Did not add this because the preprocessor will not accept it.*
 
 `{::trace}` -> {::trace}
 

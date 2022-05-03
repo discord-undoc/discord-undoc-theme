@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,8 @@
     <meta property="og:title" content="Unofficial Discord Documentation" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://discord-undoc.github.io" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/discord-undoc/.github/master/assets/UNDocNoBG.png" />
     <meta property="og:description" content="Theme for the Unofficial Discord Documentation" />
     <meta name="theme-color" content="#FD745E">
 
@@ -17,9 +19,9 @@
 
 
     
-        <link rel="prerender" href="demo.html">
+    <link rel="prerender" href="demo.html">
 
-        <link rel="prerender" href="mddemo.html">
+    <link rel="prerender" href="mddemo.html">
 
     <link rel="preload" href="css/variables.css" as="style">
     <link rel="preload" href="css/general.css" as="style">
@@ -41,13 +43,16 @@
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
 </head>
+
 <body>
     <script type="text/javascript">
         const base_url = "";
         const path_to_root = "";
         const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
-    
+
         try {
             let theme = localStorage.getItem('theme');
             let sidebar = localStorage.getItem('sidebar');
@@ -80,7 +85,7 @@
             <div class="sb_header">
                 <a href="">
                     <img src="favicon.png" alt="" srcset="" width="50px" height="50px">
-                        <span>Unofficial Discord Documentation</span>
+                    <span>Unofficial Discord Documentation</span>
                     </img>
                 </a>
                 <script>
@@ -88,25 +93,30 @@
                 </script>
             </div>
             <div class="search">
-                    <button id="search-toggle" style="display: none;"></button>
-                    <form id="searchbar-outer" class="searchbar-outer" autocomplete="off" spellcheck="false">
-                        <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="search-wrapper" style="display: inherit !important;">
-                        <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
-                            <div id="searchresults-header" class="searchresults-header"></div>
-                            <ul id="searchresults" class="noscrollbar">
-                            </ul>
-                        </div>
+                <button id="search-toggle" style="display: none;"></button>
+                <form id="searchbar-outer" class="searchbar-outer" autocomplete="off" spellcheck="false">
+                    <input type="text" id="searchbar" name="searchbar" placeholder="Search the docs..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="search-wrapper" style="display: inherit !important;">
+                    <div id="searchresults-outer" class="searchresults-outer hidden noscrollbar">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults" class="noscrollbar">
+                        </ul>
                     </div>
                 </div>
+            </div>
             <div class="toctree noscrollbar">
                 <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Readable Content</li><li class="chapter-item expanded "><a href="demo.html">Custom Elements</a></li><li class="chapter-item expanded "><a href="reference.html" class="active">Reference</a></li><li class="chapter-item expanded "><a href="mddemo.html">Markdown</a></li><li class="chapter-item expanded "><a href="kbdcombo.html">Navigation</a></li><li class="chapter-item expanded affix "><li class="part-title">Testing Spam</li><li class="chapter-item expanded "><a href="edgecases.html">Testing Cases</a></li><li class="chapter-item expanded "><a href="empty.html">[Object], [Object]</a></li><li class="chapter-item expanded "><div>Start</div></li><li class="chapter-item expanded "><div>Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Spam 1</div></li><li><ol class="section"><li class="chapter-item expanded "><div>Sub Sub Spam 1</div></li><li class="chapter-item expanded "><div>Sub Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Sub Spam 2</div></li></ol></li><li class="chapter-item expanded "><div>Spam 2</div></li><li class="chapter-item expanded "><div>Spam 3</div></li><li class="chapter-item expanded "><div>Spam 4</div></li><li class="chapter-item expanded "><div>Spam 5</div></li><li class="chapter-item expanded "><div>Spam 6</div></li><li class="chapter-item expanded "><div>Spam 7</div></li><li class="chapter-item expanded "><div>Spam 8</div></li><li class="chapter-item expanded "><div>Spam 9</div></li><li class="chapter-item expanded "><div>Spam 10</div></li><li class="chapter-item expanded "><div>Spam 11</div></li><li class="chapter-item expanded "><div>Spam 12</div></li><li class="chapter-item expanded "><div>Spam 13</div></li><li class="chapter-item expanded "><div>Spam 14</div></li><li class="chapter-item expanded "><div>Spam 15</div></li><li class="chapter-item expanded "><div>Spam 16</div></li><li class="chapter-item expanded "><div>Spam 17</div></li><li class="chapter-item expanded "><div>Spam 18</div></li><li class="chapter-item expanded "><div>Spam 19</div></li><li class="chapter-item expanded "><div>Spam 20</div></li><li class="chapter-item expanded "><div>Spam 21</div></li><li class="chapter-item expanded "><div>Spam 22</div></li><li class="chapter-item expanded "><div>Spam 23</div></li><li class="chapter-item expanded "><div>Spam 24</div></li><li class="chapter-item expanded "><div>Spam 25</div></li><li class="chapter-item expanded "><div>Spam 27</div></li><li class="chapter-item expanded "><div>Spam 28</div></li><li class="chapter-item expanded "><div>Spam 29</div></li><li class="chapter-item expanded "><div>Spam 30</div></li><li class="chapter-item expanded "><div>Spam 31</div></li><li class="chapter-item expanded "><div>Spam 32</div></li><li class="chapter-item expanded "><div>Spam 33</div></li><li class="chapter-item expanded "><div>Spam 34</div></li><li class="chapter-item expanded "><div>Spam 35</div></li><li class="chapter-item expanded "><div>END</div></li></ol>
             </div>
         </div>
         <div class="page-content">
             <div class="sidebartoggle noselect">
-                <span class="material-icons round">menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill-rule="evenodd"
+                        d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
             </div>
             <div class="settings noselect">
                 <div class="themetoggle">
@@ -116,7 +126,11 @@
                     <span class="material-icons round">edit</span>
                 </a>
                 <a class="giturl" href="https://github.com/discord-undoc/discord-undoc-theme" target="_blank">
-                    <span class="material-icons round">source</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
                 </a>
             </div>
             <div class="chapter-contents">
@@ -138,9 +152,9 @@
 <div class="info"><p>Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering</p></div>
 <p>User Badge:</p>
 <ul>
-<li>Format: <code>{::user (USERNAME#DISCRIMINATOR)-(USER_ID)-(AVATAR_HASH)}</code></li>
-<li>Example: <code>{::user Rydix#1726-755792681313108018-a_90be0df51f8cf7dc36bec9cb1ad1459c}</code>
-<a href="https://discord.com/users/755792681313108018" class="user"><img src="https://cdn.discordapp.com/avatars/755792681313108018/a_90be0df51f8cf7dc36bec9cb1ad1459c.gif" alt="Rydix's avatar" class="avatar" width="25px" height="25px">Rydix<span>#1726</span></img></a></li>
+<li>Format: <code>{::user (USER_ID)}</code></li>
+<li>Example: <code>{::user 755792681313108018}</code>
+<a href="https://discord.com/users/755792681313108018" class="user"><img src="https://cdn.discordapp.com/avatars/755792681313108018/a_90be0df51f8cf7dc36bec9cb1ad1459c.gif" alt="Rydix's avatar" class="avatar" width="25px" height="25px">Rydix<span>1726</span></img></a></li>
 </ul>
 <br>
 <p>HTTP Stuff:</p>
@@ -152,7 +166,7 @@
 <p>Indicators:</p>
 <ul>
 <li>Format: <code>{::(undoc|nobot|iandeploy)}</code></li>
-<li>Example: <code>{::iandeploy}</code> <b class="iandeploy"><b class="material-icons round">rocket_launch</b></b></li>
+<li>Example: <code>{::iandeploy}</code> <b class="iandeploy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.031-12a4.38 4.38 0 00-3.097 1.283l-.23.229c-.156.157-.308.32-.452.49H5.65a.876.876 0 00-.746.417l-.856 1.388a.375.375 0 00.21.556l1.552.477 1.35 1.35.478 1.553a.375.375 0 00.555.21l1.389-.855a.876.876 0 00.416-.746V8.747c.17-.144.333-.295.49-.452l.23-.23A4.38 4.38 0 0012 4.969v-.093A.876.876 0 0011.124 4h-.093zm-5.107 7.144a.81.81 0 01-.188.263c-.394.394-1.258.563-1.62.619a.124.124 0 01-.143-.143c.056-.362.225-1.226.62-1.62a.808.808 0 011.33.881z"></path></svg></b></li>
 </ul>
 <br>
 <p>Alert Boxes:</p>
@@ -169,12 +183,12 @@
 <p>Spoilers:</p>
 <ul>
 <li>Format: <code>{::spoiler (CONTENT)}</code></li>
-<li>Example: <code>{::spoiler this is a spoiler}</code> <input type="checkbox" class="spoiler" id="spoiler-6748237566715"><label for="spoiler-6748237566715">this is a spoiler</label></li>
+<li>Example: <code>{::spoiler this is a spoiler}</code> <input type="checkbox" class="spoiler" id="spoiler-17891979341226"><label class="spoiler" for="spoiler-17891979341226">this is a spoiler</label></li>
 </ul>
 <h2 id="examples-of-faulty-rendering"><a class="header" href="#examples-of-faulty-rendering">Examples of faulty rendering</a></h2>
 <p><code>{::undoc hello}</code> -&gt; (‘undoc’, ‘hello’)</p>
 <p><code>{::note}</code> -&gt; note</p>
-<p><code>{::user ab#12-12432-suhOUAdass}</code> -&gt; ab#12-12432-suhOUAdass</p>
+<p><code>{::user 1234}</code> -&gt; <em>Did not add this because the preprocessor will not accept it.</em></p>
 <p><code>{::trace}</code> -&gt; trace</p>
 <p>Annnnnnnnnnnnnnnnnnnnnnnnnnnnd many more cases……………..</p>
 
@@ -191,11 +205,26 @@
                     <div class="nav-button next">
                         <span class="material-icons round">arrow_forward_ios</span>
                     </div>
-                    </a>
+                </a>
                 </a>
             </div>
         </div>
     </main>
+
+    <script type="text/javascript">
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        let mark = new Mark(".chapter-contents");
+
+        mark.mark(getParameterByName('highlight'), { className: "highlight-search", exclude: ["h1", "h2", "h3", "h4", "h5", "h6", ".spoiler"] });
+    </script>
 
     <!-- Livereload script (if served using the cli tool) -->
     <script type="text/javascript">
@@ -207,7 +236,7 @@
             }
         };
 
-        window.onbeforeunload = function() {
+        window.onbeforeunload = function () {
             socket.close();
         }
     </script>
@@ -219,4 +248,5 @@
     <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
     <script src="book.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
 </html>

@@ -79,10 +79,10 @@ html.sidebar-hidden .page-content {
 .iandeploy {
     display: inline-block;
     position: relative;
-    color: var(--text-muted);
+    fill: var(--text-muted);
     cursor: default;
-    line-height: 1rem;
-    margin: 0 var(--element-padding);
+    line-height: 0.5rem;
+    padding: 0 calc(var(--element-padding) / 2);
     font-weight: 500;
 }
 
@@ -211,6 +211,14 @@ input:checked + label {
     -moz-user-select: inherit;
     -ms-user-select: inherit;
     user-select: inherit;
+}
+
+/* Highlight */
+
+.highlight-search {
+    background: #FEE75C;
+    padding: 0 calc(var(--element-padding) / 2);
+    border-radius: calc(var(--element-border-radius) / 2);
 }
 
 /* Sidebar */
@@ -380,7 +388,7 @@ html.sidebar-hidden .sidebar {
     left: calc(var(--sidebar-width) + var(--element-padding));
     border-radius: var(--element-border-radius);
     background: var(--alternative-background);
-    color: var(--text-muted);
+    fill: var(--text-muted);
     line-height: 0;
     cursor: pointer;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out, left 0.2s ease-in-out;
@@ -388,7 +396,7 @@ html.sidebar-hidden .sidebar {
 
 .sidebartoggle:hover {
     background: var(--main-background);
-    color: var(--text-primary);
+    fill: var(--text-primary);
 }
 
 .sidebartoggle span {
@@ -425,14 +433,22 @@ html.sidebar-hidden .sidebartoggle {
 .themetoggle {
     padding: var(--element-padding);
     color: var(--text-muted);
+    fill: var(--text-muted);
     border-radius: var(--element-border-radius);
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.giturl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .giturl:hover,
 .gitedit:hover,
 .themetoggle:hover {
     color: var(--text-primary);
+    fill: var(--text-primary);
     background: var(--main-background);
 }
 
