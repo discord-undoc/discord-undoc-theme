@@ -1,3 +1,19 @@
+/*
+Copyright 2022 한승민
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@105,400;105,500;105,600;105,700;105,800;105,900&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+Mono:wght@300;400;500&display=swap");
 
 /* https://fonts.google.com/share?selection.family=Archivo:wdth,wght@105,400;105,500;105,600;105,700;105,800;105,900|Montserrat:wght@400;500;600;700;800;900|Noto+Sans+Mono:wght@300;400;500 */
@@ -11,16 +27,16 @@
     --warn-border-color: #ED4245;
 
     /* Fonts */
-        /* 400, 600, 700, 800, 900 */
+    /* 400, 600, 700, 800, 900 */
     --font-head: "Archivo", sans-serif;
-        /* 400, 500, 600, 700, 800, 900 */
+    /* 400, 500, 600, 700, 800, 900 */
     --font-normal: "Montserrat", sans-serif;
-        /* 300, 400, 500 */
+    /* 300, 400, 500 */
     --font-code: "Noto Sans Mono", monospace;
 
     /* Page margin */
     --page-margin: 5rem;
-    
+
     /* Variables */
     --element-padding: 0.5rem;
     --element-border-radius: 0.5rem;
@@ -66,12 +82,18 @@
     /* Highlight Colors */
     --prism-background: #EDEDF7;
     --prism-color: #030303;
-    --prism-comment: #29003D; /* Dark Purple */
-    --prism-keyword: #DB0000; /* Red */
-    --prism-function: #7033FF; /* Blue */
-    --prism-string: #007A25; /* Green */
-    --prism-attribute: #C73200; /* Brown */
-    --prism-variable: #8B02A7; /* Purple */
+    --prism-comment: #29003D;
+    /* Dark Purple */
+    --prism-keyword: #DB0000;
+    /* Red */
+    --prism-function: #7033FF;
+    /* Blue */
+    --prism-string: #007A25;
+    /* Green */
+    --prism-attribute: #C73200;
+    /* Brown */
+    --prism-variable: #8B02A7;
+    /* Purple */
 }
 
 .dark {
@@ -112,12 +134,18 @@
     /* Highlight Colors */
     --prism-background: #303236;
     --prism-color: #E6E6E6;
-    --prism-comment: #DCD1E1; /* Light Purple */
-    --prism-keyword: #FFADAD; /* Light Red */
-    --prism-function: #B8BAFF; /* Blue */
-    --prism-string: #1AFF66; /* Green */
-    --prism-attribute: #FDB058; /* Orange */
-    --prism-variable: #E7B3FF; /* Purple */
+    --prism-comment: #DCD1E1;
+    /* Light Purple */
+    --prism-keyword: #FFADAD;
+    /* Light Red */
+    --prism-function: #B8BAFF;
+    /* Blue */
+    --prism-string: #1AFF66;
+    /* Green */
+    --prism-attribute: #FDB058;
+    /* Orange */
+    --prism-variable: #E7B3FF;
+    /* Purple */
 }
 
 @media (max-width: 800px) {

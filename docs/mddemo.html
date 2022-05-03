@@ -1,3 +1,19 @@
+<!--
+Copyright 2022 한승민
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -203,7 +219,7 @@ function Emitter(point, velocity, spread) {
 </code></pre>
 <h2 id="inline-code"><a class="header" href="#inline-code">Inline Code</a></h2>
 <p>Here, have a <code>429 - Too many cats</code><br />
-<a href="https://http.cat/429">https://http.cat/429</a> or <a href="https://http.cat/429"><code>429</code></a></p>
+&lt;https: 429=“” http.cat=“”&gt; or <a href="https://http.cat/429"><code>429</code></a></p>
 <h2 id="text-and-paragraphs"><a class="header" href="#text-and-paragraphs">Text and Paragraphs</a></h2>
 <pre><code class="language-md">Here is a line of text.
 
@@ -232,8 +248,8 @@ More text.
 
 Ordered
 1. carrots
-1. celery
-1. radishes
+2. celery
+3. radishes
 </code></pre>
 <p>Unordered</p>
 <ul>
@@ -252,21 +268,21 @@ Ordered
 
 Read about [mdBook](mdBook.md).
 
-A bare url: &lt;https://www.rust-lang.org&gt;.
+A bare url: &lt;https: www.rust-lang.org=&quot;&quot;&gt;.
 </code></pre>
-<p>Use <a href="https://github.com/rust-lang/mdBook">mdBook</a>. </p>
+<p>Use <a href="https://github.com/rust-lang/mdBook">mdBook</a>.</p>
 <p>Read about <a href="mdBook.html">mdBook</a>.</p>
-<p>A bare url: <a href="https://www.rust-lang.org">https://www.rust-lang.org</a>.</p>
+<p>A bare url: &lt;https: www.rust-lang.org=“”&gt;.</p>
 <h2 id="images"><a class="header" href="#images">Images</a></h2>
 <p><code>![TWICE](https://upload.wikimedia.org/wikipedia/commons/f/f4/180717_열린음악회_트와이스_02.jpg)</code></p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/180717_%EC%97%B4%EB%A6%B0%EC%9D%8C%EC%95%85%ED%9A%8C_%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4_02.jpg" alt="TWICE" /></p>
 <h2 id="videos"><a class="header" href="#videos">Videos</a></h2>
-<pre><code class="language-html">&lt;video controls&gt;
-  &lt;source src=&quot;./TWICE%20SCIENTIST.mp4&quot; type=&quot;video/mp4&quot;&gt;
+<pre><code class="language-html">&lt;video controls=&quot;&quot;&gt;
+&lt;source src=&quot;./TWICE%20SCIENTIST.mp4&quot; type=&quot;video/mp4&quot;/&gt;
 &lt;/video&gt;
 </code></pre>
-<video controls>
-  <source src="./TWICE%20SCIENTIST.mp4" type="video/mp4">
+<video controls="">
+<source src="./TWICE%20SCIENTIST.mp4" type="video/mp4"/>
 </video>
 <h2 id="strikethrough"><a class="header" href="#strikethrough">Strikethrough</a></h2>
 <p><code>An example of ~~strikethrough text~~.</code></p>
@@ -294,8 +310,9 @@ towards the bottom.</p>
 </tbody></table>
 <h2 id="task-lists"><a class="header" href="#task-lists">Task Lists</a></h2>
 <pre><code class="language-md">TODO:
-- [x] Complete task
-- [ ] Incomplete task
+
+* [x] Complete task
+* [ ] Incomplete task
 </code></pre>
 <p>TODO:</p>
 <ul>
@@ -305,7 +322,7 @@ Complete task</li>
 Incomplete task</li>
 </ul>
 <h2 id="blockquotes"><a class="header" href="#blockquotes">Blockquotes</a></h2>
-<pre><code>&gt; Hi 👋🏻
+<pre><code class="language-markdown">&gt; Hi 👋🏻
 &gt; &gt; Blockquotes can be nested!!!!
 &gt; &gt; &gt; To any possible amount
 &gt;
@@ -322,7 +339,19 @@ Incomplete task</li>
 <p>But, they start to look ugly</p>
 </blockquote>
 <h2 id="kbd-element-ik-not-markdown-but-meh"><a class="header" href="#kbd-element-ik-not-markdown-but-meh">KBD Element (IK not markdown, but meh)</a></h2>
-<p>Lorem ipsum dolor <kbd>d</kbd> sit amet, consectetur <kbd>e</kbd> adipiscing elit. Nunc fermentum <kbd>e</kbd> quis sapien quis pellentesque. Phasellus vitae congue <kbd>z</kbd> mauris. Etiam neque leo, vehicula ac varius vitae, fringilla <kbd>space</kbd> eu metus. Fusce semper leo a ante mattis, at rhoncus arcu consequat. <kbd>n</kbd> In hac habitasse platea dictumst. Praesent <kbd>u</kbd> facilisis accumsan nisi non elementum. Aenean sed <kbd>t</kbd> eleifend mi, ut consectetur sapien. Pellentesque ut tellus ac mauris lobortis varius non in nunc. Donec <kbd>s</kbd> posuere, nisi et viverra condimentum, nulla tortor volutpat urna, eget lacinia odio eros ac ante. Nullam ullamcorper tortor at nulla pretium placerat. Maecenas luctus vulputate est, in porttitor magna ullamcorper in.</p>
+<p>Lorem ipsum dolor <kbd>d</kbd> sit amet, consectetur <kbd>e</kbd>
+adipiscing elit. Nunc fermentum <kbd>e</kbd> quis sapien quis
+pellentesque. Phasellus vitae congue <kbd>z</kbd> mauris. Etiam neque
+leo, vehicula ac varius vitae, fringilla <kbd>space</kbd> eu metus.
+Fusce semper leo a ante mattis, at rhoncus arcu consequat. <kbd>n</kbd>
+In hac habitasse platea dictumst. Praesent <kbd>u</kbd> facilisis accumsan
+nisi non elementum. Aenean sed <kbd>t</kbd> eleifend mi, ut consectetur
+sapien. Pellentesque ut tellus ac mauris lobortis varius non in nunc.
+Donec <kbd>s</kbd> posuere, nisi et viverra condimentum, nulla tortor
+volutpat urna, eget lacinia odio eros ac ante. Nullam ullamcorper
+tortor at nulla pretium placerat. Maecenas luctus vulputate est, in
+porttitor magna ullamcorper in.
+&lt;/https:&gt;&lt;/https:&gt;&lt;/https:&gt;</p>
 
             </div>
             <div class="navigation">
@@ -358,20 +387,6 @@ Incomplete task</li>
         mark.mark(getParameterByName('highlight'), { className: "highlight-search", exclude: ["h1", "h2", "h3", "h4", "h5", "h6", ".spoiler"] });
     </script>
 
-    <!-- Livereload script (if served using the cli tool) -->
-    <script type="text/javascript">
-        var socket = new WebSocket("ws://localhost:3000/__livereload");
-        socket.onmessage = function (event) {
-            if (event.data === "reload") {
-                socket.close();
-                location.reload();
-            }
-        };
-
-        window.onbeforeunload = function () {
-            socket.close();
-        }
-    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>

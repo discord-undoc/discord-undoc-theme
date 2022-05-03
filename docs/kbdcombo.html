@@ -1,3 +1,19 @@
+<!--
+Copyright 2022 한승민
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,27 +152,22 @@
             <div class="chapter-contents">
                 <h1 id="keyboard-shortcuts"><a class="header" href="#keyboard-shortcuts">Keyboard Shortcuts</a></h1>
 <table><thead><tr><th>Name</th><th>Key</th></tr></thead><tbody>
-<tr><td>Toggle sidebar</td><td><kbd>k</kbd></td></tr>
-<tr><td>Change theme</td><td><kbd>t</kbd></td></tr>
+<tr><td>Toggle Sidebar</td><td><kbd>k</kbd></td></tr>
+<tr><td>Change Theme</td><td><kbd>t</kbd></td></tr>
 <tr><td>Edit Chapter</td><td><kbd>e</kbd></td></tr>
 <tr><td>View Repository</td><td><kbd>r</kbd></td></tr>
 <tr><td>Search</td><td><kbd>s</kbd></td></tr>
 <tr><td>Previous Chapter</td><td><kbd>←</kbd></td></tr>
 <tr><td>Next Chapter</td><td><kbd>→</kbd></td></tr>
 </tbody></table>
-<h1 id="manual-navigation"><a class="header" href="#manual-navigation">Manual Navigation</a></h1>
-<p><strong>Sidebar Toggle</strong></p>
+<h2 id="manual-navigation"><a class="header" href="#manual-navigation">Manual Navigation</a></h2>
+<h3 id="sidebar-toggle"><a class="header" href="#sidebar-toggle">Sidebar Toggle</a></h3>
 <p><img src="./assets/sidebar_toggle.png" alt="Sidebar Toggle" /></p>
-<br>
-<p><strong>Theme Toggle</strong><br />
-<strong>Edit Chpater</strong><br />
-<strong>View Repository</strong></p>
+<h2 id="theme-toggleedit-chapterview-repository"><a class="header" href="#theme-toggleedit-chapterview-repository">Theme Toggle/Edit Chapter/View Repository</a></h2>
 <p><img src="./assets/settings_panel.png" alt="Settings Panel" /></p>
-<br>
-<p><strong>Search</strong></p>
+<h3 id="search"><a class="header" href="#search">Search</a></h3>
 <p><img src="./assets/search.png" alt="Search" /></p>
-<br>
-<p><strong>Previous Chapter - Next Chapter</strong></p>
+<h3 id="previous-chapter---next-chapter"><a class="header" href="#previous-chapter---next-chapter">Previous Chapter - Next Chapter</a></h3>
 <p><img src="./assets/chapter_navigation.png" alt="Chapter Navigation" /></p>
 
             </div>
@@ -193,20 +204,6 @@
         mark.mark(getParameterByName('highlight'), { className: "highlight-search", exclude: ["h1", "h2", "h3", "h4", "h5", "h6", ".spoiler"] });
     </script>
 
-    <!-- Livereload script (if served using the cli tool) -->
-    <script type="text/javascript">
-        var socket = new WebSocket("ws://localhost:3000/__livereload");
-        socket.onmessage = function (event) {
-            if (event.data === "reload") {
-                socket.close();
-                location.reload();
-            }
-        };
-
-        window.onbeforeunload = function () {
-            socket.close();
-        }
-    </script>
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
