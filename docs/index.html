@@ -149,29 +149,31 @@ limitations under the License.
                 </a>
             </div>
             <div class="chapter-contents">
-                <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+                <h1 id="discord-undoc-theme"><a class="header" href="#discord-undoc-theme">Discord-Undoc Theme</a></h1>
 <p>This is a demo book, only used for the sole pupose of working on the
 custom theme of the book.</p>
-<h2 id="how-to-set-it-up"><a class="header" href="#how-to-set-it-up">How to set it up?</a></h2>
-<p>This book uses MdBook just like the main book.</p>
-<p><strong>Prerequisites</strong></p>
-<ol>
+<h2 id="how-to-use"><a class="header" href="#how-to-use">How To use</a></h2>
+<h3 id="you-need"><a class="header" href="#you-need">You need</a></h3>
+<ul>
 <li>Rust</li>
-<li>Cargo</li>
-<li>MdBook (can be installed by <code>cargo install mdbook</code>)</li>
-</ol>
-<p>After setting everything up, it’s as simple as</p>
-<ul>
-<li>Opening the folder in any IDE of choice</li>
-<li>Running the local mdbook server to see changes live.
-<ul>
-<li><code>mdbook serve</code> is the command to do that, make sure that your
-CWD is the folder the book is located in.</li>
+<li>mdbook</li>
+<li>Python</li>
 </ul>
-</li>
+<h3 id="setting-up-the-theme"><a class="header" href="#setting-up-the-theme">Setting up the theme</a></h3>
+<p>Start with installing the following python dependencies:</p>
+<ul>
+<li>mistletoe</li>
+<li>httpx</li>
+<li>orjson</li>
+<li>beautifulsoup4</li>
 </ul>
-<p>Start improving the theme!</p>
-<h2 id="features"><a class="header" href="#features">Features:</a></h2>
+<p>These are required by the preprocessor.</p>
+<p>Next you have to set the <code>TOKEN</code> environment variable, this is supposed
+to be a Bot token, it is used when fetching information for user badges.</p>
+<p>Thats it! You can now start editing the files under <code>./src</code> and
+use the <code>mdbook build</code> &amp; <code>mdbook serve</code> commands to help you in the
+process of writing the docs.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
 Responsive Design</li>

@@ -1,26 +1,35 @@
-# Introduction
+# Discord-Undoc Theme
 
 This is a demo book, only used for the sole pupose of working on the
 custom theme of the book.
 
-## How to set it up?
+## How To use
 
-This book uses MdBook just like the main book.
+### You need
 
-**Prerequisites**
-1. Rust
-2. Cargo
-3. MdBook (can be installed by `cargo install mdbook`)
+- Rust
+- mdbook
+- Python
 
-After setting everything up, it's as simple as
-- Opening the folder in any IDE of choice
-- Running the local mdbook server to see changes live.
-  - `mdbook serve` is the command to do that, make sure that your
-  CWD is the folder the book is located in.
+### Setting up the theme
 
-Start improving the theme!
+Start with installing the following python dependencies:
 
-## Features:
+- mistletoe
+- httpx
+- orjson
+- beautifulsoup4
+
+These are required by the preprocessor.\
+
+Next you have to set the `TOKEN` environment variable, this is supposed
+to be a Bot token, it is used when fetching information for user badges.
+
+Thats it! You can now start editing the files under `./src` and
+use the `mdbook build` & `mdbook serve` commands to help you in the
+process of writing the docs.
+
+## Features
 
 - [x] Responsive Design
 - [x] Dark/Light Themes
