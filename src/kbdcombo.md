@@ -2,37 +2,28 @@
 
 |  Name            | Key          |
 |------------------|--------------|
-| Toggle sidebar   | <kbd>k</kbd> |
-| Change theme     | <kbd>t</kbd> |
+| Toggle Sidebar   | <kbd>k</kbd> |
+| Change Theme     | <kbd>t</kbd> |
 | Edit Chapter     | <kbd>e</kbd> |
 | View Repository  | <kbd>r</kbd> |
 | Search           | <kbd>s</kbd> |
 | Previous Chapter | <kbd>←</kbd> |
 | Next Chapter     | <kbd>→</kbd> |
 
-# Manual Navigation
+## Manual Navigation
 
-**Sidebar Toggle**
+### Sidebar Toggle
 
 ![Sidebar Toggle](./assets/sidebar_toggle.png)
 
-<br>
-
-**Theme Toggle**\
-**Edit Chpater**\
-**View Repository**
+## Theme Toggle/Edit Chapter/View Repository
 
 ![Settings Panel](./assets/settings_panel.png)
 
-<br>
-
-**Search**
+### Search
 
 ![Search](./assets/search.png)
 
-<br>
-
-**Previous Chapter - Next Chapter**
+### Previous Chapter - Next Chapter
 
 ![Chapter Navigation](./assets/chapter_navigation.png)
-

@@ -1,64 +1,72 @@
 # Reference
 
-## Structure
+Currently the preprocessor only works with 5 types of custom elements\
+They are:
 
-**Any custom element can be divided into 2 parts**
+- Enpoints
+- Indicators
+- Alert Boxes
+- User Badges
+- Spoilers
 
-1. The type
-2. The content
+## Endpoints
 
-{::warn Some elements <b>do not</b> require any content.}
+There are upto 9 elements which are considered as "endpoint" elements\
+They are the 9 methods: `get` `head` `post` `put` `delete` `connect`
+`options` `trace` `patch`
 
-The format is: `{::(TYPE) (CONTENT)}`
-- The `TYPE` and the `CONTENT` must be separated by a space (` `)
-- Passing in content for an element that doesn't accept any may result in rendering issues!
-- Element types are case sensitive.
+```markdown
+<get>/some/endpoint</get>\
+<head>/some/endpoint</head>\
+<post>/some/endpoint</post>\
+<put>/some/endpoint</put>\
+<delete>/some/endpoint</delete>\
+<connect>/some/endpoint</connect>\
+<options>/some/endpoint</options>\
+<trace>/some/endpoint</trace>\
+<patch>/some/endpoint</patch>
+```
 
-## Formats and Examples
+## Indicators
 
-{::info Custom elements are manually added, hence only the elements listed here work, others will end-up w/ faluty rendering}
+These a small little badges that are called "indicators"
+they all have a tooltip which say different things.\
+There are 3 indicators supported: `undoc` `nobot` `iandeploy`
 
-User Badge:
-- Format: `{::user (USER_ID)}`\
-- Example: `{::user 755792681313108018}`
-    {::user 755792681313108018}
+```markdown
+<undoc/>
+<nobot/>
+<iandeploy/>
+```
 
-<br>
+## Alert Boxes
 
-HTTP Stuff:
-- Format: `{::(get|head|post|put|delete|connect|options|trace|patch) (ENDPOINT)}`
-- Exaple: `{::post /auth}` {::post /auth}
+These are those highlighted boxes which are some pieces of text that the
+user must read.\
+There are 3 types of alert boxes: `note` `info` `warn`
 
-<br>
+```markdown
+<note>This is a random note.</note>
+<info>You know what this reminds me of? Blobs!</info>
+<warn>┻━┻ ︵ヽ(\`Д´)ﾉ︵﻿ ┻━┻</warn>
+```
 
-Indicators:
-- Format: `{::(undoc|nobot|iandeploy)}`
-- Example: `{::iandeploy}` {::iandeploy}
+## User Badges
 
-<br>
+These are cute looking badges that link to users on discord\
+You can create one like this:
 
-Alert Boxes:
-- Format: `{::(note|info|warn) (CONTENT)}`
-- Exaple: `{::note Hi!}` {::note Hi!}
+```markdown
+<user id="1234"/>
+```
 
-<br>
+The `id` attribute should be the ID of that user.
 
-Accordions:
-- Format: `{::(details|details-open) (SUMMARY-optional)<summ>-optional(CONTENT)}`
-- Example: `{::details-open Hello}` {::details-open Hello}
+## Spoilers
 
-Spoilers:
-- Format: `{::spoiler (CONTENT)}`
-- Example: `{::spoiler this is a spoiler}` {::spoiler this is a spoiler}
+Inspired from discord's spoilers, discord-undoc also has spoilers\
+They can be defined like so:
 
-## Examples of faulty rendering
-
-`{::undoc hello}` -> {::undoc hello}
-
-`{::note}` -> {::note}
-
-`{::user 1234}` -> *Did not add this because the preprocessor will not accept it.*
-
-`{::trace}` -> {::trace}
-
-Annnnnnnnnnnnnnnnnnnnnnnnnnnnd many more cases.................
+```markdown
+<spoiler>spoiler'd content</spoiler>
+```

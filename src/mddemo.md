@@ -3,7 +3,7 @@
 ## Code Block
 
 **Prism w/ custom a11y colors**
-{::info Most colors in light mode do not meet `WCAG AAA` requirements but they do comply with `WCAG AA`}
+<info>Most colors in light mode do not meet `WCAG AAA` requirements but they do comply with `WCAG AA`</info>
 
 ```js
 var var1 = "This is Awesome";
@@ -103,11 +103,11 @@ Some text.
 More text.
 ```
 
-### A heading 
+### A heading
 
 Some text.
 
-#### A smaller heading 
+#### A smaller heading
 
 More text.
 
@@ -121,19 +121,21 @@ Unordered
 
 Ordered
 1. carrots
-1. celery
-1. radishes
+2. celery
+3. radishes
 ```
 
 Unordered
+
 * milk
 * eggs
 * butter
 
 Ordered
+
 1. carrots
-1. celery
-2. radishes
+2. celery
+3. radishes
 
 ## Links
 
@@ -145,7 +147,7 @@ Read about [mdBook](mdBook.md).
 A bare url: <https://www.rust-lang.org>.
 ```
 
-Use [mdBook](https://github.com/rust-lang/mdBook). 
+Use [mdBook](https://github.com/rust-lang/mdBook).
 
 Read about [mdBook](mdBook.md).
 
@@ -164,10 +166,10 @@ A bare url: <https://www.rust-lang.org>.
   <source src="./TWICE%20SCIENTIST.mp4" type="video/mp4">
 </video>
 ```
+
 <video controls>
   <source src="./TWICE%20SCIENTIST.mp4" type="video/mp4">
 </video>
-
 
 ## Strikethrough
 
@@ -175,7 +177,7 @@ A bare url: <https://www.rust-lang.org>.
 
 An example of ~~strikethrough text~~.
 
-## Footnotes 
+## Footnotes
 
 ```md
 This is an example of a footnote[^note].
@@ -207,17 +209,19 @@ This is an example of a footnote[^note].
 
 ```md
 TODO:
-- [x] Complete task
-- [ ] Incomplete task
+
+* [x] Complete task
+* [ ] Incomplete task
 ```
 
 TODO:
-- [x] Complete task
-- [ ] Incomplete task
+
+* [x] Complete task
+* [ ] Incomplete task
 
 ## Blockquotes
 
-```
+```markdown
 > Hi 👋🏻
 > > Blockquotes can be nested!!!!
 > > > To any possible amount
@@ -233,4 +237,15 @@ TODO:
 
 ## KBD Element (IK not markdown, but meh)
 
-Lorem ipsum dolor <kbd>d</kbd> sit amet, consectetur <kbd>e</kbd> adipiscing elit. Nunc fermentum <kbd>e</kbd> quis sapien quis pellentesque. Phasellus vitae congue <kbd>z</kbd> mauris. Etiam neque leo, vehicula ac varius vitae, fringilla <kbd>space</kbd> eu metus. Fusce semper leo a ante mattis, at rhoncus arcu consequat. <kbd>n</kbd> In hac habitasse platea dictumst. Praesent <kbd>u</kbd> facilisis accumsan nisi non elementum. Aenean sed <kbd>t</kbd> eleifend mi, ut consectetur sapien. Pellentesque ut tellus ac mauris lobortis varius non in nunc. Donec <kbd>s</kbd> posuere, nisi et viverra condimentum, nulla tortor volutpat urna, eget lacinia odio eros ac ante. Nullam ullamcorper tortor at nulla pretium placerat. Maecenas luctus vulputate est, in porttitor magna ullamcorper in.
+Lorem ipsum dolor <kbd>d</kbd> sit amet, consectetur <kbd>e</kbd>
+adipiscing elit. Nunc fermentum <kbd>e</kbd> quis sapien quis
+pellentesque. Phasellus vitae congue <kbd>z</kbd> mauris. Etiam neque
+leo, vehicula ac varius vitae, fringilla <kbd>space</kbd> eu metus.
+Fusce semper leo a ante mattis, at rhoncus arcu consequat. <kbd>n</kbd>
+In hac habitasse platea dictumst. Praesent <kbd>u</kbd> facilisis accumsan
+nisi non elementum. Aenean sed <kbd>t</kbd> eleifend mi, ut consectetur
+sapien. Pellentesque ut tellus ac mauris lobortis varius non in nunc.
+Donec <kbd>s</kbd> posuere, nisi et viverra condimentum, nulla tortor
+volutpat urna, eget lacinia odio eros ac ante. Nullam ullamcorper
+tortor at nulla pretium placerat. Maecenas luctus vulputate est, in
+porttitor magna ullamcorper in.
