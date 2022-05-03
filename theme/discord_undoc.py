@@ -16,7 +16,7 @@ limitations under the License.
 
 from asyncio import Event, Lock, run, sleep
 from os import getenv
-from re import compile
+from re import compile, Match
 from sys import argv, stdin
 from time import monotonic
 
@@ -60,6 +60,18 @@ STATIC_ELEMENTS = {
         ' 01-.143-.143c.056-.362.225-1.226.62-1.62a.808.808 0 011.33.881z"></path></svg>'
     ),
 }
+
+
+CODE_BLOCK_RE = compile(
+    r"(?<!\\)(`{3,}(?=[^`\n]*\n))([^\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1 *(?=\n|$))"
+)
+
+INLINE_CODE_RE = compile(r"((?<!\\)`+)([^`]|[^`][\s\S]*?[^`])(?<!\\)\1(?!`)")
+
+
+URL_RE = compile(
+    r"<https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)>"
+)
 
 
 client = AsyncClient(
@@ -194,12 +206,39 @@ async def modify_some_shit(document: BeautifulSoup):
         )
 
 
+def remove(string: str) -> tuple[dict[str, str], str]:
+    mappings = {}
+
+    def replace(match: Match[str]):
+        key = f"-SomeRandomPrefixToPreventConflictWithNormalContentKThanks{len(mappings)}-"
+        mappings[key] = match.group(0)
+        return key
+
+    string = CODE_BLOCK_RE.subn(replace, string)[0]
+    string = INLINE_CODE_RE.subn(replace, string)[0]
+    # mdbook wants urls to be enclosed in <> because of the spec
+    # but html parsers dont like it :/
+    # so we ignore those too
+    string = URL_RE.subn(replace, string)[0]
+
+    return mappings, string
+
+
+def add(string: str, mappings: dict[str, str]) -> str:
+    for key, value in mappings.items():
+        string = string.replace(key, value)
+
+    return string
+
+
 async def parse(book):
     for chapter in book["sections"]:
         if "PartTitle" not in chapter and chapter["Chapter"]["path"] is not None:
-            doc = BeautifulSoup(chapter["Chapter"]["content"], "html.parser")
+            mappings, string = remove(chapter["Chapter"]["content"])
+            doc = BeautifulSoup(string, "html.parser")
             await modify_some_shit(doc)
-            chapter["Chapter"]["content"] = doc.encode(formatter=None).decode()  # type: ignore
+            string = add(doc.encode(formatter=None).decode(), mappings)
+            chapter["Chapter"]["content"] = string  # type: ignore
     await client.aclose()
 
 

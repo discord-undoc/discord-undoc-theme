@@ -100,9 +100,6 @@ html.sidebar-hidden .page-content {
     line-height: 0.5rem;
     padding: 0 calc(var(--element-padding) / 2);
     font-weight: 500;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
 }
 
 .undoc:hover::before,

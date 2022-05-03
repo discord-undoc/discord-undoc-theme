@@ -16,7 +16,7 @@
 
 ![Sidebar Toggle](./assets/sidebar_toggle.png)
 
-## Theme Toggle/Edit Chapter/View Repository
+### Theme Toggle/Edit Chapter/View Repository
 
 ![Settings Panel](./assets/settings_panel.png)
 
