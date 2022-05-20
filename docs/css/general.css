@@ -137,12 +137,8 @@ blockquote {
     margin: var(--element-padding) 0;
     border-radius: 5px;
     padding: 5px 10px;
-    border-top: solid 1px var(--blockquote-color-l);
-    border-right: solid 1px var(--blockquote-color-l);
-    border-bottom: solid 1px var(--blockquote-color-l);
     border-left: solid 3px var(--blockquote-color-l);
     stroke-linecap: round;
-    background: var(--alternative-background);
     overflow: hidden;
 }
 

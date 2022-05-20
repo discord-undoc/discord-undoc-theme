@@ -192,21 +192,21 @@ html.sidebar-hidden .page-content {
     border-radius: var(--element-border-radius);
     color: var(--alert-box-color);
     margin: 0.75rem 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .note {
-    border: solid 2px var(--note-border-color);
+    border: solid 1px var(--note-border-color);
     background: var(--note-background);
 }
 
 .info {
-    border: solid 2px var(--info-border-color);
+    border: solid 1px var(--info-border-color);
     background: var(--info-background);
 }
 
 .warn {
-    border: solid 2px var(--warn-border-color);
+    border: solid 1px var(--warn-border-color);
     background: var(--warn-background);
 }
 
