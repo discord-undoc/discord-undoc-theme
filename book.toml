@@ -9,9 +9,6 @@ description = "Theme for the Unofficial Discord Documentation"
 [build]
 build-dir = "docs"
 
-[preprocessor.discord-undoc]
-command = "python ./theme/discord_undoc.py"
-
 [output.html]
 default-theme = "dark"
 preferred-dark-theme = "dark"

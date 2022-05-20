@@ -61,8 +61,8 @@ h4,
 h5,
 h6 {
     font-family: var(--font-head);
-    margin-top: calc(var(--element-padding) * 6);
-    margin-bottom: calc(var(--element-padding) * 3);
+    margin-top: calc(var(--element-padding) * 2);
+    margin-bottom: calc(var(--element-padding) * 2);
 }
 
 h1 a,
@@ -156,8 +156,8 @@ details {
     margin: var(--element-padding) 0;
 }
 
-details .d_content {
-    padding: var(--element-padding);
+details .d-content {
+    padding: calc(var(--element-padding) * 2);
     height: fit-content;
 }
 

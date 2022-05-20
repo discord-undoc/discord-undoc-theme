@@ -158,29 +158,42 @@ They are:</p>
 <li>Indicators</li>
 <li>Alert Boxes</li>
 <li>User Badges</li>
+<li>Servers</li>
 <li>Spoilers</li>
 </ul>
+<note>
+<p>Due to html syntax, elements which do not have a body <strong>must</strong> be closed as
+a non-void tag. For example, indicators.</p>
+</note>
 <h2 id="endpoints"><a class="header" href="#endpoints">Endpoints</a></h2>
 <p>There are upto 9 elements which are considered as “endpoint” elements<br />
 They are the 9 methods: <code>get</code> <code>head</code> <code>post</code> <code>put</code> <code>delete</code> <code>connect</code>
 <code>options</code> <code>trace</code> <code>patch</code></p>
-<pre><code class="language-markdown">&lt;get&gt;/some/endpoint&lt;/get&gt;\
-&lt;head&gt;/some/endpoint&lt;/head&gt;\
-&lt;post&gt;/some/endpoint&lt;/post&gt;\
-&lt;put&gt;/some/endpoint&lt;/put&gt;\
-&lt;delete&gt;/some/endpoint&lt;/delete&gt;\
-&lt;connect&gt;/some/endpoint&lt;/connect&gt;\
-&lt;options&gt;/some/endpoint&lt;/options&gt;\
-&lt;trace&gt;/some/endpoint&lt;/trace&gt;\
+<pre><code class="language-markdown">&lt;get&gt;/some/endpoint&lt;/get&gt;
+
+&lt;head&gt;/some/endpoint&lt;/head&gt;
+
+&lt;post&gt;/some/endpoint&lt;/post&gt;
+
+&lt;put&gt;/some/endpoint&lt;/put&gt;
+
+&lt;delete&gt;/some/endpoint&lt;/delete&gt;
+
+&lt;connect&gt;/some/endpoint&lt;/connect&gt;
+
+&lt;options&gt;/some/endpoint&lt;/options&gt;
+
+&lt;trace&gt;/some/endpoint&lt;/trace&gt;
+
 &lt;patch&gt;/some/endpoint&lt;/patch&gt;
 </code></pre>
 <h2 id="indicators"><a class="header" href="#indicators">Indicators</a></h2>
 <p>These a small little badges that are called “indicators”
 they all have a tooltip which say different things.<br />
 There are 3 indicators supported: <code>undoc</code> <code>nobot</code> <code>iandeploy</code></p>
-<pre><code class="language-markdown">&lt;undoc/&gt;
-&lt;nobot/&gt;
-&lt;iandeploy/&gt;
+<pre><code class="language-markdown">&lt;undoc&gt;&lt;/undoc&gt;
+&lt;nobot&gt;&lt;/nobot&gt;
+&lt;iandeploy&gt;&lt;/iandeploy&gt;
 </code></pre>
 <h2 id="alert-boxes"><a class="header" href="#alert-boxes">Alert Boxes</a></h2>
 <p>These are those highlighted boxes which are some pieces of text that the
@@ -191,11 +204,17 @@ There are 3 types of alert boxes: <code>note</code> <code>info</code> <code>warn
 &lt;warn&gt;┻━┻ ︵ヽ(\`Д´)ﾉ︵﻿ ┻━┻&lt;/warn&gt;
 </code></pre>
 <h2 id="user-badges"><a class="header" href="#user-badges">User Badges</a></h2>
-<p>These are cute looking badges that link to users on discord<br />
+<p>These are cute looking badges that link to users on discord or github<br />
 You can create one like this:</p>
-<pre><code class="language-markdown">&lt;user id=&quot;1234&quot;/&gt;
+<pre><code class="language-markdown">&lt;user id=&quot;discord:1234&quot;&gt;&lt;/user&gt;
+&lt;user id=&quot;github:ghost&quot;&gt;&lt;/user&gt;
 </code></pre>
-<p>The <code>id</code> attribute should be the ID of that user.</p>
+<p>The <code>id</code> attribute should be the ID of that user either prefixed with <code>discord:</code>
+for a discord user or <code>gitub:</code> for a github user.</p>
+<h2 id="servers"><a class="header" href="#servers">Servers</a></h2>
+<p>Server invite images can be created by:</p>
+<pre><code class="language-markdown">&lt;server id=&quot;invite&quot;&gt;&lt;/server&gt;
+</code></pre>
 <h2 id="spoilers"><a class="header" href="#spoilers">Spoilers</a></h2>
 <p>Inspired from discord’s spoilers, discord-undoc also has spoilers<br />
 They can be defined like so:</p>

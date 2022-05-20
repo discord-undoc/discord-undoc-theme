@@ -4,26 +4,44 @@
 
 ## User Badges
 
-User: <user id="841509053422632990"/>\
-User (animated avatar): <user id="755792681313108018"/>
+### Discord
+
+User: <user id="discord:841509053422632990"></user>\
+User (animated avatar): <user id="discord:755792681313108018"></user>
+
+### Github
+
+User: <user id="github:arHSM"></user>
+
+## Server
+
+<server id="zVB5P96GE2"></server>
 
 ## Endpoints
 
-<get>/some/endpoint</get>\
-<head>/some/endpoint</head>\
-<post>/some/endpoint</post>\
-<put>/some/endpoint</put>\
-<delete>/some/endpoint</delete>\
-<connect>/some/endpoint</connect>\
-<options>/some/endpoint</options>\
-<trace>/some/endpoint</trace>\
+<get>/some/endpoint</get>
+
+<mhead>/some/endpoint</mhead>
+
+<post>/some/endpoint</post>
+
+<put>/some/endpoint</put>
+
+<delete>/some/endpoint</delete>
+
+<connect>/some/endpoint</connect>
+
+<options>/some/endpoint</options>
+
+<trace>/some/endpoint</trace>
+
 <patch>/some/endpoint</patch>
 
 ## Indicators
 
-Undocumented: <undoc/> some random text\
-Not for bots: <nobot/> some random text\
-Ian Deploy™: <iandeploy/> some random text
+Undocumented: <undoc></undoc> some random text\
+Not for bots: <nobot></nobot> some random text\
+Ian Deploy™: <iandeploy></iandeploy> some random text
 
 ## Alert boxes
 

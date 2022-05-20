@@ -7,7 +7,15 @@ They are:
 - Indicators
 - Alert Boxes
 - User Badges
+- Servers
 - Spoilers
+
+<note>
+
+Due to html syntax, elements which do not have a body **must** be closed as
+a non-void tag. For example, indicators.
+
+</note>
 
 ## Endpoints
 
@@ -16,14 +24,22 @@ They are the 9 methods: `get` `head` `post` `put` `delete` `connect`
 `options` `trace` `patch`
 
 ```markdown
-<get>/some/endpoint</get>\
-<head>/some/endpoint</head>\
-<post>/some/endpoint</post>\
-<put>/some/endpoint</put>\
-<delete>/some/endpoint</delete>\
-<connect>/some/endpoint</connect>\
-<options>/some/endpoint</options>\
-<trace>/some/endpoint</trace>\
+<get>/some/endpoint</get>
+
+<head>/some/endpoint</head>
+
+<post>/some/endpoint</post>
+
+<put>/some/endpoint</put>
+
+<delete>/some/endpoint</delete>
+
+<connect>/some/endpoint</connect>
+
+<options>/some/endpoint</options>
+
+<trace>/some/endpoint</trace>
+
 <patch>/some/endpoint</patch>
 ```
 
@@ -34,9 +50,9 @@ they all have a tooltip which say different things.\
 There are 3 indicators supported: `undoc` `nobot` `iandeploy`
 
 ```markdown
-<undoc/>
-<nobot/>
-<iandeploy/>
+<undoc></undoc>
+<nobot></nobot>
+<iandeploy></iandeploy>
 ```
 
 ## Alert Boxes
@@ -53,14 +69,24 @@ There are 3 types of alert boxes: `note` `info` `warn`
 
 ## User Badges
 
-These are cute looking badges that link to users on discord\
+These are cute looking badges that link to users on discord or github\
 You can create one like this:
 
 ```markdown
-<user id="1234"/>
+<user id="discord:1234"></user>
+<user id="github:ghost"></user>
 ```
 
-The `id` attribute should be the ID of that user.
+The `id` attribute should be the ID of that user either prefixed with `discord:`
+for a discord user or `gitub:` for a github user.
+
+## Servers
+
+Server invite images can be created by:
+
+```markdown
+<server id="invite"></server>
+```
 
 ## Spoilers
 
