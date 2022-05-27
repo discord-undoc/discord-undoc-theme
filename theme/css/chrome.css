@@ -75,8 +75,8 @@ html.sidebar-hidden .page-content {
     background: var(--alternative-background);
     color: var(--text-primary);
     width: fit-content;
-    padding: 3px;
-    padding-right: 5px;
+    padding: 5px;
+    padding-right: 7px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.65rem;
@@ -86,6 +86,8 @@ html.sidebar-hidden .page-content {
     vertical-align: middle;
     border-radius: 20px;
     margin-right: 5px;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 .user .discriminator {
@@ -94,7 +96,7 @@ html.sidebar-hidden .page-content {
 
 .user .username,
 .user .discriminator {
-    height: 20px;
+    line-height: 0;
 }
 
 /* Indicators */

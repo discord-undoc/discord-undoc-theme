@@ -193,7 +193,7 @@ function toggle(remove, add, id, value) {
                 let user = window.users[user_id];
                 badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                     <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="20px" height="20px">
+                    class="avatar">
                     <span class="username">${user.name}</span>
                     </img>
                     </a>`
@@ -217,7 +217,7 @@ function toggle(remove, add, id, value) {
             window.users[user_id] = user
             badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
             <img src="${user.avatar}" alt="${user.name}\'s avatar"
-            class="avatar" width="20px" height="20px">
+            class="avatar">
             <span class="username">${user.name}</span>
             </img>
             </a>`
@@ -227,7 +227,7 @@ function toggle(remove, add, id, value) {
                 let user = window.users[user_id];
                 badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                     <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="20px" height="20px">
+                    class="avatar">
                     <span class="username">${user.name}</span>
                     </img>
                     </a>`
@@ -251,7 +251,7 @@ function toggle(remove, add, id, value) {
             window.users[user_id] = user
             badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                 <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                class="avatar" width="20px" height="20px">
+                class="avatar">
                 <span class="username">${user.name}</span>
                 </img>
                 </a>`
@@ -262,7 +262,7 @@ function toggle(remove, add, id, value) {
                 let user = window.users[user_id];
                 badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                     <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="20px" height="20px">
+                    class="avatar">
                     <span class="username">${user.name}</span>
                     <span class="discriminator">#${user.discriminator}</span>
                     </img>
@@ -273,7 +273,7 @@ function toggle(remove, add, id, value) {
             window.users[user_id] = user;
             badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
             <img src="${user.avatar}" alt="${user.name}\'s avatar"
-            class="avatar" width="20px" height="20px">
+            class="avatar">
             <span class="username">${user.name}</span>
             <span class="discriminator">#${user.discriminator}</span>
             </img>
