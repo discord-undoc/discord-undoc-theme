@@ -275,7 +275,7 @@ function toggle(remove, add, id, value) {
             <img src="${user.avatar}" alt="${user.name}\'s avatar"
             class="avatar" width="20px" height="20px">
             <span class="username">${user.name}</span>
-            <span>#${user.discriminator}</span>
+            <span class="discriminator">#${user.discriminator}</span>
             </img>
             </a>`
         }
