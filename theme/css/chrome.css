@@ -404,7 +404,7 @@ html.sidebar-hidden .sidebar {
 
 .toctree .part-title::before {
     display: inline-block;
-    content: "⤷ ";
+    content: "# ";
     font-family: var(--font-code);
     font-size: 0.85rem;
     color: var(--text-muted);
