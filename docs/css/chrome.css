@@ -69,11 +69,14 @@ html.sidebar-hidden .page-content {
 /* User Badges */
 
 .user {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background: var(--alternative-background);
     color: var(--text-primary);
-    height: 25px;
-    padding-right: 4px;
+    width: fit-content;
+    padding: 3px;
+    padding-right: 5px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 0.65rem;
@@ -82,11 +85,16 @@ html.sidebar-hidden .page-content {
 .user img {
     vertical-align: middle;
     border-radius: 20px;
-    margin-left: 3px;
+    margin-right: 5px;
 }
 
 .user .discriminator {
     color: var(--text-muted);
+}
+
+.user .username,
+.user .discriminator {
+    height: 20px;
 }
 
 /* Indicators */
