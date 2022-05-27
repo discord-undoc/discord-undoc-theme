@@ -66,12 +66,23 @@ html.sidebar-hidden .page-content {
     max-width: 100%;
 }
 
+/* Emojis */
+
+.emoji {
+    position: relative;
+    top: 5px;
+    width: 20px;
+    border-radius: 0;
+}
+
 /* User Badges */
 
 .user {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 5px;
     background: var(--alternative-background);
     color: var(--text-primary);
     width: fit-content;
