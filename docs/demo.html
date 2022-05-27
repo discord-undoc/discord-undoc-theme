@@ -60,7 +60,7 @@ limitations under the License.
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -157,7 +157,26 @@ limitations under the License.
 <p>User: <user id="discord:841509053422632990"></user><br />
 User (animated avatar): <user id="discord:755792681313108018"></user></p>
 <h3 id="github"><a class="header" href="#github">Github</a></h3>
-<p>User: <user id="github:arHSM"></user></p>
+<p>User: <user id="github:arHSM"></user><br />
+Organization: <user id="github:discord"></user></p>
+<h3 id="gitlab"><a class="header" href="#gitlab">Gitlab</a></h3>
+<info>
+<p>Sometimes results might not be accurate because this uses the search
+feature rather than the more accurate “get by ID” method because
+getting a gitlab user’s ID is just too much work</p>
+</info>
+<p>User: <user id="gitlab:arHSM"></user></p>
+<note>
+<p>Users are cached, so multiple badges for the same user in a page only
+costs one request.<br />
+Open network tab and reload to check requests:<br />
+<user id="gitlab:arHSM"></user><br />
+<user id="gitlab:arHSM"></user><br />
+<user id="gitlab:arHSM"></user><br />
+<user id="gitlab:arHSM"></user><br />
+<user id="gitlab:arHSM"></user><br />
+<user id="gitlab:arHSM"></user></p>
+</note>
 <h2 id="server"><a class="header" href="#server">Server</a></h2>
 <p><server id="zVB5P96GE2"></server></p>
 <h2 id="endpoints"><a class="header" href="#endpoints">Endpoints</a></h2>
@@ -178,7 +197,7 @@ Ian Deploy™: <iandeploy></iandeploy> some random text</p>
 <p>a11y checked ofc.</p>
 <p><note>This is a random note.</note>
 <info>You know what this reminds me of? Blobs!</info>
-<warn>┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻</warn></p>
+<warn>┻━┻ ﾐヽ(ಠ益ಠ)ノ彡┻━┻</warn></p>
 <h2 id="spoilers"><a class="header" href="#spoilers">Spoilers</a></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing
 <spoiler>something</spoiler> elit. Sed turpis erat, tempor a vehicula
@@ -204,21 +223,6 @@ interdum neque. <spoiler>stuff</spoiler></p>
         </div>
     </main>
 
-    <script type="text/javascript">
-        function getParameterByName(name, url = window.location.href) {
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-
-        let mark = new Mark(".chapter-contents");
-
-        mark.mark(getParameterByName('highlight'), { className: "highlight-search", exclude: ["h1", "h2", "h3", "h4", "h5", "h6", ".spoiler"] });
-    </script>
-
 
     <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
@@ -226,6 +230,23 @@ interdum neque. <spoiler>stuff</spoiler></p>
 
     <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
     <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        twemoji.parse(document.body);
+
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return undefined;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        let hlword = getParameterByName('highlight');
+
+        typeof hlword !== "undefined" ? (new Mark(".chapter-contents")).mark(hlword, { className: "highlight-search", exclude: ["h1", "h2", "h3", "h4", "h5", "h6", ".spoiler"] }) : null;
+    </script>
 </body>
 
 </html>

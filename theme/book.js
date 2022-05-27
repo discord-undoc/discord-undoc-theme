@@ -26,11 +26,11 @@ function toggle(remove, add, id, value) {
 
     let server_img = document.querySelectorAll('.server-img');
     if (server_img === null) return
-    server_img.forEach(img => {
+    for (const img of server_img) {
         let source = img.src
         source = source.substring(0, source.lastIndexOf('?theme=') + 7);
         img.src = source + value;
-    })
+    }
 }
 
 (() => {
@@ -105,17 +105,19 @@ function toggle(remove, add, id, value) {
 (() => {
     let alert_boxes = document.querySelectorAll("note, info, warn");
     if (alert_boxes === null) return
-    alert_boxes.forEach(alert_box => {
+
+    for (const alert_box of alert_boxes) {
         let type = alert_box.tagName
         let data = alert_box.innerHTML
         alert_box.innerHTML = `<div class="${type.toLocaleLowerCase()}">${data}</div>`
-    })
+    }
 })();
 
 (() => {
     let methods = document.querySelectorAll("get, mhead, post, put, delete, connect, options, trace, patch")
     if (methods === null) return
-    methods.forEach(method => {
+
+    for (const method of methods) {
         let type = method.tagName
         if (type === "MHEAD") {
             type = "head"
@@ -125,13 +127,14 @@ function toggle(remove, add, id, value) {
         <span class="endpoint-c"><span class="http-method ${type.toLowerCase()}">
         ${type.toUpperCase()}</span> ${url}</span>
         </b>`
-    })
+    }
 })();
 
 (() => {
     let indicators = document.querySelectorAll("undoc, nobot, iandeploy")
     if (indicators === null) return
-    indicators.forEach(indicator => {
+
+    for (const indicator of indicators) {
         let type = indicator.tagName
         if (type === "UNDOC") {
             indicator.innerHTML = `<b class="${type.toLocaleLowerCase()}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" 
@@ -160,102 +163,134 @@ function toggle(remove, add, id, value) {
             01-.188.263c-.394.394-1.258.563-1.62.619a.124.124 0 
             01-.143-.143c.056-.362.225-1.226.62-1.62a.808.808 0 011.33.881z"></path></svg></b>`
         }
-    })
+    }
 })();
 
 (() => {
     let spoilers = document.querySelectorAll("spoiler")
     if (spoilers === null) return
-    spoilers.forEach(spoiler => {
+
+    for (const spoiler of spoilers) {
         let id = new Date().getTime() + Math.floor(Math.random() * 500000);
         let data = spoiler.innerHTML
         spoiler.innerHTML = `<input type="checkbox" class="spoiler" id="spoiler-${id}">
         <label class="spoiler" for="spoiler-${id}">${data}</label>`
-    })
+    }
 })();
 
-(() => {
+(async () => {
+    let discordRegex = /^[0-9]+$/
     let badges = document.querySelectorAll("user")
     if (badges === null) return
 
-    let users = {}
+    window.users = {}
 
-    badges.forEach(badge => {
+    for (const badge of badges) {
         let user_id = badge.id;
         if (user_id.startsWith("github:")) {
             let user_name = user_id.substring(7);
-            if (user_name in users) {
-                let user = users[user_name];
+            if (window.users.hasOwnProperty(user_id)) {
+                let user = window.users[user_id];
                 badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                     <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="25px" height="25px">${user.name}
+                    class="avatar" width="20px" height="20px">
+                    <span class="username">${user.name}</span>
                     </img>
                     </a>`
-                return
+                continue
             }
-            fetch(`https://api.github.com/users/${user_name}`).then(
-                response => response.json()
-            ).then(
-                data => {
-                    let user = {
-                        url: "https://github.com/ghost",
-                        avatar: "https://avatars.githubusercontent.com/u/10137?v=4",
-                        name: "Deleted user",
-                        id: "ghost"
-                    }
-                    if (data.message != "Not Found") {
-                        user = {
-                            url: data.html_url,
-                            avatar: data.avatar_url,
-                            name: data.name || data.login,
-                            id: data.login
-                        }
-                    }
-                    users[user_name] = user
-                    badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
-                    <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="25px" height="25px">${user.name}
-                    </img>
-                    </a>`
+            let data = await (await fetch(`https://api.github.com/users/${user_name}`)).json()
+            let user = {
+                url: "https://github.com/ghost",
+                avatar: "https://avatars.githubusercontent.com/u/10137?v=4",
+                name: "Deleted user",
+                id: "ghost"
+            }
+            if (data.message != "Not Found") {
+                user = {
+                    url: data.html_url,
+                    avatar: data.avatar_url,
+                    name: data.name || data.login,
+                    id: data.login
                 }
-            )
-        } else if (user_id.startsWith("discord:")) {
-            user_id = user_id.substring(8);
-            if (user_id in users) {
-                let user = users[user_id];
+            }
+            window.users[user_id] = user
+            badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
+            <img src="${user.avatar}" alt="${user.name}\'s avatar"
+            class="avatar" width="20px" height="20px">
+            <span class="username">${user.name}</span>
+            </img>
+            </a>`
+        } else if (user_id.startsWith("gitlab:")) {
+            let user_name = user_id.substring(7);
+            if (window.users.hasOwnProperty(user_id)) {
+                let user = window.users[user_id];
                 badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                     <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="25px" height="25px">${user.name}
-                    <span>#${user.discriminator}</span>
+                    class="avatar" width="20px" height="20px">
+                    <span class="username">${user.name}</span>
                     </img>
                     </a>`
-                return
+                continue
             }
-            fetch(`https://discord-undoc-utils.arhsm.workers.dev/?user_id=${user_id}`).then(
-                response => response.json()
-            ).then(
-                user => {
-                    users[user_id] = user;
-                    badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
+            let data = await (await fetch(`https://gitlab.com/api/v4/users?per_page=1&username=${user_name}`)).json()
+            let user = {
+                url: "https://gitlab.com/",
+                avatar: "",
+                name: "Deleted user",
+                id: ""
+            }
+            if (data.length !== 0) {
+                user = {
+                    url: data[0].web_url,
+                    avatar: data[0].avatar_url,
+                    name: data[0].name || data[0].username,
+                    id: data[0].username
+                }
+            }
+            window.users[user_id] = user
+            badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
+                <img src="${user.avatar}" alt="${user.name}\'s avatar"
+                class="avatar" width="20px" height="20px">
+                <span class="username">${user.name}</span>
+                </img>
+                </a>`
+        } else if (user_id.startsWith("discord:") || discordRegex.test(user_id)) {
+            if (user_id.startsWith("discord:")) user_id = user_id.substring(8);
+
+            if (window.users.hasOwnProperty(user_id)) {
+                let user = window.users[user_id];
+                badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
                     <img src="${user.avatar}" alt="${user.name}\'s avatar"
-                    class="avatar" width="25px" height="25px">${user.name}
-                    <span>#${user.discriminator}</span>
+                    class="avatar" width="20px" height="20px">
+                    <span class="username">${user.name}</span>
+                    <span class="discriminator">#${user.discriminator}</span>
                     </img>
                     </a>`
-                }
-            )
+                continue
+            }
+            let user = await (await fetch(`https://discord-undoc-utils.arhsm.workers.dev/?user_id=${user_id}`)).json()
+            window.users[user_id] = user;
+            badge.innerHTML = `<a href="${user.url}" targe="_blank" class="user">
+            <img src="${user.avatar}" alt="${user.name}\'s avatar"
+            class="avatar" width="20px" height="20px">
+            <span class="username">${user.name}</span>
+            <span>#${user.discriminator}</span>
+            </img>
+            </a>`
         }
-    })
+    }
 })();
 
 (() => {
     let isDarkTheme = document.querySelector('html').classList.contains("dark");
     let servers = document.querySelectorAll("server")
     if (servers === null) return
-    servers.forEach(server => {
+
+    for (const server of servers) {
         let invite = server.id
         server.innerHTML = `<a href="https://discord.gg/${invite}" target="_blank">
         <img class="server-img" src="https://invidget.switchblade.xyz/${invite}?theme=${isDarkTheme ? 'dark' : 'light'}" alt=""/>
         </a>`
-    })
+    }
 })();

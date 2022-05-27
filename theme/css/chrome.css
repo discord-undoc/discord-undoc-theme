@@ -72,21 +72,21 @@ html.sidebar-hidden .page-content {
     display: inline-block;
     background: var(--alternative-background);
     color: var(--text-primary);
-    padding: 5px;
+    height: 25px;
+    padding-right: 4px;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
 }
 
 .user img {
     vertical-align: middle;
-    border-radius: 25px;
-    margin-right: 5px;
+    border-radius: 20px;
+    margin-left: 3px;
 }
 
-.user span {
+.user .discriminator {
     color: var(--text-muted);
-    padding-right: 2px;
 }
 
 /* Indicators */
