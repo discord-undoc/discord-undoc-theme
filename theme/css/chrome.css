@@ -172,6 +172,7 @@ html.sidebar-hidden .page-content {
 .endpoint-c {
     display: flex;
     align-items: center;
+    font-family: var(--font-code);
 }
 
 .http-method {
